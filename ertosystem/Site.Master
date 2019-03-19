@@ -53,7 +53,7 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About Us</a></li>
                         <li><a runat="server" href="~/erto_userforms/user_reg">UserRegistration</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/Contact">Contact Us</a></li>
                         <li><a runat="server" href="~/erto_userforms/Login">Login</a></li>
                     </ul>
                 </div>

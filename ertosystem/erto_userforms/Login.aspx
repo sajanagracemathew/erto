@@ -127,8 +127,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="auto-style20">
-                                                    <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." />
-                                                </td>
+                                                    &nbsp;</td>
                                             </tr>
                                             <tr>
                                                 <td align="center" class="auto-style20" style="color:Red;">
