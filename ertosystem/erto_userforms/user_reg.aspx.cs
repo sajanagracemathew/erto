@@ -29,10 +29,11 @@ namespace ertosystem.erto_userforms
             uobj.Password = tbpassword.Text;
             uobj.Con_password = tbconfirm.Text;
             uobj.InsertUser();
+            uobj.InsertLogin2();
 
             if (FileUpload1.HasFile)
             {
-                FileUpload1.SaveAs(Server.MapPath("~/photo/" + FileUpload1.FileName));
+                FileUpload1.SaveAs(Server.MapPath("~/Images" + FileUpload1.FileName));
                 uobj.Photo = FileUpload1.FileName + "";
             }
             Response.Write("Registered successfully");

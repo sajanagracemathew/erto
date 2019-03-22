@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table class="nav-justified">
     <tr>
-        <td style="width: 237px">&nbsp;</td>
+        <td style="width: 148px">&nbsp;</td>
         <td style="width: 34px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -10,7 +10,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="text-center" colspan="2" style="text-align: center"><strong>USER REGISTRATION</strong></td>
+        <td class="text-center" colspan="2" style="text-align: center"><strong>&nbsp;REGISTRATION</strong></td>
         <td colspan="1">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -18,7 +18,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 237px; height: 22px"></td>
+        <td style="width: 148px; height: 22px"></td>
         <td style="height: 22px; width: 34px"></td>
         <td style="height: 22px">&nbsp;</td>
         <td style="height: 22px"></td>
@@ -26,7 +26,7 @@
         <td style="height: 22px"></td>
     </tr>
     <tr>
-        <td id="lbname" style="width: 237px">Name</td>
+        <td id="lbname" style="width: 148px">Name</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbname" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -38,7 +38,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td id="lbdob" style="width: 237px">DOB</td>
+        <td id="lbdob" style="width: 148px">DOB</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbdob" runat="server" Width="158px" TextMode="Date"></asp:TextBox>
         </td>
@@ -50,7 +50,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td id="lbaddress" style="width: 237px">Address</td>
+        <td id="lbaddress" style="width: 148px">Address</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbaddress" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -62,7 +62,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td id="lbcity" style="width: 237px">City</td>
+        <td id="lbcity" style="width: 148px">City</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbcity" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -74,7 +74,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td id="lbmobile" style="width: 237px; height: 22px">Mobile number</td>
+        <td id="lbmobile" style="width: 148px; height: 22px">Mobile number</td>
         <td style="width: 34px; height: 22px">
             <asp:TextBox ID="tbmobile" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -86,7 +86,7 @@
         <td style="height: 22px"></td>
     </tr>
     <tr>
-        <td id="lbemail" style="width: 237px">Email</td>
+        <td id="lbemail" style="width: 148px">Email</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbemail" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -100,7 +100,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td id="lbphoto" style="width: 237px; height: 27px;">Photo</td>
+        <td id="lbphoto" style="width: 148px; height: 27px;">Photo</td>
         <td style="width: 34px; height: 27px;">
             <asp:FileUpload ID="FileUpload1" runat="server" Width="158px" Height="27px" />
         </td>
@@ -112,7 +112,7 @@
         <td style="height: 27px"></td>
     </tr>
     <tr>
-        <td id="lbusername" style="width: 237px; height: 20px">Username</td>
+        <td id="lbusername" style="width: 148px; height: 20px">Username</td>
         <td style="height: 20px; width: 34px">
             <asp:TextBox ID="tbusername" runat="server" Width="158px" OnTextChanged="tbusername_TextChanged"></asp:TextBox>
         </td>
@@ -124,7 +124,7 @@
         <td style="height: 20px"></td>
     </tr>
     <tr>
-        <td id="lbpassword" style="width: 237px">Password</td>
+        <td id="lbpassword" style="width: 148px">Password</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbpassword" runat="server" TextMode="Password" Width="158px"></asp:TextBox>
         </td>
@@ -136,7 +136,7 @@
         <td></td>
     </tr>
     <tr>
-        <td id="lbconfirm" style="width: 237px; height: 20px">Confirm password</td>
+        <td id="lbconfirm" style="width: 148px; height: 20px">Confirm password</td>
         <td style="height: 20px; width: 34px">
             <asp:TextBox ID="tbconfirm" runat="server" TextMode="Password" Width="158px"></asp:TextBox>
         </td>
@@ -150,7 +150,7 @@
         <td style="height: 20px">&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 237px; height: 20px">&nbsp;</td>
+        <td style="width: 148px; height: 20px">&nbsp;</td>
         <td style="height: 20px; width: 34px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
@@ -158,7 +158,7 @@
         <td style="height: 20px">&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 237px; height: 20px">&nbsp;</td>
+        <td style="width: 148px; height: 20px">&nbsp;</td>
         <td style="height: 20px; width: 34px">
             <asp:Button ID="submit_btn" runat="server" Text="SUBMIT" Width="67px" OnClick="submit_btn_Click" />
         </td>
@@ -168,7 +168,7 @@
         <td style="height: 20px">&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 237px; height: 20px"></td>
+        <td style="width: 148px; height: 20px"></td>
         <td style="width: 34px; height: 20px"></td>
         <td style="height: 20px"></td>
         <td style="height: 20px"></td>
@@ -176,7 +176,7 @@
         <td style="height: 20px"></td>
     </tr>
     <tr>
-        <td style="width: 237px; height: 20px">&nbsp;</td>
+        <td style="width: 148px; height: 20px">&nbsp;</td>
         <td style="height: 20px; width: 34px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
@@ -184,7 +184,7 @@
         <td style="height: 20px">&nbsp;</td>
     </tr>
     <tr>
-        <td style="height: 31px; width: 237px"></td>
+        <td style="height: 31px; width: 148px"></td>
         <td style="height: 31px; width: 34px"></td>
         <td style="height: 31px"></td>
         <td style="height: 31px"></td>

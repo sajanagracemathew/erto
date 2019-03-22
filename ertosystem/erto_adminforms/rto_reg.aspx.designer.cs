@@ -10,7 +10,7 @@
 namespace ertosystem.erto_adminforms {
     
     
-    public partial class rto_reg {
+    public partial class Rto_reg {
         
         /// <summary>
         /// tbrtoname control.
@@ -148,22 +148,13 @@ namespace ertosystem.erto_adminforms {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
         
         /// <summary>
-        /// tbrtousername control.
+        /// rtoid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbrtousername;
-        
-        /// <summary>
-        /// RequiredFieldValidator8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
+        protected global::System.Web.UI.WebControls.Label rtoid;
         
         /// <summary>
         /// tbrtopassword control.
@@ -182,33 +173,6 @@ namespace ertosystem.erto_adminforms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator9;
-        
-        /// <summary>
-        /// tbrtoconfirm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbrtoconfirm;
-        
-        /// <summary>
-        /// RequiredFieldValidator10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator10;
-        
-        /// <summary>
-        /// CompareValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
         /// submit1_btn control.

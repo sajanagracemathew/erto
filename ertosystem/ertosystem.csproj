@@ -120,8 +120,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="erto_adminforms\Emp_reg.aspx" />
-    <Content Include="erto_adminforms\rto_reg.aspx" />
-    <Content Include="erto_userforms\Login.aspx" />
+    <Content Include="erto_adminforms\Rto_reg.aspx" />
+    <Content Include="erto_userforms\login.aspx" />
     <Content Include="erto_userforms\user_reg.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -182,6 +182,9 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classes\EmpRegistration.cs" />
+    <Compile Include="Classes\Logins.cs" />
+    <Compile Include="Classes\RtoRegistration.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -204,12 +207,12 @@
     <Compile Include="erto_adminforms\Emp_reg.aspx.designer.cs">
       <DependentUpon>Emp_reg.aspx</DependentUpon>
     </Compile>
-    <Compile Include="erto_adminforms\rto_reg.aspx.cs">
-      <DependentUpon>rto_reg.aspx</DependentUpon>
+    <Compile Include="erto_adminforms\Rto_reg.aspx.cs">
+      <DependentUpon>Rto_reg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="erto_adminforms\rto_reg.aspx.designer.cs">
-      <DependentUpon>rto_reg.aspx</DependentUpon>
+    <Compile Include="erto_adminforms\Rto_reg.aspx.designer.cs">
+      <DependentUpon>Rto_reg.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_adminforms\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -217,13 +220,6 @@
     </Compile>
     <Compile Include="erto_adminforms\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="erto_userforms\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="erto_userforms\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\user_reg.aspx.cs">
       <DependentUpon>user_reg.aspx</DependentUpon>
@@ -261,6 +257,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="erto_empforms\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

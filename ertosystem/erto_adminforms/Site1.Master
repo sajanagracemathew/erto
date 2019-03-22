@@ -58,7 +58,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">Registration</a></li>
+                        <li><a runat="server" href="~/erto_adminforms/Rto_reg">Registration</a></li>
                         
                         <li><a runat="server" href="~/Contact">Details</a></li>
                         <li><a runat="server" href="~/">Logout</a></li>

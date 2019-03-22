@@ -1,8 +1,40 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/erto_adminforms/Site1.Master"  AutoEventWireup="true" CodeBehind="rto_reg.aspx.cs" Inherits="ertosystem.erto_adminforms.rto_reg" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/erto_adminforms/Site1.Master" AutoEventWireup="true" CodeBehind="Rto_reg.aspx.cs" Inherits="ertosystem.erto_adminforms.Rto_reg" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style2 {
+            width: 34px;
+            height: 20px;
+        }
+        .auto-style3 {
+            height: 20px;
+        }
+        .auto-style4 {
+            width: 135px;
+        }
+        .auto-style5 {
+            height: 22px;
+            width: 135px;
+        }
+        .auto-style6 {
+            height: 27px;
+            width: 135px;
+        }
+        .auto-style7 {
+            height: 20px;
+            width: 135px;
+        }
+        .auto-style8 {
+            height: 31px;
+            width: 135px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <table class="nav-justified">
     <tr>
-        <td style="width: 237px">&nbsp;</td>
+        <td class="auto-style4">&nbsp;</td>
         <td style="width: 34px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -18,7 +50,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 237px; height: 22px"></td>
+        <td class="auto-style5"></td>
         <td style="height: 22px; width: 34px"></td>
         <td style="height: 22px">&nbsp;</td>
         <td style="height: 22px"></td>
@@ -26,7 +58,7 @@
         <td style="height: 22px"></td>
     </tr>
     <tr>
-        <td id="lbrtoname" style="width: 237px">Name</td>
+        <td id="lbrtoname" class="auto-style4">Name</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbrtoname" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -38,7 +70,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td id="lbrtodob" style="width: 237px">DOB</td>
+        <td id="lbrtodob" class="auto-style4">DOB</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbrtodob" runat="server" Width="158px" TextMode="Date"></asp:TextBox>
         </td>
@@ -50,7 +82,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td id="lbrtoaddress" style="width: 237px">Address</td>
+        <td id="lbrtoaddress" class="auto-style4">Address</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbrtoaddress" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -62,7 +94,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td id="lbrtomobile" style="width: 237px; height: 22px">Mobile number</td>
+        <td id="lbrtomobile" class="auto-style5">Mobile number</td>
         <td style="width: 34px; height: 22px">
             <asp:TextBox ID="tbrtomobile" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -74,7 +106,7 @@
         <td style="height: 22px"></td>
     </tr>
     <tr>
-        <td id="lbrtoemail" style="width: 237px">Email</td>
+        <td id="lbrtoemail" class="auto-style4">Email</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbrtoemail" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -88,7 +120,7 @@
         <td>&nbsp;</td>
     </tr>
         <tr>
-        <td id="lbrtodoj" style="width: 237px">Date of Join</td>
+        <td id="lbrtodoj" class="auto-style4">Date of Join</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbrtodoj" runat="server" Width="158px" TextMode="Date"></asp:TextBox>
         </td>
@@ -100,7 +132,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td id="lbrtophoto" style="width: 237px; height: 27px;">Photo</td>
+        <td id="lbrtophoto" class="auto-style6">Photo</td>
         <td style="width: 34px; height: 27px;">
             <asp:FileUpload ID="FileUpload2" runat="server" Width="158px" Height="27px" />
         </td>
@@ -112,19 +144,18 @@
         <td style="height: 27px"></td>
     </tr>
     <tr>
-        <td id="lbrtousername" style="width: 237px; height: 20px">Username</td>
-        <td style="height: 20px; width: 34px">
-            <asp:TextBox ID="tbrtousername" runat="server" Width="158px"></asp:TextBox>
+        <td id="lbrtousername" class="auto-style7">Username</td>
+        <td style="height: 20px; width: 34px" id="rtoid">
+            <asp:Label ID="rtoid" runat="server"></asp:Label>
         </td>
         <td style="height: 20px">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please enter username" ForeColor="#CC0000" ControlToValidate="tbrtousername"></asp:RequiredFieldValidator>
-        </td>
+            &nbsp;</td>
         <td style="height: 20px"></td>
         <td style="height: 20px"></td>
         <td style="height: 20px"></td>
     </tr>
     <tr>
-        <td id="lbrtopassword" style="width: 237px">Password</td>
+        <td id="lbrtopassword" class="auto-style4">Password</td>
         <td style="width: 34px">
             <asp:TextBox ID="tbrtopassword" runat="server" TextMode="Password" Width="158px"></asp:TextBox>
         </td>
@@ -136,21 +167,17 @@
         <td></td>
     </tr>
     <tr>
-        <td id="lbrtoconfirm" style="width: 237px; height: 20px">Confirm password</td>
+        <td id="lbrtoconfirm" class="auto-style7">&nbsp;</td>
         <td style="height: 20px; width: 34px">
-            <asp:TextBox ID="tbrtoconfirm" runat="server" TextMode="Password" Width="158px"></asp:TextBox>
-        </td>
+            &nbsp;</td>
         <td style="height: 20px">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Please enter confirm password." ForeColor="#CC0000" ControlToValidate="tbrtoconfirm"></asp:RequiredFieldValidator>
-            <br />
-            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="tbrtopassword" ControlToValidate="tbrtoconfirm" ErrorMessage="Both password must be same" ForeColor="#CC0000"></asp:CompareValidator>
-            .</td>
+            &nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 237px; height: 20px">&nbsp;</td>
+        <td class="auto-style7">&nbsp;</td>
         <td style="height: 20px; width: 34px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
@@ -158,19 +185,19 @@
         <td style="height: 20px">&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 237px; height: 20px; text-align: center;">
-            <asp:Button ID="submit1_btn" runat="server" Text="SUBMIT" />
+        <td style="text-align: center;" class="auto-style7">
+            <asp:Button ID="submit1_btn" runat="server" Text="SUBMIT" Width="67px" OnClick="submit1_btn_Click" />
         </td>
-        <td style="height: 20px; width: 34px; text-align: center;">
+        <td style="text-align: center;" class="auto-style2">
             <asp:Button ID="send_btn" runat="server" Text="SEND" Width="61px" />
         </td>
-        <td style="height: 20px">&nbsp;</td>
-        <td style="height: 20px">&nbsp;</td>
-        <td style="height: 20px">&nbsp;</td>
-        <td style="height: 20px">&nbsp;</td>
+        <td class="auto-style3"></td>
+        <td class="auto-style3"></td>
+        <td class="auto-style3"></td>
+        <td class="auto-style3"></td>
     </tr>
     <tr>
-        <td style="width: 237px; height: 20px"></td>
+        <td class="auto-style7"></td>
         <td style="width: 34px; height: 20px"></td>
         <td style="height: 20px"></td>
         <td style="height: 20px"></td>
@@ -178,7 +205,7 @@
         <td style="height: 20px"></td>
     </tr>
     <tr>
-        <td style="width: 237px; height: 20px">&nbsp;</td>
+        <td class="auto-style7">&nbsp;</td>
         <td style="height: 20px; width: 34px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
@@ -186,7 +213,7 @@
         <td style="height: 20px">&nbsp;</td>
     </tr>
     <tr>
-        <td style="height: 31px; width: 237px"></td>
+        <td class="auto-style8"></td>
         <td style="height: 31px; width: 34px"></td>
         <td style="height: 31px"></td>
         <td style="height: 31px"></td>
@@ -195,3 +222,8 @@
     </tr>
 </table>
 </asp:Content>
+
+   
+
+
+
