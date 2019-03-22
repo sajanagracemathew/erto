@@ -1,6 +1,8 @@
-# erto
+# e-RTO
 
 
+e-RTO System provides solutions to maintain all the records like issuing the Learner’s License(LL),Driver’s License(DL),Vehicle registration, Vehicle ownership transfer etc. Once all these get computerized to work efficiency of the employee will get increases.
+e-RTO System has been designed to automate the process of registration of vehicle and issuing driving license process. System can make the daily activities efficient and providing the fast response to store and retrieve information to the people By Using SMS or E-Mail.The project consists of RTO officer module, Employee module and Usermodule.
 
 
 
@@ -9,7 +11,7 @@
 
 # License
 
-<pre><code>Hand Gesture Recognition project is free software: you can redistribute it and/or modify
+<pre><code>e-RTO project is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
