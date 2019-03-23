@@ -41,7 +41,7 @@ namespace ertosystem.erto_adminforms
 
             if (FileUpload2.HasFile)
             {
-                FileUpload2.SaveAs(Server.MapPath("~/Images" + FileUpload2.FileName));
+                FileUpload2.SaveAs(Server.MapPath("~/Images/" + FileUpload2.FileName));
                 robj.Rphoto = FileUpload2.FileName + "";
             }
 

@@ -221,6 +221,13 @@
     <Compile Include="erto_adminforms\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="erto_userforms\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="erto_userforms\user_reg.aspx.cs">
       <DependentUpon>user_reg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -257,6 +264,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="erto_empforms\" />
+    <Folder Include="erto_officerforms\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>

@@ -23,7 +23,14 @@ namespace ertosystem.erto_adminforms
 
         protected void submit2_btn_Click(object sender, EventArgs e)
         {
-            
+            if (rbempmale.Checked)
+            {
+                eobj.Egender = rbempmale.Text.ToString();
+            }
+            else if (rbempfemale.Checked)
+            {
+                eobj.Egender = rbempfemale.Text.ToString();
+            }
             eobj.Ename = tbempname.Text;
             eobj.Edob = tbempdob.Text;
             eobj.Eaddress = tbempaddress.Text;
@@ -39,7 +46,7 @@ namespace ertosystem.erto_adminforms
 
             if (FileUpload3.HasFile)
             {
-                FileUpload3.SaveAs(Server.MapPath("~/Images" + FileUpload3.FileName));
+                FileUpload3.SaveAs(Server.MapPath("~/Images/" + FileUpload3.FileName));
                 eobj.Ephoto = FileUpload3.FileName + "";
             }
 

@@ -27,6 +27,7 @@ namespace ertosystem.Classes
         }
         private string ename;
         private string edob;
+        private string egender;
         private string eaddress;
         private string emobile;
         private string eemail;
@@ -48,15 +49,17 @@ namespace ertosystem.Classes
         public string Eusername { get => eusername; set => eusername = value; }
         public string Epassword { get => epassword; set => epassword = value; }
         public string Etype { get => etype; set => etype = value; }
+        public string Egender { get => egender; set => egender = value; }
 
         public void InsertEmp_Parameter()
         {
             OpenConection();
 
-            string qry = "insert into empregistration_table values(@name,@dob,@address,@mobile_number,@email,@qual,@doj,@photo,@username,@password);";
+            string qry = "insert into empregistration_table values(@name,@dob,@gender,@address,@mobile_number,@email,@qual,@doj,@photo,@username,@password);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@name", ename);
             cmd.Parameters.AddWithValue("@dob", edob);
+            cmd.Parameters.AddWithValue("@gender", egender);
             cmd.Parameters.AddWithValue("@address", eaddress);
             cmd.Parameters.AddWithValue("@mobile_number", emobile);
             cmd.Parameters.AddWithValue("@email", eemail);
