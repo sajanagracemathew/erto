@@ -28,6 +28,7 @@ namespace ertosystem.Classes
         }
         private string rname;
         private string rdob;
+        private string rgender;
         private string raddress;
         private string rmobile;
         private string remail;
@@ -47,15 +48,17 @@ namespace ertosystem.Classes
         public string Rpassword { get => rpassword; set => rpassword = value; }
         public string Remail { get => remail; set => remail = value; }
         public string Type { get => type; set => type = value; }
+        public string Rgender { get => rgender; set => rgender = value; }
 
         public void InsertRto_Parameter()
         {
             OpenConection();
             
-            string qry = "insert into rtoregistration_table values(@name,@dob,@address,@mobile_number,@email,@doj,@photo,@username,@password);";
+            string qry = "insert into rtoregistration_table values(@name,@dob,@gender,@address,@mobile_number,@email,@doj,@photo,@username,@password);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@name", rname);
             cmd.Parameters.AddWithValue("@dob", rdob);
+            cmd.Parameters.AddWithValue("@gender", rgender);
             cmd.Parameters.AddWithValue("@address", raddress);
             cmd.Parameters.AddWithValue("@mobile_number", rmobile);
             cmd.Parameters.AddWithValue("@email", remail);

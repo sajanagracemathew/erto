@@ -26,11 +26,12 @@ namespace ertosystem.erto_userforms
             if(dtReg.Rows.Count>0)
             {
                 String type1 = "";
+                
                 type1 += dtReg.Rows[0]["Login_type"];
-                if(type1=="admin")
+                if (type1 == "admin")
                 {
-                    Label1.Text = "Login Success...!";
-                    //Response.Redirect("~/erto_adminforms/adminhome.aspx");
+                    //Label1.Text = "Login Success...!";
+                    Response.Redirect("~/erto_adminforms/adminhome.aspx");
                 }
                 if (type1 == "officer")
                 {
@@ -44,8 +45,9 @@ namespace ertosystem.erto_userforms
                 }
                 if (type1 == "user")
                 {
+
                     Label1.Text = "Login Success...!";
-                    //Response.Redirect("~/erto_userforms/userhome.aspx");
+                    Response.Redirect("~/erto_userforms/vehicle_reg.aspx?Value=" + tbloginusername.Text);
                 }
 
             }

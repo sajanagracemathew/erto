@@ -25,7 +25,14 @@ namespace ertosystem.erto_adminforms
         protected void submit1_btn_Click(object sender, EventArgs e)
         {
 
-            
+            if (rbrtomale.Checked)
+            {
+                robj.Rgender = rbrtomale.Text.ToString();
+            }
+            else if (rbrtofemale.Checked)
+            {
+                robj.Rgender = rbrtofemale.Text.ToString();
+            }
             robj.Rname = tbrtoname.Text;
             robj.Rdob = tbrtodob.Text;
             robj.Raddress = tbrtoaddress.Text;
@@ -44,6 +51,7 @@ namespace ertosystem.erto_adminforms
                 FileUpload2.SaveAs(Server.MapPath("~/Images/" + FileUpload2.FileName));
                 robj.Rphoto = FileUpload2.FileName + "";
             }
+            Response.Write("Registered Successfully");
 
             tbrtoname.Text = "";
             tbrtodob.Text = "";

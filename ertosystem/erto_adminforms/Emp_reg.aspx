@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style2 {
-            width: 137px;
+            width: 125px;
             height: 20px;
         }
         .auto-style3 {
@@ -11,7 +11,7 @@
         .auto-style4 {
             text-align: center;
             height: 20px;
-            width: 137px;
+            width: 125px;
         }
         .auto-style5 {
             width: 162px;
@@ -36,21 +36,21 @@
         .auto-style11 {
             text-align: center;
             font-weight: 700;
-            font-size: medium;
+            font-size: large;
         }
         .auto-style20 {
             height: 25px;
             width: 162px;
         }
         .auto-style21 {
-            width: 137px;
+            width: 125px;
             height: 25px;
         }
         .auto-style22 {
             height: 25px;
         }
         .auto-style26 {
-            width: 137px;
+            width: 125px;
             height: 32px;
         }
         .auto-style27 {
@@ -61,25 +61,56 @@
             height: 32px;
         }
         .auto-style29 {
-            width: 137px;
+            width: 125px;
         }
         .auto-style30 {
             height: 22px;
-            width: 137px;
+            width: 125px;
         }
         .auto-style31 {
             height: 31px;
-            width: 137px;
+            width: 125px;
+        }
+        .auto-style32 {
+            width: 868px;
+        }
+        .auto-style33 {
+            width: 150px;
+        }
+        .auto-style34 {
+            height: 22px;
+            width: 150px;
+        }
+        .auto-style35 {
+            height: 25px;
+            width: 150px;
+        }
+        .auto-style36 {
+            width: 150px;
+            height: 32px;
+        }
+        .auto-style37 {
+            height: 20px;
+            width: 150px;
+        }
+        .auto-style38 {
+            text-align: center;
+            height: 20px;
+            width: 150px;
+        }
+        .auto-style39 {
+            height: 31px;
+            width: 150px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <table class="nav-justified">
+    <table class="auto-style32">
     <tr>
         <td class="auto-style5">&nbsp;</td>
-        <td class="auto-style5">&nbsp;</td>
+        <td class="auto-style33">&nbsp;</td>
         <td class="auto-style29">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -97,7 +128,7 @@
     </tr>
     <tr>
         <td class="auto-style6">&nbsp;</td>
-        <td class="auto-style6"></td>
+        <td class="auto-style34"></td>
         <td class="auto-style30"></td>
         <td style="height: 22px">&nbsp;</td>
         <td style="height: 22px"></td>
@@ -106,7 +137,7 @@
     </tr>
     <tr>
         <td id="lbempname" class="auto-style20"></td>
-        <td id="lbempname" class="auto-style20">Name</td>
+        <td id="lbempname" class="auto-style35">Name</td>
         <td class="auto-style21">
             <asp:TextBox ID="tbempname" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -119,7 +150,7 @@
     </tr>
     <tr>
         <td id="lbempdob" class="auto-style20"></td>
-        <td id="lbempdob" class="auto-style20">DOB</td>
+        <td id="lbempdob" class="auto-style35">DOB</td>
         <td class="auto-style21">
             <asp:TextBox ID="tbempdob" runat="server" Width="158px" TextMode="Date"></asp:TextBox>
         </td>
@@ -132,7 +163,7 @@
     </tr>
     <tr>
         <td id="lbempdob" class="auto-style27"></td>
-        <td id="lbempdob" class="auto-style27">
+        <td id="lbempdob" class="auto-style36">
             <asp:Label ID="lbempgender" runat="server" Text="Gender"></asp:Label>
         </td>
         
@@ -148,7 +179,7 @@
     </tr>
     <tr>
         <td id="lbempaddress" class="auto-style20"></td>
-        <td id="lbempaddress" class="auto-style20">Address</td>
+        <td id="lbempaddress" class="auto-style35">Address</td>
         <td class="auto-style21">
             <asp:TextBox ID="tbempaddress" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -161,7 +192,7 @@
     </tr>
     <tr>
         <td id="lbempmobile" class="auto-style20"></td>
-        <td id="lbempmobile" class="auto-style20">Mobile number</td>
+        <td id="lbempmobile" class="auto-style35">Mobile number</td>
         <td class="auto-style21">
             <asp:TextBox ID="tbempmobile" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -174,7 +205,7 @@
     </tr>
     <tr>
         <td id="lbempemail" class="auto-style20"></td>
-        <td id="lbempemail" class="auto-style20">Email</td>
+        <td id="lbempemail" class="auto-style35">Email</td>
         <td class="auto-style21">
             <asp:TextBox ID="tbempemail" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -189,7 +220,7 @@
     </tr>
     <tr>
         <td id="lbempqual" class="auto-style20"></td>
-        <td id="lbempqual" class="auto-style20">Educational Qualification</td>
+        <td id="lbempqual" class="auto-style35">Educational Qualification</td>
         <td class="auto-style21">
             <asp:TextBox ID="tbempqual" runat="server" Width="158px"></asp:TextBox>
         </td>
@@ -202,7 +233,7 @@
     </tr>
         <tr>
         <td id="lbempdoj" class="auto-style20"></td>
-        <td id="lbempdoj" class="auto-style20">Date of Join</td>
+        <td id="lbempdoj" class="auto-style35">Date of Join</td>
         <td class="auto-style21">
             <asp:TextBox ID="tbempdoj" runat="server" Width="158px" TextMode="Date"></asp:TextBox>
         </td>
@@ -215,7 +246,7 @@
     </tr>
     <tr>
         <td id="lbempphoto" class="auto-style20"></td>
-        <td id="lbempphoto" class="auto-style20">Photo</td>
+        <td id="lbempphoto" class="auto-style35">Photo</td>
         <td class="auto-style21">
             <asp:FileUpload ID="FileUpload3" runat="server" Width="158px" Height="27px" />
         </td>
@@ -228,7 +259,7 @@
     </tr>
     <tr>
         <td id="lbempusername" class="auto-style20"></td>
-        <td id="lbempusername" class="auto-style20">Username</td>
+        <td id="lbempusername" class="auto-style35">Username</td>
         <td class="auto-style21">
             <asp:Label ID="empid" runat="server"></asp:Label>
         </td>
@@ -240,7 +271,7 @@
     </tr>
     <tr>
         <td id="lbemppassword" class="auto-style20"></td>
-        <td id="lbemppassword" class="auto-style20">Password</td>
+        <td id="lbemppassword" class="auto-style35">Password</td>
         <td class="auto-style21">
             <asp:TextBox ID="tbemppassword" runat="server" TextMode="Password" Width="158px"></asp:TextBox>
         </td>
@@ -255,7 +286,7 @@
     <tr>
         <td style="text-align: center;" class="auto-style8">
             &nbsp;</td>
-        <td style="text-align: center;" class="auto-style8">
+        <td style="text-align: center;" class="auto-style37">
             &nbsp;</td>
         <td style="text-align: center;" class="auto-style2">
             &nbsp;</td>
@@ -267,7 +298,7 @@
     <tr>
         <td class="auto-style9">
             &nbsp;</td>
-        <td class="auto-style9">
+        <td class="auto-style38">
             <asp:Button ID="submit2_btn" runat="server" OnClick="submit2_btn_Click" Text="SUBMIT" />
         </td>
         <td class="auto-style4">
@@ -280,7 +311,7 @@
     </tr>
     <tr>
         <td class="auto-style8">&nbsp;</td>
-        <td class="auto-style8">&nbsp;</td>
+        <td class="auto-style37">&nbsp;</td>
         <td class="auto-style2">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
@@ -289,7 +320,7 @@
     </tr>
     <tr>
         <td class="auto-style10">&nbsp;</td>
-        <td class="auto-style10"></td>
+        <td class="auto-style39"></td>
         <td class="auto-style31"></td>
         <td style="height: 31px"></td>
         <td style="height: 31px"></td>

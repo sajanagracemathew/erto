@@ -49,6 +49,7 @@ namespace ertosystem.erto_adminforms
                 FileUpload3.SaveAs(Server.MapPath("~/Images/" + FileUpload3.FileName));
                 eobj.Ephoto = FileUpload3.FileName + "";
             }
+            Response.Write("Registered Successfully");
 
             tbempname.Text = "";
             tbempdob.Text = "";

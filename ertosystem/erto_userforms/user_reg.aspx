@@ -140,7 +140,7 @@
         <td id="lbusername" style="width: 124px; height: 29px"></td>
         <td id="lbusername" style="width: 124px; height: 29px">Username</td>
         <td style="height: 29px; width: 158px">
-            <asp:TextBox ID="tbusername" runat="server" Width="158px" OnTextChanged="tbusername_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="tbusername" runat="server" Width="158px"></asp:TextBox>
         </td>
         <td style="height: 29px">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please enter username" ForeColor="#CC0000" ControlToValidate="tbusername"></asp:RequiredFieldValidator>

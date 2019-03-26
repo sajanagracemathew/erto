@@ -51,6 +51,22 @@ namespace ertosystem.Classes
         public string Utype { get => utype; set => utype = value; }
         public string Gender { get => gender; set => gender = value; }
 
+        public string GetUsername()
+        {
+            OpenConection();
+            string qry = "select Login_type from Login_table where Username=@uname;";
+            SqlCommand cmd = new SqlCommand(qry,con);
+            cmd.Parameters.AddWithValue("@uname", username);
+            string typ = "";
+            Object obj = cmd.ExecuteScalar();
+            if(obj != DBNull.Value)
+            {
+                typ = (string)obj;
+            }
+            CloseConnection();
+            return typ;
+
+        }
         public void InsertUser()
         {
             OpenConection();

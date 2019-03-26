@@ -119,10 +119,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="erto_adminforms\adminhome.aspx" />
     <Content Include="erto_adminforms\Emp_reg.aspx" />
     <Content Include="erto_adminforms\Rto_reg.aspx" />
     <Content Include="erto_userforms\login.aspx" />
     <Content Include="erto_userforms\user_reg.aspx" />
+    <Content Include="erto_userforms\vehicle_reg.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -135,6 +137,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="erto_adminforms\Site1.Master" />
+    <Content Include="erto_userforms\Site2.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -186,6 +189,7 @@
     <Compile Include="Classes\Logins.cs" />
     <Compile Include="Classes\RtoRegistration.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\VehicleRegistration.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -199,6 +203,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_adminforms\adminhome.aspx.cs">
+      <DependentUpon>adminhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_adminforms\adminhome.aspx.designer.cs">
+      <DependentUpon>adminhome.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_adminforms\Emp_reg.aspx.cs">
       <DependentUpon>Emp_reg.aspx</DependentUpon>
@@ -228,12 +239,26 @@
     <Compile Include="erto_userforms\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="erto_userforms\Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
     <Compile Include="erto_userforms\user_reg.aspx.cs">
       <DependentUpon>user_reg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="erto_userforms\user_reg.aspx.designer.cs">
       <DependentUpon>user_reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\vehicle_reg.aspx.cs">
+      <DependentUpon>vehicle_reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\vehicle_reg.aspx.designer.cs">
+      <DependentUpon>vehicle_reg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
