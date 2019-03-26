@@ -219,7 +219,7 @@
         }
         .auto-style81 {
             width: 100%;
-            height: 533px;
+            height: 586px;
             margin-bottom: 0px;
         }
         .auto-style82 {
@@ -227,7 +227,7 @@
         }
         </style>
 </head>
-<body>
+<body style="height: 633px">
     
        
         <table class="auto-style81">
@@ -250,7 +250,7 @@
                    <div class="auto-style80"> <strong>
                     <asp:Button ID="Login_btn" runat="server" CssClass="auto-style70" OnClick="Login_btn_Click" Text="Login" Width="100px" Height="28px" />
                     </strong></div>
-                   <div> <asp:Label ID="Label1" runat="server" ForeColor="#009900"></asp:Label></div>
+                   <div> <asp:Label ID="Label1" runat="server" ForeColor="#CC0000"></asp:Label></div>
                                 </fieldset>
                             </form>
                         </div>
