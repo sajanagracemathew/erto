@@ -31,21 +31,24 @@ namespace ertosystem.erto_userforms
                 if (type1 == "admin")
                 {
                     //Label1.Text = "Login Success...!";
+                    Session["admin"] = tbloginusername.Text;
                     Response.Redirect("~/erto_adminforms/adminhome.aspx");
                 }
                 if (type1 == "officer")
                 {
+                    Session["officer"] = tbloginusername.Text;
                     Label1.Text = "Login Success...!";
                     //Response.Redirect("~/erto_officerforms/rtohome.aspx");
                 }
                 if (type1 == "employee")
                 {
+                    Session["employee"] = tbloginusername.Text;
                     Label1.Text = "Login Success...!";
                     //Response.Redirect("~/erto_empforms/employhome.aspx");
                 }
                 if (type1 == "user")
                 {
-
+                    Session["user"] = tbloginusername.Text;
                     Label1.Text = "Login Success...!";
                     Response.Redirect("~/erto_userforms/vehicle_reg.aspx?Value=" + tbloginusername.Text);
                 }

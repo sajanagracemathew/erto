@@ -16,6 +16,32 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <style>
+     UL.nav > LI {
+    list-style: none;
+    float: left;
+   
+    position: relative;
+    height: 24px; /* height included for IE 7 */
+}
+
+UL.nav UL{
+    left: -10000px;
+ 
+    list-style-type: none;
+  color: white;
+    position: absolute;            
+}
+
+UL.nav > LI:hover UL{
+    left: 0;
+    
+     list-style-type: none;
+ color:#9D9595 ;
+    top: 24px; /* IE7 has problems without this */
+}
+
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -51,18 +77,29 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">e-RTO</a>
+                    <a class="navbar-brand" runat="server" href="~/" style="font-size:large">e-RTO</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/erto_userforms/Rto_reg">Registration&Services</a></li>
-                        
-                        <li><a runat="server" href="~/Contact">Fee/Tax/Fine</a></li>
-                        <li><a runat="server" href="~/Contact">Transfer&NOC</a></li>
-                        <li><a runat="server" href="~/Contact">Complaints</a></li>
-                        <li><a runat="server" href="~/">Logout</a></li>
-                    </ul>
+                    <ul class="nav">
+    <li><a class="navbar-brand" runat="server" href="~/">Home</a>
+    </li>    
+    <li><a class="navbar-brand" runat="server" href="~/erto_userforms/Rto_reg">Registration&Services</a>
+        <ul class="nav">
+            <li></li>
+            <li><br /></li>
+             <li><a runat="server" href="~/vehicle_reg.aspx">Vehicle Registration</a></li>
+                                <li><a runat="server" href="~/">Driving Licence Application</a></li>
+        </ul>
+    </li>
+                         <li><a class="navbar-brand" runat="server" href="~/Contact">Fee/Tax/Fine</a></li>
+                        <li><a class="navbar-brand" runat="server" href="~/Contact">Transfer&NOC</a></li>
+                        <li><a class="navbar-brand" runat="server" href="~/Contact">Complaints</a></li>
+                        <li><a class="navbar-brand" runat="server" href="~/">Logout</a></li>
+
+    
+            
+    
+</ul>
                 </div>
             </div>
         </div>

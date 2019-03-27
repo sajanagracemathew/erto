@@ -53,13 +53,16 @@ namespace ertosystem.Classes
         public string Oareaname { get => oareaname; set => oareaname = value; }
         public int Ochassisnum { get => ochassisnum; set => ochassisnum = value; }
         public string Ofitnesscer { get => ofitnesscer; set => ofitnesscer = value; }
-        public string Oregdate { get => oregdate; set => oregdate = value; }
         public string UnameT { get => unameT; set => unameT = value; }
+        public string Oregdate { get => oregdate; set => oregdate = value; }
+
+        //public DateTime Oregdate { get => oregdate; set => oregdate = value; }
 
         public void InsertVehiclereg_Parameter()
         {
             OpenConection();
-
+            oregdate = System.DateTime.Now.ToString("dd/MM/yyyy");
+            DateTime ddoc = Convert.ToDateTime(oregdate);
             string qry = "insert into vehicleregistration_table values(@veh_id,@name,@swd,@dob,@address,@address_proof,@veh_type,@veh_company,@veh_model,@veh_manuf,@areaname,@chassis_num,@fitness_cer,@reg_date);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@veh_id", oveh_id);

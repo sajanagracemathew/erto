@@ -15,6 +15,7 @@ namespace ertosystem.erto_userforms
         public string usrname = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            tbregdate.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
             if (!IsPostBack)
             {
 
@@ -63,9 +64,9 @@ namespace ertosystem.erto_userforms
                 FileUpload3.SaveAs(Server.MapPath("~/Images/" + FileUpload3.FileName));
                 obj.Oproof = FileUpload3.FileName + "";
             }
-            else if (FileUpload2.HasFile)
+            if (FileUpload2.HasFile)
             {
-                FileUpload3.SaveAs(Server.MapPath("~/Images/" + FileUpload3.FileName));
+                FileUpload2.SaveAs(Server.MapPath("~/Images/" + FileUpload2.FileName));
                 obj.Ofitnesscer = FileUpload2.FileName + "";
             }
             Response.Write("Please pay the registration fees(online/manually)");

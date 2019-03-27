@@ -122,7 +122,9 @@
     <Content Include="erto_adminforms\adminhome.aspx" />
     <Content Include="erto_adminforms\Emp_reg.aspx" />
     <Content Include="erto_adminforms\Rto_reg.aspx" />
+    <Content Include="erto_userforms\renewdrivinglicense.aspx" />
     <Content Include="erto_userforms\login.aspx" />
+    <Content Include="erto_userforms\userhome.aspx" />
     <Content Include="erto_userforms\user_reg.aspx" />
     <Content Include="erto_userforms\vehicle_reg.aspx" />
     <Content Include="favicon.ico" />
@@ -187,6 +189,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Classes\EmpRegistration.cs" />
     <Compile Include="Classes\Logins.cs" />
+    <Compile Include="Classes\RenewDl.cs" />
     <Compile Include="Classes\RtoRegistration.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\VehicleRegistration.cs" />
@@ -232,6 +235,13 @@
     <Compile Include="erto_adminforms\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="erto_userforms\renewdrivinglicense.aspx.cs">
+      <DependentUpon>renewdrivinglicense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\renewdrivinglicense.aspx.designer.cs">
+      <DependentUpon>renewdrivinglicense.aspx</DependentUpon>
+    </Compile>
     <Compile Include="erto_userforms\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,6 +255,13 @@
     </Compile>
     <Compile Include="erto_userforms\Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\userhome.aspx.cs">
+      <DependentUpon>userhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\userhome.aspx.designer.cs">
+      <DependentUpon>userhome.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\user_reg.aspx.cs">
       <DependentUpon>user_reg.aspx</DependentUpon>

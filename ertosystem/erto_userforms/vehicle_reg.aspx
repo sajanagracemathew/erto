@@ -211,10 +211,10 @@
                 <tr>
                     <td class="auto-style33"></td>
                     <td class="auto-style34">
-                        <asp:Label ID="lbvehmanuf" runat="server" Text="Vehicle Manufacture Date"></asp:Label>
+                        <asp:Label ID="lbvehmanuf" runat="server" Text="Vehicle Manufacture Year"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="tbvehmanuf" runat="server" Width="148px" TextMode="Date"></asp:TextBox>
+                        <asp:TextBox ID="tbvehmanuf" runat="server" Width="148px"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -254,7 +254,7 @@
                         <asp:Label ID="lbregdate" runat="server" Text="Registration Date"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="tbregdate" runat="server" TextMode="Date" Width="142px"></asp:TextBox>
+                        <asp:TextBox ID="tbregdate" runat="server" Width="142px"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
