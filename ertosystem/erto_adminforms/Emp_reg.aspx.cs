@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ertosystem.Classes;
+using System.Data;
+using System.IO;
 
 namespace ertosystem.erto_adminforms
 {
@@ -41,14 +43,20 @@ namespace ertosystem.erto_adminforms
             eobj.Ephoto = FileUpload3.FileName;
             eobj.Eusername = empid.Text;
             eobj.Epassword = tbemppassword.Text;
+
+            String filename = Path.GetFileName(FileUpload3.PostedFile.FileName);
+            string ext = Path.GetExtension(filename);
+            if (ext.ToLower() == ".jpg" || ext.ToLower() == ".bmp" || ext.ToLower() == ".png" || ext.ToLower() == ".jpeg")
+            {
+                string src = Server.MapPath("~/Images") + "\\" + empid.Text + ".jpg";
+                FileUpload3.PostedFile.SaveAs(src);
+                string picpath = "~/Images/" + empid.Text + ".jpg";
+                eobj.Ephoto = picpath;
+            }
             eobj.InsertEmp_Parameter();
             eobj.InsertLogin1();
 
-            if (FileUpload3.HasFile)
-            {
-                FileUpload3.SaveAs(Server.MapPath("~/Images/" + FileUpload3.FileName));
-                eobj.Ephoto = FileUpload3.FileName + "";
-            }
+          
             Response.Write("Registered Successfully");
 
             tbempname.Text = "";

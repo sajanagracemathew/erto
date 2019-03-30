@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ertosystem.Classes;
+using System.Data;
+using System.IO;
 
 namespace ertosystem.erto_userforms
 {
@@ -42,18 +44,24 @@ namespace ertosystem.erto_userforms
                 uobj.City = tbcity.Text;
                 uobj.Mobile = tbmobile.Text;
                 uobj.Email = tbemail.Text;
-                uobj.Photo = FileUpload1.FileName;
+                //uobj.Photo = FileUpload1.FileName;
                 uobj.Username = tbusername.Text;
                 uobj.Password = tbpassword.Text;
                 uobj.Con_password = tbconfirm.Text;
+
+                String filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
+                string ext = Path.GetExtension(filename);
+                if (ext.ToLower() == ".jpg" || ext.ToLower() == ".bmp" || ext.ToLower() == ".png" || ext.ToLower() == ".jpeg")
+                {
+                    string src = Server.MapPath("~/Images") + "\\" + tbusername.Text + ".jpg";
+                    FileUpload1.PostedFile.SaveAs(src);
+                    string picpath = "~/Images/" + tbusername.Text + ".jpg";
+                    uobj.Photo = picpath;
+                }
                 uobj.InsertUser();
                 uobj.InsertLogin2();
+                
 
-                if (FileUpload1.HasFile)
-                {
-                    FileUpload1.SaveAs(Server.MapPath("~/Images/" + FileUpload1.FileName));
-                    uobj.Photo = FileUpload1.FileName + "";
-                }
                 Response.Write("Registered successfully");
 
 

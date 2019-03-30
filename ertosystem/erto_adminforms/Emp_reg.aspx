@@ -113,17 +113,11 @@
         <td class="auto-style33">&nbsp;</td>
         <td class="auto-style29">&nbsp;</td>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
     </tr>
     <tr>
         <td class="text-center" style="text-align: center">&nbsp;</td>
         <td class="auto-style11" colspan="2" style="text-align: center"><strong>Employee Registration</strong></td>
         <td colspan="1">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
@@ -131,9 +125,6 @@
         <td class="auto-style34"></td>
         <td class="auto-style30"></td>
         <td style="height: 22px">&nbsp;</td>
-        <td style="height: 22px"></td>
-        <td style="height: 22px"></td>
-        <td style="height: 22px"></td>
     </tr>
     <tr>
         <td id="lbempname" class="auto-style20"></td>
@@ -144,9 +135,6 @@
         <td class="auto-style22">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter name" ForeColor="#CC0000" ControlToValidate="tbempname"></asp:RequiredFieldValidator>
         </td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
     </tr>
     <tr>
         <td id="lbempdob" class="auto-style20"></td>
@@ -157,9 +145,6 @@
         <td class="auto-style22">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter date of birth" ForeColor="#CC0000" ControlToValidate="tbempdob"></asp:RequiredFieldValidator>
         </td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
     </tr>
     <tr>
         <td id="lbempdob" class="auto-style27"></td>
@@ -173,9 +158,6 @@
             </td>
         <td class="auto-style28">
             </td>
-        <td class="auto-style28"></td>
-        <td class="auto-style28"></td>
-        <td class="auto-style28"></td>
     </tr>
     <tr>
         <td id="lbempaddress" class="auto-style20"></td>
@@ -186,9 +168,6 @@
         <td class="auto-style22">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter address" ForeColor="#CC0000" ControlToValidate="tbempaddress"></asp:RequiredFieldValidator>
         </td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
     </tr>
     <tr>
         <td id="lbempmobile" class="auto-style20"></td>
@@ -199,9 +178,6 @@
         <td class="auto-style22">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please enter mobile number" ForeColor="#CC0000" ControlToValidate="tbempmobile"></asp:RequiredFieldValidator>
         </td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
     </tr>
     <tr>
         <td id="lbempemail" class="auto-style20"></td>
@@ -214,9 +190,6 @@
             <br />
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbempemail" ErrorMessage="Enter a valid email id." ForeColor="#CC0000" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
         </td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
     </tr>
     <tr>
         <td id="lbempqual" class="auto-style20"></td>
@@ -227,9 +200,6 @@
         <td class="auto-style22">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Please enter qualification" ControlToValidate="tbempqual" ForeColor="#CC0000"></asp:RequiredFieldValidator>
         </td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
     </tr>
         <tr>
         <td id="lbempdoj" class="auto-style20"></td>
@@ -240,9 +210,6 @@
         <td class="auto-style22">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please enter date of join" ForeColor="#CC0000" ControlToValidate="tbempdoj"></asp:RequiredFieldValidator>
         </td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
     </tr>
     <tr>
         <td id="lbempphoto" class="auto-style20"></td>
@@ -253,21 +220,15 @@
         <td class="auto-style22">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please upload photo" ForeColor="#CC0000" ControlToValidate="FileUpload3"></asp:RequiredFieldValidator>
         </td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
     </tr>
     <tr>
         <td id="lbempusername" class="auto-style20"></td>
         <td id="lbempusername" class="auto-style35">Username</td>
         <td class="auto-style21">
-            <asp:Label ID="empid" runat="server"></asp:Label>
+            <asp:TextBox ID="empid" runat="server" ReadOnly="True" Width="158px"></asp:TextBox>
         </td>
         <td class="auto-style22">
             </td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
     </tr>
     <tr>
         <td id="lbemppassword" class="auto-style20"></td>
@@ -278,9 +239,6 @@
         <td class="auto-style22">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Please enter password" ForeColor="#CC0000" ControlToValidate="tbemppassword"></asp:RequiredFieldValidator>
         </td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
-        <td class="auto-style22"></td>
     </tr>
     
     <tr>
@@ -290,9 +248,6 @@
             &nbsp;</td>
         <td style="text-align: center;" class="auto-style2">
             &nbsp;</td>
-        <td class="auto-style3"></td>
-        <td class="auto-style3"></td>
-        <td class="auto-style3"></td>
         <td class="auto-style3"></td>
     </tr>
     <tr>
@@ -305,26 +260,17 @@
             <asp:Button ID="send2_btn" runat="server" Text="SEND" Width="59px" />
         </td>
         <td style="height: 20px"></td>
-        <td style="height: 20px"></td>
-        <td style="height: 20px"></td>
-        <td style="height: 20px"></td>
     </tr>
     <tr>
         <td class="auto-style8">&nbsp;</td>
         <td class="auto-style37">&nbsp;</td>
         <td class="auto-style2">&nbsp;</td>
         <td style="height: 20px">&nbsp;</td>
-        <td style="height: 20px">&nbsp;</td>
-        <td style="height: 20px">&nbsp;</td>
-        <td style="height: 20px">&nbsp;</td>
     </tr>
     <tr>
         <td class="auto-style10">&nbsp;</td>
         <td class="auto-style39"></td>
         <td class="auto-style31"></td>
-        <td style="height: 31px"></td>
-        <td style="height: 31px"></td>
-        <td style="height: 31px"></td>
         <td style="height: 31px"></td>
     </tr>
 </table>

@@ -73,10 +73,10 @@ C:\Users\sajana\source\repos\ertosystem\ertosystem\bin\Microsoft.CodeDom.Provide
 C:\Users\sajana\source\repos\ertosystem\ertosystem\obj\Debug\ertosystem.csproj.CopyComplete
 C:\Users\sajana\source\repos\ertosystem\ertosystem\obj\Debug\ertosystem.dll
 C:\Users\sajana\source\repos\ertosystem\ertosystem\obj\Debug\ertosystem.pdb
+E:\ertosystem\ertosystem\bin\roslyn\csc.exe
 E:\ertosystem\ertosystem\bin\ertosystem.dll.config
 E:\ertosystem\ertosystem\bin\ertosystem.dll
 E:\ertosystem\ertosystem\bin\ertosystem.pdb
-E:\ertosystem\ertosystem\bin\roslyn\csc.exe
 E:\ertosystem\ertosystem\bin\roslyn\csc.exe.config
 E:\ertosystem\ertosystem\bin\roslyn\csc.rsp
 E:\ertosystem\ertosystem\bin\roslyn\csi.exe
@@ -143,8 +143,8 @@ E:\ertosystem\ertosystem\bin\Microsoft.AspNet.FriendlyUrls.xml
 E:\ertosystem\ertosystem\bin\System.Diagnostics.DiagnosticSource.xml
 E:\ertosystem\ertosystem\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 E:\ertosystem\ertosystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\ertosystem\ertosystem\obj\Debug\ertosystem.csprojAssemblyReference.cache
 E:\ertosystem\ertosystem\obj\Debug\ertosystem.csproj.CoreCompileInputs.cache
 E:\ertosystem\ertosystem\obj\Debug\ertosystem.csproj.CopyComplete
 E:\ertosystem\ertosystem\obj\Debug\ertosystem.dll
 E:\ertosystem\ertosystem\obj\Debug\ertosystem.pdb
+E:\ertosystem\ertosystem\obj\Debug\ertosystem.csprojAssemblyReference.cache

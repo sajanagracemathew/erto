@@ -102,7 +102,7 @@
             <asp:Label ID="lbname" runat="server" Text="License Holder Name"></asp:Label>
         </td>
         <td class="auto-style19">
-            <asp:TextBox ID="TextBox1" runat="server" Width="130px"></asp:TextBox>
+            <asp:TextBox ID="tbname" runat="server" Width="130px" ReadOnly="True"></asp:TextBox>
         </td>
         <td class="auto-style20"></td>
     </tr>

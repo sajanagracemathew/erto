@@ -233,7 +233,7 @@
         <table class="auto-style81">
             <tr>
                 <td class="auto-style77"></td>
-                <td rowspan="8" style="border-style: none; border-color: #00D0F1; background-color: #3366CC" class="auto-style50">
+                <td rowspan="8" style="border-style: none; border-color: #00D0F1; background-color: #3333FF" class="auto-style50">
                     <div id="warpper">
                         <form id="form2" runat="server">
                             <fieldset>

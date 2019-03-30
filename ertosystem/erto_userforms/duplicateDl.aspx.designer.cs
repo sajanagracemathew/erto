@@ -10,87 +10,69 @@
 namespace ertosystem.erto_userforms {
     
     
-    public partial class drivinglicenseappln {
+    public partial class duplicateDl {
         
         /// <summary>
-        /// lblicense_no control.
+        /// labellicenseno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblicense_no;
+        protected global::System.Web.UI.WebControls.Label labellicenseno;
         
         /// <summary>
-        /// tblicense_no control.
+        /// textboxlicenseno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tblicense_no;
+        protected global::System.Web.UI.WebControls.TextBox textboxlicenseno;
         
         /// <summary>
-        /// lbname control.
+        /// labelname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbname;
+        protected global::System.Web.UI.WebControls.Label labelname;
         
         /// <summary>
-        /// tbname control.
+        /// textboxname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbname;
+        protected global::System.Web.UI.WebControls.TextBox textboxname;
         
         /// <summary>
-        /// lbcurrentdate control.
+        /// labeldob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbcurrentdate;
+        protected global::System.Web.UI.WebControls.Label labeldob;
         
         /// <summary>
-        /// tbcurrentdate control.
+        /// textboxdob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbcurrentdate;
+        protected global::System.Web.UI.WebControls.TextBox textboxdob;
         
         /// <summary>
-        /// lbexpiredate control.
+        /// dlduplicate_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbexpiredate;
-        
-        /// <summary>
-        /// tbexpiredate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbexpiredate;
-        
-        /// <summary>
-        /// renew_btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button renew_btn;
+        protected global::System.Web.UI.WebControls.Button dlduplicate_btn;
     }
 }

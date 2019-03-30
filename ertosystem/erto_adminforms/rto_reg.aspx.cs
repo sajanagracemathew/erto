@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ertosystem.Classes;
+using System.Data;
+using System.IO;
 
 namespace ertosystem.erto_adminforms
 {
@@ -40,17 +42,21 @@ namespace ertosystem.erto_adminforms
             robj.Remail = tbrtoemail.Text;
             robj.Rdoj = tbrtodoj.Text;
             robj.Rphoto = FileUpload2.FileName;
-           
             robj.Rusername = rtoid.Text;
             robj.Rpassword = tbrtopassword.Text;
+
+            String filename = Path.GetFileName(FileUpload2.PostedFile.FileName);
+            string ext = Path.GetExtension(filename);
+            if (ext.ToLower() == ".jpg" || ext.ToLower() == ".bmp" || ext.ToLower() == ".png" || ext.ToLower() == ".jpeg")
+            {
+                string src = Server.MapPath("~/Images") + "\\" + rtoid.Text + ".jpg";
+                FileUpload2.PostedFile.SaveAs(src);
+                string picpath = "~/Images/" + rtoid.Text + ".jpg";
+                robj.Rphoto = picpath;
+            }
             robj.InsertRto_Parameter();
             robj.InsertLogin();
 
-            if (FileUpload2.HasFile)
-            {
-                FileUpload2.SaveAs(Server.MapPath("~/Images/" + FileUpload2.FileName));
-                robj.Rphoto = FileUpload2.FileName + "";
-            }
             Response.Write("Registered Successfully");
 
             tbrtoname.Text = "";

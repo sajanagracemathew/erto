@@ -211,7 +211,7 @@
         <td id="lbrtousername" class="auto-style16"></td>
         <td id="lbrtousername" class="auto-style16">Username</td>
         <td id="rtoid" class="auto-style17">
-            <asp:Label ID="rtoid" runat="server"></asp:Label>
+            <asp:TextBox ID="rtoid" runat="server" ReadOnly="True" Width="158px"></asp:TextBox>
         </td>
         <td class="auto-style15">
             </td>

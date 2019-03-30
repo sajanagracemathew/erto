@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ertosystem.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Test.master.cs" Inherits="ertosystem.Test" %>
 
 <!DOCTYPE html>
 
@@ -13,6 +13,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <webopt:BundleReference runat="server" Path="~/Content/css" />
 </head>
@@ -31,17 +32,17 @@
             <div id="topbar">
                 <div id="topnav">
                     <ul>
-                        <li class="active"><a href="~/">Home</a></li>
-                        <li><a href="~/About">About Us</a></li>
-                        <li><a runat="server" href="~/erto_userforms/user_reg">UserRegistration</a></li>
-                        <li><a runat="server" href="~/Contact">Contact Us</a>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="pages/style-demo.html">Style Demo</a></li>
+                        <li><a href="pages/full-width.html">Full Width</a></li>
+                        <li><a href="#">DropDown</a>
                             <ul>
                                 <li><a href="#">Link 1</a></li>
                                 <li><a href="#">Link 2</a></li>
                                 <li><a href="#">Link 3</a></li>
                             </ul>
                         </li>
-                        <li class="last"><a href="~/erto_userforms/Login">Login</a></li>
+                        <li class="last"><a href="#">A Long Link Text</a></li>
                     </ul>
                 </div>
                 <br class="clear" />

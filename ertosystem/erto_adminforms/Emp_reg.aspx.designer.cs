@@ -199,7 +199,7 @@ namespace ertosystem.erto_adminforms {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label empid;
+        protected global::System.Web.UI.WebControls.TextBox empid;
         
         /// <summary>
         /// tbemppassword control.
