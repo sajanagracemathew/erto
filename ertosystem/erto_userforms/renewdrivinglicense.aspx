@@ -17,8 +17,8 @@
         width: 192px;
     }
     .auto-style5 {
-        width: 260px;
-    }
+            width: 222px;
+        }
     .auto-style6 {
         width: 176px;
     }
@@ -27,7 +27,7 @@
         height: 20px;
     }
     .auto-style9 {
-        width: 260px;
+        width: 222px;
         height: 20px;
     }
     .auto-style10 {
@@ -38,42 +38,28 @@
         height: 20px;
     }
     .auto-style12 {
-        width: 260px;
+        width: 222px;
         text-align: center;
     }
     .auto-style13 {
         width: 192px;
-        height: 31px;
+        height: 34px;
     }
     .auto-style14 {
-        width: 260px;
-        height: 31px;
+        width: 222px;
+        height: 34px;
     }
     .auto-style15 {
         width: 176px;
-        height: 31px;
+        height: 34px;
     }
     .auto-style16 {
-        height: 31px;
+        height: 34px;
     }
-    .auto-style17 {
-        width: 192px;
-        height: 30px;
-    }
-    .auto-style18 {
-        width: 260px;
-        height: 30px;
-    }
-    .auto-style19 {
-        width: 176px;
-        height: 30px;
-    }
-    .auto-style20 {
-        height: 30px;
-    }
-</style>
+    </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+
     <table class="nav-justified">
     <tr>
         <td class="auto-style3">&nbsp;</td>
@@ -83,7 +69,7 @@
     </tr>
     <tr>
         <td class="auto-style4"></td>
-        <td class="auto-style2" colspan="2"><strong>Renew Driving License</strong></td>
+        <td class="auto-style2" colspan="2"><strong style="color: #666666">Renew Driving License</strong></td>
         <td class="auto-style1"></td>
     </tr>
     <tr>
@@ -92,39 +78,39 @@
             <asp:Label ID="lblicense_no" runat="server" Text="License No"></asp:Label>
         </td>
         <td class="auto-style15">
-            <asp:TextBox ID="tblicense_no" runat="server" Width="130px"></asp:TextBox>
+            <asp:TextBox ID="tblicense_no" runat="server" Width="150px"></asp:TextBox>
         </td>
         <td class="auto-style16"></td>
     </tr>
     <tr>
-        <td class="auto-style17"></td>
-        <td class="auto-style18">
+        <td class="auto-style13"></td>
+        <td class="auto-style14">
             <asp:Label ID="lbname" runat="server" Text="License Holder Name"></asp:Label>
         </td>
-        <td class="auto-style19">
-            <asp:TextBox ID="tbname" runat="server" Width="130px" ReadOnly="True"></asp:TextBox>
+        <td class="auto-style15">
+            <asp:TextBox ID="tbname" runat="server" Width="150px" ReadOnly="True"></asp:TextBox>
         </td>
-        <td class="auto-style20"></td>
+        <td class="auto-style16"></td>
     </tr>
     <tr>
-        <td class="auto-style17"></td>
-        <td class="auto-style18">
+        <td class="auto-style13"></td>
+        <td class="auto-style14">
             <asp:Label ID="lbcurrentdate" runat="server" Text="Current Date"></asp:Label>
         </td>
-        <td class="auto-style19">
-            <asp:TextBox ID="tbcurrentdate" runat="server" Width="130px"></asp:TextBox>
+        <td class="auto-style15">
+            <asp:TextBox ID="tbcurrentdate" runat="server" Width="150px"></asp:TextBox>
         </td>
-        <td class="auto-style20"></td>
+        <td class="auto-style16"></td>
     </tr>
     <tr>
-        <td class="auto-style17"></td>
-        <td class="auto-style18">
+        <td class="auto-style13"></td>
+        <td class="auto-style14">
             <asp:Label ID="lbexpiredate" runat="server" Text="Expire Date"></asp:Label>
         </td>
-        <td class="auto-style19">
-            <asp:TextBox ID="tbexpiredate" runat="server" Width="130px"></asp:TextBox>
+        <td class="auto-style15">
+            <asp:TextBox ID="tbexpiredate" runat="server" Width="150px"></asp:TextBox>
         </td>
-        <td class="auto-style20"></td>
+        <td class="auto-style16"></td>
     </tr>
     <tr>
         <td class="auto-style3">&nbsp;</td>
@@ -141,7 +127,7 @@
     <tr>
         <td class="auto-style3">&nbsp;</td>
         <td class="auto-style12">
-            <asp:Button ID="renew_btn" runat="server" Height="28px" Text="Renew License" OnClick="renew_btn_Click" />
+            <asp:Button ID="renew_btn" runat="server" Height="28px" Text="Renew License" OnClick="renew_btn_Click" ForeColor="#666666" />
         </td>
         <td class="auto-style6">&nbsp;</td>
         <td>&nbsp;</td>
@@ -190,5 +176,4 @@
     </tr>
 </table>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-</asp:Content>
+

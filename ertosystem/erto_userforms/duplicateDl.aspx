@@ -8,15 +8,17 @@
             text-align: center;
             height: 26px;
         }
+        .auto-style3 {
+            text-align: center;
+            font-size: medium;
+        }
     </style>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <p class="auto-style1">
         &nbsp;</p>
-    <p class="auto-style1">
-        <strong>Issue of Duplicate Driving License</strong></p>
+    <p class="auto-style3">
+        <strong style="color: #333333">Issue of Duplicate Driving License</strong></p>
     <p class="auto-style2">
         <br />
     </p>
@@ -40,7 +42,7 @@
     <p class="auto-style1">
         &nbsp;</p>
     <p class="auto-style1">
-        <asp:Button ID="dlduplicate_btn" runat="server" OnClick="Button1_Click" Text="Apply Duplicate" Width="132px" />
+        <asp:Button ID="dlduplicate_btn" runat="server" OnClick="Button1_Click" Text="Apply Duplicate" Width="132px" ForeColor="#666666" />
     </p>
     <p class="auto-style1">
         &nbsp;</p>

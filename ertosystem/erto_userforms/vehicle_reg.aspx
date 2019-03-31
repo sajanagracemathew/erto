@@ -6,11 +6,11 @@
         }
         .auto-style2 {
             text-align: center;
-            width: 139px;
+            width: 241px;
             height: 29px;
         }
         .auto-style3 {
-            width: 139px;
+            width: 241px;
         }
         .auto-style4 {
             text-align: center;
@@ -18,100 +18,99 @@
             font-size: large;
         }
         .auto-style6 {
-            width: 139px;
+            width: 241px;
             height: 23px;
         }
         .auto-style8 {
             height: 23px;
         }
         .auto-style11 {
-            width: 172px;
+            width: 197px;
         }
         .auto-style13 {
-            width: 172px;
+            width: 197px;
             text-align: center;
         }
         .auto-style14 {
             height: 29px;
         }
         .auto-style15 {
-            width: 172px;
+            width: 197px;
             height: 23px;
             text-align: center;
         }
         .auto-style22 {
-            width: 150px;
+            width: 165px;
         }
         .auto-style24 {
-            width: 150px;
+            width: 165px;
             height: 23px;
         }
         .auto-style25 {
-            width: 139px;
+            width: 241px;
             height: 27px;
         }
         .auto-style26 {
-            width: 172px;
+            width: 197px;
             height: 27px;
         }
         .auto-style27 {
-            width: 150px;
+            width: 165px;
             height: 27px;
         }
         .auto-style28 {
             height: 27px;
         }
         .auto-style29 {
-            width: 139px;
+            width: 241px;
             height: 18px;
         }
         .auto-style30 {
-            width: 172px;
+            width: 197px;
             height: 18px;
         }
         .auto-style31 {
-            width: 150px;
+            width: 165px;
             height: 18px;
         }
         .auto-style32 {
             height: 18px;
         }
         .auto-style33 {
-            width: 139px;
+            width: 241px;
             height: 28px;
         }
         .auto-style34 {
-            width: 172px;
+            width: 197px;
             height: 28px;
         }
         .auto-style35 {
-            width: 150px;
+            width: 165px;
             height: 28px;
         }
         .auto-style36 {
             height: 28px;
         }
         .auto-style37 {
-            width: 139px;
+            width: 241px;
             height: 29px;
         }
         .auto-style38 {
-            width: 172px;
+            width: 197px;
             height: 29px;
         }
         .auto-style39 {
-            width: 150px;
+            width: 165px;
             height: 29px;
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-</asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <table class="auto-style1">
                 <tr>
                     <td class="auto-style2"></td>
-                    <td class="auto-style4" colspan="2"><strong>Vehicle Registration</strong></td>
+                    <td class="auto-style4" colspan="2"><strong style="color: #666666">Vehicle Registration</strong></td>
                     <td class="auto-style14"></td>
                 </tr>
                 <tr>
@@ -130,7 +129,7 @@
                         <asp:Label ID="lbregname" runat="server" Text="Name(Name of the vehicle owner)"></asp:Label>
                     </td>
                     <td class="auto-style31">
-                        <asp:TextBox ID="lbveh_owner1" runat="server" ReadOnly="true" Width="147px"></asp:TextBox>
+                        <asp:TextBox ID="lbveh_owner1" runat="server" ReadOnly="true" Width="155px"></asp:TextBox>
                     </td>
                     <td class="auto-style32"></td>
                 </tr>
@@ -140,7 +139,7 @@
                         <asp:Label ID="lbregsod" runat="server" Text="Son/Wife/Daughter of"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="tbregswd" runat="server" Width="148px"></asp:TextBox>
+                        <asp:TextBox ID="tbregswd" runat="server" Width="155px"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -150,7 +149,7 @@
                         <asp:Label ID="lbregdob" runat="server" Text="DOB"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="lbownerdob1" runat="server" ReadOnly="True" Width="147px"></asp:TextBox>
+                        <asp:TextBox ID="lbownerdob1" runat="server" ReadOnly="True" Width="155px"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -160,7 +159,7 @@
                         <asp:Label ID="lbregaddress" runat="server" Text="Address"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="lbowneraddress1" runat="server" ReadOnly="True" Width="147px"></asp:TextBox>
+                        <asp:TextBox ID="lbowneraddress1" runat="server" ReadOnly="True" Width="155px"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -170,7 +169,7 @@
                         <asp:Label ID="lbaddressproof" runat="server" Text="Address proof"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:FileUpload ID="FileUpload3" runat="server" Width="148px" />
+                        <asp:FileUpload ID="FileUpload3" runat="server" Width="155px" />
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -180,7 +179,7 @@
                         <asp:Label ID="lbvehtype" runat="server" Text="Vehicle Type"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:DropDownList ID="dpvehtype" runat="server" Width="148px">
+                        <asp:DropDownList ID="dpvehtype" runat="server" Width="155px">
                             <asp:ListItem>2 wheeler</asp:ListItem>
                             <asp:ListItem>3 wheeler</asp:ListItem>
                             <asp:ListItem>4 wheeler</asp:ListItem>
@@ -194,7 +193,7 @@
                         <asp:Label ID="lbvehcompany" runat="server" Text="Vehicle Company"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="tbvehcompany" runat="server" Width="148px"></asp:TextBox>
+                        <asp:TextBox ID="tbvehcompany" runat="server" Width="155px"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -204,7 +203,7 @@
                         <asp:Label ID="lbvehmodel" runat="server" Text="Vehicle Model"></asp:Label>
                     </td>
                     <td class="auto-style39">
-                        <asp:TextBox ID="tbvehmodel" runat="server" Width="148px"></asp:TextBox>
+                        <asp:TextBox ID="tbvehmodel" runat="server" Width="155px"></asp:TextBox>
                     </td>
                     <td class="auto-style14"></td>
                 </tr>
@@ -214,7 +213,7 @@
                         <asp:Label ID="lbvehmanuf" runat="server" Text="Vehicle Manufacture Year"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="tbvehmanuf" runat="server" Width="148px"></asp:TextBox>
+                        <asp:TextBox ID="tbvehmanuf" runat="server" Width="155px"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -224,7 +223,7 @@
                         <asp:Label ID="lbareaname" runat="server" Text="Area name"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="tbareaname" runat="server" Width="148px"></asp:TextBox>
+                        <asp:TextBox ID="tbareaname" runat="server" Width="155px"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -234,7 +233,7 @@
                         <asp:Label ID="lbchassis" runat="server" Text="Chassis Number"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="tbchassis" runat="server" Width="148px"></asp:TextBox>
+                        <asp:TextBox ID="tbchassis" runat="server" Width="155px"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -244,7 +243,7 @@
                         <asp:Label ID="lbfitness" runat="server" Text="Fitness Certificate"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:FileUpload ID="FileUpload2" runat="server" Width="148px" />
+                        <asp:FileUpload ID="FileUpload2" runat="server" Width="155px" />
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -254,7 +253,7 @@
                         <asp:Label ID="lbregdate" runat="server" Text="Registration Date"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="tbregdate" runat="server" Width="142px"></asp:TextBox>
+                        <asp:TextBox ID="tbregdate" runat="server" Width="155px"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -267,7 +266,7 @@
                 <tr>
                     <td class="auto-style6"></td>
                     <td class="auto-style15"><strong>
-                        <asp:Button ID="register_btn" runat="server" Text="Register" Width="73px" OnClick="register_btn_Click" />
+                        <asp:Button ID="register_btn" runat="server" Text="Register" Width="73px" OnClick="register_btn_Click" ForeColor="#666666" />
                         </strong></td>
                     <td class="auto-style24"></td>
                     <td class="auto-style8"></td>

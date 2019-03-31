@@ -125,6 +125,7 @@
     <Content Include="erto_userforms\duplicateDl.aspx" />
     <Content Include="erto_userforms\renewdrivinglicense.aspx" />
     <Content Include="erto_userforms\login.aspx" />
+    <Content Include="erto_userforms\sample2master.aspx" />
     <Content Include="erto_userforms\userhome.aspx" />
     <Content Include="erto_userforms\user_reg.aspx" />
     <Content Include="erto_userforms\vehicle_reg.aspx" />
@@ -267,6 +268,13 @@
     <Compile Include="erto_userforms\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="erto_userforms\sample2master.aspx.cs">
+      <DependentUpon>sample2master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\sample2master.aspx.designer.cs">
+      <DependentUpon>sample2master.aspx</DependentUpon>
+    </Compile>
     <Compile Include="erto_userforms\Site2.Master.cs">
       <DependentUpon>Site2.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -339,7 +347,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="erto_empforms\" />
     <Folder Include="erto_officerforms\" />
-    <Folder Include="Fileuploads\" />
+    <Folder Include="Fileuploads\Address_proof\" />
+    <Folder Include="Fileuploads\Fitness_certificates\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>

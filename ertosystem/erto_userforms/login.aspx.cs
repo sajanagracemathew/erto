@@ -50,8 +50,9 @@ namespace ertosystem.erto_userforms
                 {
                     Session["user"] = tbloginusername.Text;
                     Label1.Text = "Login Success...!";
-                    Response.Redirect("~/erto_userforms/vehicle_reg.aspx?Value=" + tbloginusername.Text);
+                    //Response.Redirect("~/erto_userforms/vehicle_reg.aspx?Value=" + tbloginusername.Text);
                     //Response.Redirect("~/erto_userforms/renewdrivinglicense.aspx");
+                    Response.Redirect("~/erto_userforms/userhome.aspx");
                 }
 
             }

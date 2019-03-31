@@ -21,27 +21,22 @@
         <div class="wrapper col1">
             <div id="header">
                 <div id="logo">
-                    <h1><a href="#">BusinessToday</a></h1>
-                    <p><strong>Free Website Template</strong></p>
+                    <h1><a href="#">E-RTO</a></h1>
+                    <p><strong>Online solutions</strong></p>
                 </div>
                 <br class="clear" />
             </div>
         </div>
+
         <div class="wrapper col2">
             <div id="topbar">
                 <div id="topnav">
                     <ul>
-                        <li class="active"><a href="~/">Home</a></li>
-                        <li><a href="~/About">About Us</a></li>
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About Us</a></li>
                         <li><a runat="server" href="~/erto_userforms/user_reg">UserRegistration</a></li>
-                        <li><a runat="server" href="~/Contact">Contact Us</a>
-                            <ul>
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="last"><a href="~/erto_userforms/Login">Login</a></li>
+                        <li><a runat="server" href="~/Contact">Contact Us</a></li>
+                        <li><a runat="server" href="~/erto_userforms/Login">Login</a></li>
                     </ul>
                 </div>
                 <br class="clear" />
