@@ -125,7 +125,7 @@
     <Content Include="erto_userforms\duplicateDl.aspx" />
     <Content Include="erto_userforms\renewdrivinglicense.aspx" />
     <Content Include="erto_userforms\login.aspx" />
-    <Content Include="erto_userforms\sample2master.aspx" />
+    <Content Include="erto_userforms\transfer.aspx" />
     <Content Include="erto_userforms\userhome.aspx" />
     <Content Include="erto_userforms\user_reg.aspx" />
     <Content Include="erto_userforms\vehicle_reg.aspx" />
@@ -199,11 +199,14 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classes\DuplicateDlicense.cs" />
     <Compile Include="Classes\EmpRegistration.cs" />
     <Compile Include="Classes\Logins.cs" />
     <Compile Include="Classes\RenewDl.cs" />
     <Compile Include="Classes\RtoRegistration.cs" />
+    <Compile Include="Classes\TransferOwnership.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\UserHome.cs" />
     <Compile Include="Classes\VehicleRegistration.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -268,19 +271,19 @@
     <Compile Include="erto_userforms\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="erto_userforms\sample2master.aspx.cs">
-      <DependentUpon>sample2master.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="erto_userforms\sample2master.aspx.designer.cs">
-      <DependentUpon>sample2master.aspx</DependentUpon>
-    </Compile>
     <Compile Include="erto_userforms\Site2.Master.cs">
       <DependentUpon>Site2.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="erto_userforms\Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\transfer.aspx.cs">
+      <DependentUpon>transfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\transfer.aspx.designer.cs">
+      <DependentUpon>transfer.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\userhome.aspx.cs">
       <DependentUpon>userhome.aspx</DependentUpon>
@@ -349,6 +352,8 @@
     <Folder Include="erto_officerforms\" />
     <Folder Include="Fileuploads\Address_proof\" />
     <Folder Include="Fileuploads\Fitness_certificates\" />
+    <Folder Include="Fileuploads\Insurance_certificates\" />
+    <Folder Include="Fileuploads\Noc_certificates\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>

@@ -36,7 +36,10 @@
                         <li><a runat="server" href="~/">Registration&Services</a>
                             <ul>
                                 <li><a runat="server" href="~/erto_userforms/vehicle_reg">Vehicle Registration</a></li>
-                                <li><a runat="server" href="~/erto_userforms/duplicateDl">Driving Licence Application</a></li>
+                                <li><a runat="server" href="~/erto_userforms/vehicle_reg">Issue of Learner's License</a></li>
+                                <li><a runat="server" href="~/erto_userforms/">Issue of Driving License</a></li>
+                                <li><a runat="server" href="~/erto_userforms/renewdrivinglicense">Renewal of Driving License</a></li>
+                                <li><a runat="server" href="~/erto_userforms/duplicateDl">Issue of Duplicate Driving License</a></li>
                             </ul>
                         </li>
                         <li><a runat="server" href="~/Contact">Fee/Tax/Fine</a>
@@ -45,7 +48,7 @@
                                 <li><a runat="server" href="#">Tax</a></li>
                                 <li><a runat="server" href="#">Fine</a></li>
                             </ul>
-                            <li><a runat="server" href="~/Contact">Transfer&NOC</a></li>
+                            <li><a runat="server" href="~/erto_userforms/transfer">Transfer&NOC</a></li>
                         <li><a runat="server" href="~/Contact">Complaints</a></li>
                         <li><a runat="server" href="~/Default.aspx">Logout</a></li>
                     </ul>

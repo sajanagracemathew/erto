@@ -26,6 +26,7 @@ namespace ertosystem.Classes
             SqlCommand cmd = new SqlCommand(Query_, con);
             cmd.ExecuteNonQuery();
         }
+        private string oid;
         private string oveh_id;
         private string unameT;
         private string oswd;
@@ -55,6 +56,8 @@ namespace ertosystem.Classes
         public string Ofitnesscer { get => ofitnesscer; set => ofitnesscer = value; }
         public string UnameT { get => unameT; set => unameT = value; }
         public string Oregdate { get => oregdate; set => oregdate = value; }
+        public string Oid { get => oid; set => oid = value; }
+
 
         //public DateTime Oregdate { get => oregdate; set => oregdate = value; }
 
@@ -81,21 +84,17 @@ namespace ertosystem.Classes
             cmd.Parameters.AddWithValue("@reg_date", oregdate);
             cmd.ExecuteNonQuery();
         }
-        public DataTable ExecuteSelectQueries()
+        public DataTable ExecuteSelect()
         {
             OpenConection();
 
-            DataTable dispname = new DataTable();
-            string str = "select * from userregistration_table where username= @uname;";
-            SqlCommand command = new SqlCommand(str, con);
-            command.Parameters.AddWithValue("@uname", unameT);
-
-            SqlDataAdapter da = new SqlDataAdapter(command);
-            da.Fill(dispname);
+            DataTable dt1 = new DataTable();
+            SqlCommand cmd1 = new SqlCommand("select name,dob,address from userregistration_table where username=@usrname", con);
+            cmd1.Parameters.AddWithValue("@usrname", oid);
+            SqlDataAdapter da = new SqlDataAdapter(cmd1);// this will query your database and return the result to your datatable
+            da.Fill(dt1);
             CloseConnection();
-            return dispname;
-           
-
+            return dt1;
         }
         public void GenerateAutoID()
         {

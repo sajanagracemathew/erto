@@ -159,7 +159,7 @@
                         <asp:Label ID="lbregaddress" runat="server" Text="Address"></asp:Label>
                     </td>
                     <td class="auto-style35">
-                        <asp:TextBox ID="lbowneraddress1" runat="server" ReadOnly="True" Width="155px"></asp:TextBox>
+                        <asp:TextBox ID="lbowneraddress1" runat="server" ReadOnly="True" Width="155px" Height="49px" TextMode="MultiLine"></asp:TextBox>
                     </td>
                     <td class="auto-style36"></td>
                 </tr>
@@ -277,29 +277,5 @@
                     <td class="auto-style22">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
-                <tr>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                    <td class="auto-style22">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                    <td class="auto-style22">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                    <td class="auto-style22">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                    <td class="auto-style22">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>  
+                </table>  
 </asp:Content>

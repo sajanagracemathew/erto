@@ -40,13 +40,49 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.Label lbname;
         
         /// <summary>
-        /// tbname control.
+        /// tblname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbname;
+        protected global::System.Web.UI.WebControls.TextBox tblname;
+        
+        /// <summary>
+        /// lbdob control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbdob;
+        
+        /// <summary>
+        /// tbldob control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbldob;
+        
+        /// <summary>
+        /// lbaddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbaddress;
+        
+        /// <summary>
+        /// tbladdress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbladdress;
         
         /// <summary>
         /// lbcurrentdate control.

@@ -67,6 +67,42 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.TextBox textboxdob;
         
         /// <summary>
+        /// labeladdress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labeladdress;
+        
+        /// <summary>
+        /// textboxaddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textboxaddress;
+        
+        /// <summary>
+        /// labeldate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labeldate;
+        
+        /// <summary>
+        /// textboxdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textboxdate;
+        
+        /// <summary>
         /// dlduplicate_btn control.
         /// </summary>
         /// <remarks>

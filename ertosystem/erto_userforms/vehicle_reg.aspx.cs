@@ -24,23 +24,24 @@ namespace ertosystem.erto_userforms
                 obj.GenerateAutoID();
                 veh_id1.Text = obj.Oveh_id;
             }
-            usrname = Request.QueryString["value"];
-            UserDet();
-        }
-        public void UserDet()
-        {
-            obj.UnameT = usrname;
-            DataTable dispname = new DataTable();
-            dispname = obj.ExecuteSelectQueries();
-            if (dispname.Rows.Count > 0)
+            obj.Oid = Session["user"].ToString();
+            obj.UnameT = lbveh_owner1.Text;
+            obj.Odob = lbownerdob1.Text;
+            obj.Oaddress = lbowneraddress1.Text;
+            obj.ExecuteSelect();
+
+            DataTable dt1 = new DataTable();
+            dt1 = obj.ExecuteSelect();
+            if (dt1.Rows.Count > 0)
             {
-                lbveh_owner1.Text = dispname.Rows[0]["name"].ToString();
-                lbownerdob1.Text = dispname.Rows[0]["dob"].ToString();
-                lbowneraddress1.Text = dispname.Rows[0]["address"].ToString();
+                lbveh_owner1.Text = dt1.Rows[0]["name"].ToString();
+                lbownerdob1.Text = dt1.Rows[0]["dob"].ToString();
+                lbowneraddress1.Text = dt1.Rows[0]["address"].ToString();
 
             }
 
         }
+        
 
         protected void register_btn_Click(object sender, EventArgs e)
         {
@@ -79,7 +80,7 @@ namespace ertosystem.erto_userforms
             }
             obj.InsertVehiclereg_Parameter();
            
-            Response.Write("Please pay the registration fees(online/manually)");
+            Response.Write("<script>alert('Registered Successfully...Please Pay the Registration Fees(online/manually)')</script>");
 
             lbveh_id.Text = "";
             lbveh_owner1.Text = "";

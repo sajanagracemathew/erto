@@ -48,6 +48,7 @@ namespace ertosystem.erto_userforms
                 uobj.Username = tbusername.Text;
                 uobj.Password = tbpassword.Text;
                 uobj.Con_password = tbconfirm.Text;
+                
 
                 String filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
                 string ext = Path.GetExtension(filename);
@@ -61,9 +62,7 @@ namespace ertosystem.erto_userforms
                 uobj.InsertUser();
                 uobj.InsertLogin2();
                 
-
                 Response.Write("Registered successfully");
-
 
             }
 

@@ -57,7 +57,7 @@
         <td id="lbaddress" style="width: 201px; height: 29px;"></td>
         <td id="lbaddress" style="width: 185px; height: 29px;">Address</td>
         <td style="width: 191px; height: 29px;">
-            <asp:TextBox ID="tbaddress" runat="server" Width="170px" ForeColor="Black"></asp:TextBox>
+            <asp:TextBox ID="tbaddress" runat="server" Width="170px" ForeColor="Black" Height="51px" TextMode="MultiLine"></asp:TextBox>
         </td>
         <td style="height: 29px">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter address" ForeColor="#CC0000" ControlToValidate="tbaddress"></asp:RequiredFieldValidator>
@@ -147,15 +147,21 @@
         <td style="width: 201px; height: 20px">&nbsp;</td>
         <td style="width: 185px; height: 20px">&nbsp;</td>
         <td style="height: 20px; width: 191px">
-            <asp:Button ID="submit_btn" runat="server" Text="SUBMIT" Width="67px" OnClick="submit_btn_Click" ForeColor="#666666" />
+            <asp:Button ID="submit_btn" runat="server" Text="SUBMIT" Width="77px" OnClick="submit_btn_Click" ForeColor="#666666" />
         </td>
         <td style="height: 20px">&nbsp;</td>
     </tr>
     <tr>
         <td style="width: 201px; height: 20px">&nbsp;</td>
-        <td style="width: 185px; height: 20px"></td>
+        <td style="width: 185px; height: 20px">&nbsp;</td>
         <td style="width: 191px; height: 20px"></td>
         <td style="height: 20px"></td>
+    </tr>
+    <tr>
+        <td style="width: 201px; height: 20px">&nbsp;</td>
+        <td style="width: 185px; height: 20px">&nbsp;</td>
+        <td style="width: 191px; height: 20px">&nbsp;</td>
+        <td style="height: 20px">&nbsp;</td>
     </tr>
     </table>
 </asp:Content>

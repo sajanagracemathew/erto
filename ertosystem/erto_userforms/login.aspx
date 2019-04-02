@@ -27,7 +27,7 @@
             width: 207px;
         }
         .auto-style50 {
-            width: 632px;
+            width: 649px;
         }
         .auto-style52 {
             height: 40px;
@@ -225,6 +225,13 @@
         .auto-style82 {
             text-align: left;
         }
+        .auto-style83 {
+            width: 370px;
+            height: 245px;
+        }
+        .auto-style84 {
+            width: 422px;
+        }
         </style>
 </head>
 <body style="height: 633px">
@@ -233,16 +240,16 @@
         <table class="auto-style81">
             <tr>
                 <td class="auto-style77"></td>
-                <td rowspan="8" style="border-style: none; border-color: #00D0F1; background-color: #3366CC" class="auto-style50">
+                <td rowspan="8" style="border-style: none; border-color: #00D0F1; background-color: #999999" class="auto-style50">
                     <div id="warpper">
-                        <form id="form2" runat="server">
-                            <fieldset>
+                        <form id="form2" runat="server" class="auto-style84">
+                            <fieldset class="auto-style83">
                     <legend><div><strong>LogIn</strong></div></legend>
                     <div><asp:Label ID="lbloginusername" runat="server" Text="Username"></asp:Label>
-                        <asp:TextBox ID="tbloginusername" runat="server" Height="16px"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbloginusername" ErrorMessage="*" ForeColor="#CC0000"></asp:RequiredFieldValidator></div>
+                        <asp:TextBox ID="tbloginusername" runat="server" Height="16px" Width="264px"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbloginusername" ErrorMessage="*" ForeColor="#CC0000"></asp:RequiredFieldValidator></div>
                     
                    <div><asp:Label ID="lbloginpassword" runat="server" Text="Password"></asp:Label>
-                    <asp:TextBox ID="tbloginpassword" runat="server" TextMode="Password" Height="16px"></asp:TextBox>
+                    <asp:TextBox ID="tbloginpassword" runat="server" TextMode="Password" Height="16px" Width="263px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbloginpassword" ErrorMessage="*" ForeColor="#CC0000"></asp:RequiredFieldValidator></div> 
                     <div class="auto-style82"> 
                                 <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#CC0000">Forgot Password?</asp:HyperLink>

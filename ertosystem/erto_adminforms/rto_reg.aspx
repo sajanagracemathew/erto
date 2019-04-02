@@ -148,7 +148,7 @@
         <td id="lbrtoaddress" class="auto-style16"></td>
         <td id="lbrtoaddress" class="auto-style20">Address</td>
         <td class="auto-style17">
-            <asp:TextBox ID="tbrtoaddress" runat="server" Width="165px"></asp:TextBox>
+            <asp:TextBox ID="tbrtoaddress" runat="server" Width="165px" Height="46px" TextMode="MultiLine"></asp:TextBox>
         </td>
         <td class="auto-style15">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter address" ForeColor="#CC0000" ControlToValidate="tbrtoaddress"></asp:RequiredFieldValidator>
