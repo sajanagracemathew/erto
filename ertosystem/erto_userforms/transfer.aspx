@@ -49,7 +49,7 @@
                 <asp:Label ID="lbvehid" runat="server" Text="Vehicle_ID"></asp:Label>
             </td>
             <td class="auto-style1">
-                <asp:TextBox ID="tbvehid" runat="server" OnTextChanged="tbvehid_TextChanged" Width="165px"></asp:TextBox>
+                <asp:TextBox ID="tbvehid" runat="server"  Width="165px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -59,7 +59,7 @@
                 <asp:Label ID="lbvehno" runat="server" Text="Vehicle Number"></asp:Label>
             </td>
             <td class="auto-style1">
-                <asp:TextBox ID="tbvehno" runat="server" OnTextChanged="tbvehno_TextChanged" Width="165px"></asp:TextBox>
+                <asp:TextBox ID="tbvehno" runat="server"  Width="165px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>

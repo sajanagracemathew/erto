@@ -15,6 +15,7 @@ namespace ertosystem.erto_userforms
         protected void Page_Load(object sender, EventArgs e)
         {
             obj.Hid = Session["user"].ToString();
+            obj.Userid = lbuserid1.Text;
             obj.Hname = lbname1.Text;
             obj.Hdob = lbdob1.Text;
             obj.Haddress = lbaddress2.Text;
@@ -25,10 +26,11 @@ namespace ertosystem.erto_userforms
             dt1 = obj.ExecuteSelect();
             if (dt1.Rows.Count > 0)
             {
-                lbname1.Text = Convert.ToString(dt1.Rows[0][0]);
-                lbdob1.Text = Convert.ToString(dt1.Rows[0][1]);
-                lbaddress2.Text = Convert.ToString(dt1.Rows[0][2]);
-                lbmob2.Text = Convert.ToString(dt1.Rows[0][3]);
+                lbuserid1.Text= Convert.ToString(dt1.Rows[0][0]);
+                lbname1.Text = Convert.ToString(dt1.Rows[0][1]);
+                lbdob1.Text = Convert.ToString(dt1.Rows[0][2]);
+                lbaddress2.Text = Convert.ToString(dt1.Rows[0][3]);
+                lbmob2.Text = Convert.ToString(dt1.Rows[0][4]);
 
             }
         }

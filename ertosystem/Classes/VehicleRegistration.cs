@@ -28,6 +28,8 @@ namespace ertosystem.Classes
         }
         private string oid;
         private string oveh_id;
+        private string user_id;
+        private string d_district;
         private string unameT;
         private string oswd;
         private string odob;
@@ -57,6 +59,9 @@ namespace ertosystem.Classes
         public string UnameT { get => unameT; set => unameT = value; }
         public string Oregdate { get => oregdate; set => oregdate = value; }
         public string Oid { get => oid; set => oid = value; }
+        //public int User_id { get => User_id1; set => User_id1 = value; }
+        public string User_id1 { get => user_id; set => user_id = value; }
+        public string D_district { get => d_district; set => d_district = value; }
 
 
         //public DateTime Oregdate { get => oregdate; set => oregdate = value; }
@@ -66,9 +71,11 @@ namespace ertosystem.Classes
             OpenConection();
             oregdate = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(oregdate);
-            string qry = "insert into vehicleregistration_table values(@veh_id,@name,@swd,@dob,@address,@address_proof,@veh_type,@veh_company,@veh_model,@veh_manuf,@areaname,@chassis_num,@fitness_cer,@reg_date);";
+            string qry = "insert into vehicleregistration_table values(@veh_id,@usr_id,@d_dist,@name,@swd,@dob,@address,@address_proof,@veh_type,@veh_company,@veh_model,@veh_manuf,@areaname,@chassis_num,@fitness_cer,@reg_date);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@veh_id", oveh_id);
+            cmd.Parameters.AddWithValue("@usr_id", User_id1);
+            cmd.Parameters.AddWithValue("@d_dist", d_district);
             cmd.Parameters.AddWithValue("@name", unameT);
             cmd.Parameters.AddWithValue("@swd", oswd);
             cmd.Parameters.AddWithValue("@dob", odob);
@@ -89,12 +96,27 @@ namespace ertosystem.Classes
             OpenConection();
 
             DataTable dt1 = new DataTable();
-            SqlCommand cmd1 = new SqlCommand("select name,dob,address from userregistration_table where username=@usrname", con);
+            SqlCommand cmd1 = new SqlCommand("select user_id,name,dob,address from userregistration_table where username=@usrname", con);
             cmd1.Parameters.AddWithValue("@usrname", oid);
             SqlDataAdapter da = new SqlDataAdapter(cmd1);// this will query your database and return the result to your datatable
             da.Fill(dt1);
             CloseConnection();
             return dt1;
+        }
+        public DataTable ExecuteSelectQueries()
+        {
+            OpenConection();
+
+            DataTable dispdistrict = new DataTable();
+            SqlCommand command = new SqlCommand("select * from districtcode_table where district_id='" + d_district + "' ", con);
+
+            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
+
+            da.Fill(dispdistrict);
+            CloseConnection();
+            return dispdistrict;
+
+
         }
         public void GenerateAutoID()
         {

@@ -47,7 +47,6 @@ namespace ertosystem.erto_userforms
                 //uobj.Photo = FileUpload1.FileName;
                 uobj.Username = tbusername.Text;
                 uobj.Password = tbpassword.Text;
-                uobj.Con_password = tbconfirm.Text;
                 
 
                 String filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
@@ -64,6 +63,14 @@ namespace ertosystem.erto_userforms
                 
                 Response.Write("Registered successfully");
 
+                tbname.Text = "";
+                tbdob.Text = "";
+                tbaddress.Text = "";
+                tbcity.Text = "";
+                tbmobile.Text = "";
+                tbemail.Text = "";
+                tbusername.Text = "";
+                tbpassword.Text = "";
             }
 
         }

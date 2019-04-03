@@ -27,6 +27,7 @@ namespace ertosystem.Classes
             cmd.ExecuteNonQuery();
         }
         private string trans_id;
+        //private string vid;
         private string ownername;
         private string veh_id;
         private string veh_number;
@@ -49,6 +50,7 @@ namespace ertosystem.Classes
         public string Noc { get => noc; set => noc = value; }
         public string Date { get => date; set => date = value; }
         public string Trans_id { get => trans_id; set => trans_id = value; }
+        //public string Vid { get => vid; set => vid = value; }
 
         public void InsertTransfer_Parameter()
         {
@@ -80,6 +82,19 @@ namespace ertosystem.Classes
             da.Fill(dt1);
             CloseConnection();
             return dt1;
+        }
+        public DataTable ExecuteSelectQueries()
+        {
+            OpenConection();
+
+            DataTable dt2 = new DataTable();
+            SqlCommand cmd2 = new SqlCommand("select vehicleregistration_table.Veh_Id from vehicleregistration_table "+
+                                            " LEFT OUTER JOIN transfer_table ON vehicleregistration_table.Veh_Id=transfer_table.Veh_Id", con);
+            cmd2.Parameters.AddWithValue("@v_id", veh_id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);// this will query your database and return the result to your datatable
+            da.Fill(dt2);
+            CloseConnection();
+            return dt2;
         }
     }
 }

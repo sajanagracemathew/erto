@@ -13,6 +13,24 @@ namespace ertosystem.erto_userforms {
     public partial class userhome {
         
         /// <summary>
+        /// lbuserid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbuserid;
+        
+        /// <summary>
+        /// lbuserid1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbuserid1;
+        
+        /// <summary>
         /// lbname control.
         /// </summary>
         /// <remarks>

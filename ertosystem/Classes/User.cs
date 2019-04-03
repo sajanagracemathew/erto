@@ -35,7 +35,6 @@ namespace ertosystem.Classes
         public string photo;
         private string username;
         private string password;
-        private string con_password;
         private string utype;
         //private string usuccess;
 
@@ -47,7 +46,6 @@ namespace ertosystem.Classes
         public string Photo { get => photo; set => photo = value; }
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
-        public string Con_password { get => con_password; set => con_password = value; }
         public string Dob { get => dob; set => dob = value; }
         public string Utype { get => utype; set => utype = value; }
         public string Gender { get => gender; set => gender = value; }
@@ -72,7 +70,7 @@ namespace ertosystem.Classes
         public void InsertUser()
         {
             OpenConection();
-            string qry = "insert into userregistration_table values ('" + name + "','" + dob + "','" + gender + "','" + address + "','" + city + "','" + mobile + "','" + email + "','" + photo + "','" + username + "','" + password + "','" + con_password + "');";
+            string qry = "insert into userregistration_table values ('" + name + "','" + dob + "','" + gender + "','" + address + "','" + city + "','" + mobile + "','" + email + "','" + photo + "','" + username + "','" + password + "');";
             ExecuteQueries(qry);
         }
         public void InsertLogin2()

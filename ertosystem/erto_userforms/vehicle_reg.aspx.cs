@@ -25,6 +25,7 @@ namespace ertosystem.erto_userforms
                 veh_id1.Text = obj.Oveh_id;
             }
             obj.Oid = Session["user"].ToString();
+            obj.User_id1 = tbuserid.Text;
             obj.UnameT = lbveh_owner1.Text;
             obj.Odob = lbownerdob1.Text;
             obj.Oaddress = lbowneraddress1.Text;
@@ -34,6 +35,7 @@ namespace ertosystem.erto_userforms
             dt1 = obj.ExecuteSelect();
             if (dt1.Rows.Count > 0)
             {
+                tbuserid.Text= dt1.Rows[0]["user_id"].ToString();
                 lbveh_owner1.Text = dt1.Rows[0]["name"].ToString();
                 lbownerdob1.Text = dt1.Rows[0]["dob"].ToString();
                 lbowneraddress1.Text = dt1.Rows[0]["address"].ToString();
@@ -46,6 +48,8 @@ namespace ertosystem.erto_userforms
         protected void register_btn_Click(object sender, EventArgs e)
         {
             obj.Oveh_id = veh_id1.Text;
+            obj.User_id1 = tbuserid.Text;
+            obj.D_district = ddistrict.Text;
             obj.UnameT = lbveh_owner1.Text;
             obj.Oswd = tbregswd.Text;
             obj.Odob = lbownerdob1.Text;
@@ -80,8 +84,9 @@ namespace ertosystem.erto_userforms
             }
             obj.InsertVehiclereg_Parameter();
            
-            Response.Write("<script>alert('Registered Successfully...Please Pay the Registration Fees(online/manually)')</script>");
+            Response.Write("<script>alert('Submitted Successfully...Please Pay the Registration Fees(online/manually)')</script>");
 
+            tbuserid.Text = "";
             lbveh_id.Text = "";
             lbveh_owner1.Text = "";
             tbregswd.Text = "";
@@ -93,6 +98,22 @@ namespace ertosystem.erto_userforms
             tbchassis.Text = "";
             tbregdate.Text = "";
             
+        }
+
+        protected void ddistrict_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            obj.D_district = ddistrict.SelectedValue.ToString();
+            DataTable dispdistrict = new DataTable();
+
+            dispdistrict = obj.ExecuteSelectQueries();
+            if (dispdistrict.Rows.Count > 0)
+            {
+
+                ddistrict.DataSource = dispdistrict;
+                ddistrict.DataTextField = "District";
+                ddistrict.DataValueField = "District_id";
+                ddistrict.DataBind();
+            }
         }
     }
 

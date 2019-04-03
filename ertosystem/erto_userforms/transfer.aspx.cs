@@ -27,6 +27,16 @@ namespace ertosystem.erto_userforms
                 tbcurrentname.Text = dt1.Rows[0]["name"].ToString();
 
             }
+            obj.Veh_id = tbvehid.Text;
+            obj.ExecuteSelectQueries();
+
+            DataTable dt2 = new DataTable();
+            dt2 = obj.ExecuteSelectQueries();
+            if (dt2.Rows.Count > 0)
+            {
+                tbvehid.Text = dt2.Rows[0]["Vehicle_ID"].ToString();
+
+            }
 
         }
 
@@ -73,9 +83,6 @@ namespace ertosystem.erto_userforms
             tbdate.Text = "";
         }
 
-        protected void tbvehid_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
+        
     }
 }

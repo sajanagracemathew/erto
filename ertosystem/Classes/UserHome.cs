@@ -27,6 +27,7 @@ namespace ertosystem.Classes
             cmd.ExecuteNonQuery();
         }
         private string hid;
+        private string userid;
         private string hname;
         private string hdob;
         private string haddress;
@@ -37,13 +38,14 @@ namespace ertosystem.Classes
         public string Haddress { get => haddress; set => haddress = value; }
         public string Hmobile_no { get => hmobile_no; set => hmobile_no = value; }
         public string Hid { get => hid; set => hid = value; }
+        public string Userid { get => userid; set => userid = value; }
 
         public DataTable ExecuteSelect()
         {
             OpenConection();
 
             DataTable dt1 = new DataTable();
-            SqlCommand cmd1 = new SqlCommand("select name,dob,address,mob_number from userregistration_table where username=@usrname", con);
+            SqlCommand cmd1 = new SqlCommand("select user_id,name,dob,address,mob_number from userregistration_table where username=@usrname", con);
             cmd1.Parameters.AddWithValue("@usrname", hid);
             SqlDataAdapter da = new SqlDataAdapter(cmd1);// this will query your database and return the result to your datatable
             da.Fill(dt1);
