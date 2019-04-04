@@ -123,6 +123,8 @@
     <Content Include="erto_adminforms\Emp_reg.aspx" />
     <Content Include="erto_adminforms\Rto_reg.aspx" />
     <Content Include="erto_userforms\duplicateDl.aspx" />
+    <Content Include="erto_userforms\Fee.aspx" />
+    <Content Include="erto_userforms\paymentpage.aspx" />
     <Content Include="erto_userforms\renewdrivinglicense.aspx" />
     <Content Include="erto_userforms\login.aspx" />
     <Content Include="erto_userforms\transfer.aspx" />
@@ -202,6 +204,7 @@
     <Compile Include="Classes\DuplicateDlicense.cs" />
     <Compile Include="Classes\EmpRegistration.cs" />
     <Compile Include="Classes\Logins.cs" />
+    <Compile Include="Classes\Payment.cs" />
     <Compile Include="Classes\RenewDl.cs" />
     <Compile Include="Classes\RtoRegistration.cs" />
     <Compile Include="Classes\TransferOwnership.cs" />
@@ -256,6 +259,20 @@
     </Compile>
     <Compile Include="erto_userforms\duplicateDl.aspx.designer.cs">
       <DependentUpon>duplicateDl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\Fee.aspx.cs">
+      <DependentUpon>Fee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\Fee.aspx.designer.cs">
+      <DependentUpon>Fee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\paymentpage.aspx.cs">
+      <DependentUpon>paymentpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\paymentpage.aspx.designer.cs">
+      <DependentUpon>paymentpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\renewdrivinglicense.aspx.cs">
       <DependentUpon>renewdrivinglicense.aspx</DependentUpon>
@@ -350,11 +367,11 @@
     <Folder Include="App_Data\" />
     <Folder Include="erto_empforms\" />
     <Folder Include="erto_officerforms\" />
-    <Folder Include="Fileuploads\Address_proof\" />
-    <Folder Include="Fileuploads\Fitness_certificates\" />
-    <Folder Include="Fileuploads\Insurance_certificates\" />
-    <Folder Include="Fileuploads\Noc_certificates\" />
     <Folder Include="Images\" />
+    <Folder Include="Uploads\Add_proof\" />
+    <Folder Include="Uploads\Fitness_cer\" />
+    <Folder Include="Uploads\Insurance_cer\" />
+    <Folder Include="Uploads\Noc_cer\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

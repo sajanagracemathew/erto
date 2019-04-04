@@ -55,18 +55,18 @@ namespace ertosystem.erto_userforms
             string ext = Path.GetExtension(filename);
             if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
             {
-                string src = Server.MapPath("~/Fileuploads/Insurance_certificates") + "\\" + tbvehid.Text + ".pdf";
+                string src = Server.MapPath("~/Uploads/Insurance_cer") + "\\" + tbvehid.Text + ".pdf";
                 uploadins_cer.PostedFile.SaveAs(src);
-                string picpath = "~/Fileuploads/Insurance_certificates/" + tbvehid.Text + ".pdf";
+                string picpath = "~/Uploads/Insurance_cer/" + tbvehid.Text + ".pdf";
                 obj.Ins_cer = picpath;
             }
             String filename1 = Path.GetFileName(uploadnoc_cer.PostedFile.FileName);
             string ext1 = Path.GetExtension(filename1);
             if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
             {
-                string src = Server.MapPath("~/Fileuploads/Noc_certificates") + "\\" + tbvehid.Text + ".pdf";
+                string src = Server.MapPath("~/Uploads/Noc_cer") + "\\" + tbvehid.Text + ".pdf";
                 uploadnoc_cer.PostedFile.SaveAs(src);
-                string picpath = "~/Fileuploads/Noc_certificates/" + tbvehid.Text + ".pdf";
+                string picpath = "~/Uploads/Noc_cer/" + tbvehid.Text + ".pdf";
                 obj.Noc = picpath;
             }
             obj.InsertTransfer_Parameter();

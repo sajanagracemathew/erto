@@ -17,10 +17,12 @@ namespace ertosystem.erto_userforms
         public string usrname = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+
+           
             tbregdate.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
             if (!IsPostBack)
             {
-
+                BindDistrict();
                 obj.GenerateAutoID();
                 veh_id1.Text = obj.Oveh_id;
             }
@@ -68,18 +70,18 @@ namespace ertosystem.erto_userforms
             string ext = Path.GetExtension(filename);
             if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
             {
-                string src = Server.MapPath("~/Fileuploads/Address_proof") + "\\" + veh_id1.Text + ".pdf";
+                string src = Server.MapPath("~/Uploads/Add_proof") + "\\" + veh_id1.Text + ".pdf";
                 FileUpload3.PostedFile.SaveAs(src);
-                string picpath = "~/Fileuploads/Address_proof/" + veh_id1.Text + ".pdf";
+                string picpath = "~/Uploads/Add_proof/" + veh_id1.Text + ".pdf";
                 obj.Oproof = picpath;
             }
             String filename1 = Path.GetFileName(FileUpload2.PostedFile.FileName);
             string ext1 = Path.GetExtension(filename1);
             if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
             {
-                string src = Server.MapPath("~/Fileuploads/Fitness_certificates") + "\\" + veh_id1.Text + ".pdf";
+                string src = Server.MapPath("~/Uploads/Fitness_cer") + "\\" + veh_id1.Text + ".pdf";
                 FileUpload2.PostedFile.SaveAs(src);
-                string picpath = "~/Fileuploads/Fitness_certificates/" + veh_id1.Text + ".pdf";
+                string picpath = "~/Uploads/Fitness_cer/" + veh_id1.Text + ".pdf";
                 obj.Ofitnesscer = picpath;
             }
             obj.InsertVehiclereg_Parameter();
@@ -103,15 +105,19 @@ namespace ertosystem.erto_userforms
         protected void ddistrict_SelectedIndexChanged(object sender, EventArgs e)
         {
             obj.D_district = ddistrict.SelectedValue.ToString();
+           
+        }
+
+        private void BindDistrict()
+        {
+
             DataTable dispdistrict = new DataTable();
 
-            dispdistrict = obj.ExecuteSelectQueries();
+            dispdistrict = obj.FetchDistrict();
             if (dispdistrict.Rows.Count > 0)
             {
 
-                ddistrict.DataSource = dispdistrict;
-                ddistrict.DataTextField = "District";
-                ddistrict.DataValueField = "District_id";
+                ddistrict.DataSource = dispdistrict;               
                 ddistrict.DataBind();
             }
         }

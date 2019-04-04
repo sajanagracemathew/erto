@@ -116,7 +116,8 @@
                         <asp:Label ID="lbdistrict" runat="server" Text="District"></asp:Label>
                     </td>
                     <td class="auto-style48">
-                        <asp:DropDownList ID="ddistrict" runat="server" Width="174px" OnSelectedIndexChanged="ddistrict_SelectedIndexChanged">
+                        <asp:DropDownList ID="ddistrict" runat="server" Width="174px" DataTextField="District" DataValueField="District_id" 
+                            OnSelectedIndexChanged="ddistrict_SelectedIndexChanged">
                             <asp:ListItem>--Select District--</asp:ListItem>
                         </asp:DropDownList>
                     </td>

@@ -71,15 +71,15 @@ namespace ertosystem.Classes
             OpenConection();
             oregdate = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(oregdate);
-            string qry = "insert into vehicleregistration_table values(@veh_id,@usr_id,@d_dist,@name,@swd,@dob,@address,@address_proof,@veh_type,@veh_company,@veh_model,@veh_manuf,@areaname,@chassis_num,@fitness_cer,@reg_date);";
+            string qry = "insert into vehicleregistration_table values(@veh_id,@usr_id,@swd,@address_proof,@d_dist,@veh_type,@veh_company,@veh_model,@veh_manuf,@areaname,@chassis_num,@fitness_cer,@reg_date);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@veh_id", oveh_id);
             cmd.Parameters.AddWithValue("@usr_id", User_id1);
-            cmd.Parameters.AddWithValue("@d_dist", d_district);
-            cmd.Parameters.AddWithValue("@name", unameT);
+            //cmd.Parameters.AddWithValue("@name", unameT);
             cmd.Parameters.AddWithValue("@swd", oswd);
-            cmd.Parameters.AddWithValue("@dob", odob);
-            cmd.Parameters.AddWithValue("@address", oaddress);
+            cmd.Parameters.AddWithValue("@d_dist", d_district);
+            //cmd.Parameters.AddWithValue("@dob", odob);
+            //cmd.Parameters.AddWithValue("@address", oaddress);
             cmd.Parameters.AddWithValue("@address_proof", oproof);
             cmd.Parameters.AddWithValue("@veh_type", oveh_type);
             cmd.Parameters.AddWithValue("@veh_company", oveh_company);
@@ -115,13 +115,11 @@ namespace ertosystem.Classes
             da.Fill(dispdistrict);
             CloseConnection();
             return dispdistrict;
-
-
         }
         public void GenerateAutoID()
         {
             OpenConection();
-            SqlCommand command = new SqlCommand("select count(Name) from vehicleregistration_table ", con);
+            SqlCommand command = new SqlCommand("select count(User_Id) from vehicleregistration_table ", con);
             int count;
             object cnt = command.ExecuteScalar();
             if (cnt != DBNull.Value)
@@ -136,6 +134,21 @@ namespace ertosystem.Classes
                 oveh_id = "VEH" + count;
             }
 
+        }
+
+        
+            public DataTable FetchDistrict()
+        {
+            OpenConection();
+
+            DataTable dispdistrict = new DataTable();
+            SqlCommand command = new SqlCommand("select * from districtcode_table ", con);
+
+            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
+
+            da.Fill(dispdistrict);
+            CloseConnection();
+            return dispdistrict;
         }
     }
 }
