@@ -27,6 +27,7 @@ namespace ertosystem.Classes
             cmd.ExecuteNonQuery();
         }
         private string lid;
+        private string uid;
         private string licensenumber;
         private string name;
         private string dob;
@@ -41,18 +42,17 @@ namespace ertosystem.Classes
         public string Lid { get => lid; set => lid = value; }
         public string Dob { get => dob; set => dob = value; }
         public string Address { get => address; set => address = value; }
+        public string Uid { get => uid; set => uid = value; }
 
         public void InsertRenewlicense_Parameter()
         {
             OpenConection();
             currentdate = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(currentdate);
-            string qry = "insert into renewdrivinglicense_table values(@license_no,@hname,@hdob,@haddress,@current_date,@expire_date);";
+            string qry = "insert into renewdrivinglicense_table values(@usrid,@license_no,@current_date,@expire_date);";
             SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@usrid", uid);
             cmd.Parameters.AddWithValue("@license_no", licensenumber);
-            cmd.Parameters.AddWithValue("@hname", name);
-            cmd.Parameters.AddWithValue("@hdob", dob);
-            cmd.Parameters.AddWithValue("@haddress", address);
             cmd.Parameters.AddWithValue("@current_date", currentdate);
             cmd.Parameters.AddWithValue("@expire_date", expiredate);
             cmd.ExecuteNonQuery();
@@ -62,7 +62,7 @@ namespace ertosystem.Classes
             OpenConection();
 
             DataTable dt1 = new DataTable();
-            SqlCommand cmd1 = new SqlCommand("select name,dob,address from userregistration_table where username=@usrname", con);
+            SqlCommand cmd1 = new SqlCommand("select user_id,name,dob,address from userregistration_table where username=@usrname", con);
             cmd1.Parameters.AddWithValue("@usrname", lid);
             SqlDataAdapter da = new SqlDataAdapter(cmd1);// this will query your database and return the result to your datatable
             da.Fill(dt1);

@@ -17,6 +17,7 @@ namespace ertosystem.erto_userforms
         {
             textboxdate.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
             obj.Dupid = Session["user"].ToString();
+            obj.Uid = tbuserid.Text;
             obj.Name = textboxname.Text;
             obj.Dob = textboxdob.Text;
             obj.Address = textboxaddress.Text;
@@ -26,6 +27,7 @@ namespace ertosystem.erto_userforms
             dt1 = obj.ExecuteSelect();
             if (dt1.Rows.Count > 0)
             {
+                tbuserid.Text = dt1.Rows[0]["user_id"].ToString();
                 textboxname.Text = dt1.Rows[0]["name"].ToString();
                 textboxdob.Text = dt1.Rows[0]["dob"].ToString();
                 textboxaddress.Text = dt1.Rows[0]["address"].ToString();
@@ -35,15 +37,17 @@ namespace ertosystem.erto_userforms
 
         protected void dlduplicate_btn_Click(object sender, EventArgs e)
         {
+            obj.Uid = tbuserid.Text;
             obj.Licensenumber = textboxlicenseno.Text;
-            obj.Name = textboxname.Text;
-            obj.Dob = textboxdob.Text;
-            obj.Address = textboxaddress.Text;
+            //obj.Name = textboxname.Text;
+            //obj.Dob = textboxdob.Text;
+            //obj.Address = textboxaddress.Text;
             obj.Date = textboxdate.Text;
             obj.InsertDuplicatelicense_Parameter();
 
             Response.Write("<script>alert('Application Submitted Successfully...Please Pay the Fees(online/manually)')</script>");
 
+            tbuserid.Text = "";
             textboxlicenseno.Text = "";
             textboxname.Text = "";
             textboxdob.Text = "";

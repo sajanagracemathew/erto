@@ -189,6 +189,7 @@
             font-weight: bold;
             text-align: center;
             margin-left: 90;
+            margin-top: 13px;
         }
         .auto-style74 {
             height: 73px;
@@ -226,11 +227,13 @@
             text-align: left;
         }
         .auto-style83 {
-            width: 370px;
+            width: 361px;
             height: 245px;
         }
         .auto-style84 {
-            width: 422px;
+            width: 377px;
+            height: 306px;
+            margin-top: 0px;
         }
         </style>
 </head>
@@ -245,17 +248,20 @@
                         <form id="form2" runat="server" class="auto-style84">
                             <fieldset class="auto-style83">
                     <legend><div><strong>LogIn</strong></div></legend>
-                    <div><asp:Label ID="lbloginusername" runat="server" Text="Username"></asp:Label>
+                    <div><asp:Label ID="lbloginusername" runat="server" Text=" Username"></asp:Label>
+                        <br />
+                        <br />
                         <asp:TextBox ID="tbloginusername" runat="server" Height="16px" Width="264px"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbloginusername" ErrorMessage="*" ForeColor="#CC0000"></asp:RequiredFieldValidator></div>
                     
                    <div><asp:Label ID="lbloginpassword" runat="server" Text="Password"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="tbloginpassword" runat="server" TextMode="Password" Height="16px" Width="263px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbloginpassword" ErrorMessage="*" ForeColor="#CC0000"></asp:RequiredFieldValidator></div> 
                     <div class="auto-style82"> 
                                 <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#CC0000">Forgot Password?</asp:HyperLink>
                                 </div>
                    <div class="auto-style80"> <strong>
-                    <asp:Button ID="Login_btn" runat="server" CssClass="auto-style70" OnClick="Login_btn_Click" Text="Login" Width="100px" Height="28px" />
+                    <asp:Button ID="Login_btn" runat="server" CssClass="auto-style70" OnClick="Login_btn_Click" Text="Login" Width="100px" Height="31px" />
                     </strong></div>
                    <div> <asp:Label ID="Label1" runat="server" ForeColor="#CC0000"></asp:Label></div>
                                 </fieldset>

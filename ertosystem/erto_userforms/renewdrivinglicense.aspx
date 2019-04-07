@@ -76,6 +76,16 @@
         <td class="auto-style1"></td>
     </tr>
     <tr>
+        <td class="auto-style13">&nbsp;</td>
+        <td class="auto-style14">
+            <asp:Label ID="lbuserid" runat="server" Text="User_Id"></asp:Label>
+        </td>
+        <td class="auto-style15">
+            <asp:TextBox ID="tbuserid" runat="server" ReadOnly="True" Width="160px"></asp:TextBox>
+        </td>
+        <td class="auto-style16">&nbsp;</td>
+    </tr>
+    <tr>
         <td class="auto-style13"></td>
         <td class="auto-style14">
             <asp:Label ID="lblicense_no" runat="server" Text="License No"></asp:Label>

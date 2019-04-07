@@ -13,6 +13,24 @@ namespace ertosystem.erto_userforms {
     public partial class drivinglicenseappln {
         
         /// <summary>
+        /// lbuserid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbuserid;
+        
+        /// <summary>
+        /// tbuserid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbuserid;
+        
+        /// <summary>
         /// lblicense_no control.
         /// </summary>
         /// <remarks>

@@ -81,6 +81,16 @@
             <tr>
                 <td class="auto-style3">&nbsp;</td>
                 <td class="auto-style16">
+                    <asp:Label ID="lbuserid" runat="server" Text="User_Id"></asp:Label>
+                </td>
+                <td class="auto-style7">
+                    <asp:TextBox ID="tbuserid" runat="server" Height="21px" Width="160px"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3">&nbsp;</td>
+                <td class="auto-style16">
                     <asp:Label ID="labellicenseno" runat="server" Text="License No"></asp:Label>
                 </td>
                 <td class="auto-style7">
@@ -124,7 +134,7 @@
                     <asp:Label ID="labeldate" runat="server" Text="Date"></asp:Label>
                 </td>
                 <td class="auto-style27">
-                    <asp:TextBox ID="textboxdate" runat="server" Width="160px"></asp:TextBox>
+                    <asp:TextBox ID="textboxdate" runat="server" Width="160px" Height="21px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>

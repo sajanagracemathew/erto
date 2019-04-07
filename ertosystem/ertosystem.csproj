@@ -124,6 +124,7 @@
     <Content Include="erto_adminforms\Rto_reg.aspx" />
     <Content Include="erto_userforms\duplicateDl.aspx" />
     <Content Include="erto_userforms\Fee.aspx" />
+    <Content Include="erto_userforms\learnerslicense.aspx" />
     <Content Include="erto_userforms\paymentpage.aspx" />
     <Content Include="erto_userforms\renewdrivinglicense.aspx" />
     <Content Include="erto_userforms\login.aspx" />
@@ -266,6 +267,13 @@
     </Compile>
     <Compile Include="erto_userforms\Fee.aspx.designer.cs">
       <DependentUpon>Fee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\learnerslicense.aspx.cs">
+      <DependentUpon>learnerslicense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\learnerslicense.aspx.designer.cs">
+      <DependentUpon>learnerslicense.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\paymentpage.aspx.cs">
       <DependentUpon>paymentpage.aspx</DependentUpon>

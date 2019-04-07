@@ -34,25 +34,26 @@
         .auto-style10 {
             width: 190px;
         }
-        .auto-style11 {
-            color: #000099;
-        }
         .auto-style12 {
             width: 279px;
+        }
+        .auto-style13 {
+            color: #000099;
+            font-size: medium;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <table class="nav-justified">
     <tr>
-        <td class="auto-style3" style="color: #808080; background-color: #808080">
+        <td class="auto-style3" style="background-color: #C0C0C0">
             <br />
             <br />
             <br />
-            <asp:HyperLink ID="fee_link" runat="server" BackColor="Gray" CssClass="auto-style11" ForeColor="#000099" NavigateUrl="paymentpage.aspx">E-payment</asp:HyperLink>
+            <asp:HyperLink ID="fee_link" runat="server" BackColor="Silver" CssClass="auto-style13" ForeColor="#000099" NavigateUrl="paymentpage.aspx">E-payment</asp:HyperLink>
             <br />
             <br />
-            <asp:HyperLink ID="challanlink" runat="server" BackColor="Gray" CssClass="auto-style11" ForeColor="#000099">E-challan</asp:HyperLink>
+            <asp:HyperLink ID="challanlink" runat="server" BackColor="Silver" CssClass="auto-style13" ForeColor="#000099">E-challan</asp:HyperLink>
             <br />
             <br />
             <br />
@@ -98,7 +99,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style7">Issue of Duplicate Driving License</td>
-                    <td class="auto-style5">5000</td>
+                    <td class="auto-style5">500</td>
                 </tr>
                 <tr>
                     <td class="auto-style12"></td>
@@ -108,39 +109,39 @@
         </td>
     </tr>
     <tr>
-        <td class="auto-style1" style="color: #808080; background-color: #808080">&nbsp;</td>
+        <td class="auto-style1" style="background-color: #C0C0C0">&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style1" style="color: #808080; background-color: #808080">&nbsp;</td>
+        <td class="auto-style1" style="background-color: #C0C0C0">&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style1" style="color: #808080; background-color: #808080">&nbsp;</td>
+        <td class="auto-style1" style="background-color: #C0C0C0">&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style1" style="color: #808080; background-color: #808080">&nbsp;</td>
+        <td class="auto-style1" style="background-color: #C0C0C0">&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style1" style="background-color: #808080">&nbsp;</td>
+        <td class="auto-style1" style="background-color: #C0C0C0">&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style1" style="background-color: #808080">&nbsp;</td>
+        <td class="auto-style1" style="background-color: #C0C0C0">&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style1" style="background-color: #808080">&nbsp;</td>
+        <td class="auto-style1" style="background-color: #C0C0C0; color: #C0C0C0;">&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style1" style="background-color: #808080">&nbsp;</td>
+        <td class="auto-style1" style="background-color: #C0C0C0; color: #C0C0C0;">&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style1" style="background-color: #808080">&nbsp;</td>
+        <td class="auto-style1" style="background-color: #C0C0C0; color: #C0C0C0;">&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
 </table>

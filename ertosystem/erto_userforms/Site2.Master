@@ -24,6 +24,15 @@
                     <h1><a href="#">E-RTO</a></h1>
                     <p><strong>Online solutions</strong></p>
                 </div>
+                <div id="info">
+                    <ul>
+                        <li>Tel: xxxxx xxxxxxxxxx</li>
+                        <li>| </li>
+                        <li>Mail: info@domain.com</li>
+                        <li>| </li>
+                        <li><a runat="server" href="~/Default.aspx">Logout</a></li>
+                    </ul>
+                </div>
                 <br class="clear" />
             </div>
         </div>
@@ -32,14 +41,14 @@
             <div id="topbar">
                 <div id="topnav">
                     <ul>
-                        <li><a runat="server" href ="~/erto_userforms/userhome" style="font-size: medium">Home</a></li>
+                        <li><a runat="server" href="~/erto_userforms/userhome" style="font-size: medium">Home</a></li>
                         <li><a runat="server" href="~/">Registration&Services</a>
                             <ul>
                                 <li><a runat="server" href="~/erto_userforms/vehicle_reg">Vehicle Registration</a></li>
-                                <li><a runat="server" href="~/erto_userforms/vehicle_reg">Issue of Learner's License</a></li>
-                                <li><a runat="server" href="~/erto_userforms/">Issue of Driving License</a></li>
+                                <li><a runat="server" href="~/erto_userforms/vehicle_reg">Learner's License</a></li>
+                                <li><a runat="server" href="~/erto_userforms/">Driving License</a></li>
                                 <li><a runat="server" href="~/erto_userforms/renewdrivinglicense">Renewal of Driving License</a></li>
-                                <li><a runat="server" href="~/erto_userforms/duplicateDl">Issue of Duplicate Driving License</a></li>
+                                <li><a runat="server" href="~/erto_userforms/duplicateDl">Duplicate Driving License</a></li>
                             </ul>
                         </li>
                         <li><a runat="server" href="~/Contact">Fee/Tax/Fine</a>
@@ -50,7 +59,7 @@
                             </ul>
                             <li><a runat="server" href="~/erto_userforms/transfer">Transfer&NOC</a></li>
                         <li><a runat="server" href="~/Contact">Complaints</a></li>
-                        <li><a runat="server" href="~/Default.aspx">Logout</a></li>
+                        
                     </ul>
                 </div>
                 <br class="clear" />

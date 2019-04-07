@@ -41,7 +41,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col1{color:#666666; background-color:#E3F1F9;}
 .col2{color:#FFFFFF; background-color:#000000;}
 .col3, .col4, .col5{color:#666666; background-color:#FFFFFF;}
-.col6{color:#999999; background-color:#F3F3F3;}
+.col6{color:#808080; background-color:#F3F3F3;}
 .col6 a{color:#2684B7; background-color:#F3F3F3;}
 .col7, .col7 a{color:#FFFFFF; background-color:#29313C;}
 
@@ -58,6 +58,23 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #header h1 a{color:#3A6C86; background-color:#E3F1F9;}
 #header #newsletter{float:right; padding:10px 10px 12px 10px; color:#000000; background-color:#ADD6ED;}
 #header #newsletter p{margin:0 0 8px 0; font-family:Verdana, Arial, Helvetica, sans-serif;}
+    #header #info {
+        display: block;
+        float: right;
+        margin-top: 15px;
+    }
+
+        #header #info ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #header #info li {
+            display: inline;
+            margin: 0 0 0 10px;
+        }
+
 
 /* ----------------------------------------------Topbar------------------------------------- */
 
