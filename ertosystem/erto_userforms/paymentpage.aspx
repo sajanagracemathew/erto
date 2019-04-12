@@ -36,6 +36,23 @@
         .auto-style11 {
             height: 66px;
         }
+    .auto-style12 {
+        font-size: small;
+    }
+        .auto-style13 {
+            width: 212px;
+            height: 30px;
+        }
+        .auto-style14 {
+            width: 375px;
+            height: 30px;
+        }
+        .auto-style15 {
+            height: 30px;
+        }
+        .auto-style16 {
+            text-decoration: underline;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -48,12 +65,22 @@
                 <td class="auto-style11"> </td>
             </tr>
             <tr>
+                <td class="auto-style6">
+                    <asp:Label ID="lbuserid" runat="server" Text="User_id"></asp:Label>
+                </td>
+                <td class="auto-style7">
+                    <asp:TextBox ID="tbuserid" runat="server" ReadOnly="True" Width="185px"></asp:TextBox>
+                </td>
+                <td class="auto-style8"> <strong><span class="auto-style2">Payment Options</span></strong></td>
+            </tr>
+            <tr>
                 <td class="auto-style6">&nbsp;Application Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                 <td class="auto-style7">
-        <asp:DropDownList ID="d_applntype" runat="server" Width="195px" OnSelectedIndexChanged="d_applntype_SelectedIndexChanged" AutoPostBack="True" >
+        <asp:DropDownList ID="d_applntype" runat="server" Width="185px" OnSelectedIndexChanged="d_applntype_SelectedIndexChanged" AutoPostBack="True" Height="27px" >
         </asp:DropDownList>
                 </td>
-                <td class="auto-style8"> <strong><span class="auto-style2">&nbsp;Payment Options</span></strong></td>
+                <td class="auto-style8"> <strong><span class="auto-style2">&nbsp;&nbsp; <asp:RadioButton ID="rb_debit" runat="server" Text="Debit /Credit Card" CssClass="auto-style12" />
+                    </span></strong></td>
             </tr>
             <tr>
                 <td class="auto-style4">Total amount to be paid(Rs) </td>
@@ -69,29 +96,43 @@
                     </asp:UpdatePanel>
                 </td>
                 <td>
-        <strong>
-        <asp:RadioButton ID="RadioButton1" runat="server" Text="Debit card" />
-        </strong></td>
-            </tr>
-            <tr>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style3">&nbsp;</td>
-                <td>
-        <asp:RadioButton ID="RadioButton2" runat="server" Text="Credit card" />
+        &nbsp;&nbsp;
+                    <asp:RadioButton ID="rb_netbanking" runat="server" Text="Net banking" CssClass="auto-style12" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style3">&nbsp;</td>
                 <td>
-        <asp:RadioButton ID="RadioButton3" runat="server" Text="Netbanking" />
+        &nbsp;&nbsp;
                 </td>
+            </tr>
+            <tr>
+                <td class="auto-style13"></td>
+                <td class="auto-style14"></td>
+                <td class="auto-style15">
+                    </td>
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style5">
-        <asp:Button ID="ok_btn" runat="server" OnClick="ok_btn_Click" Text="OK" Width="58px" />
+                    <asp:Button ID="paynow_btn" runat="server" OnClick="paynow_btn_Click" Text="Pay" Width="64px" />
                 </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">&nbsp;</td>
+                <td class="auto-style5">
+                    <asp:Label ID="Label1" runat="server" ForeColor="#009933"></asp:Label>
+                </td>
+                <td>
+                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style16" NavigateUrl="~/erto_userforms/vehicle_reg.aspx" Visible="False">Go to vehicle registration page</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">&nbsp;</td>
+                <td class="auto-style3">
+&nbsp; </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>

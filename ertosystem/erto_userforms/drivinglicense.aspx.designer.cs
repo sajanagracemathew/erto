@@ -10,7 +10,7 @@
 namespace ertosystem.erto_userforms {
     
     
-    public partial class duplicateDl {
+    public partial class drivinglicense {
         
         /// <summary>
         /// lbuserid control.
@@ -31,111 +31,174 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.TextBox tbuserid;
         
         /// <summary>
-        /// lbuser_id control.
+        /// lblearner_no control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbuser_id;
+        protected global::System.Web.UI.WebControls.Label lblearner_no;
         
         /// <summary>
-        /// labellicenseno control.
+        /// tblearner_no control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labellicenseno;
+        protected global::System.Web.UI.WebControls.TextBox tblearner_no;
         
         /// <summary>
-        /// textboxlicenseno control.
+        /// lbname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textboxlicenseno;
+        protected global::System.Web.UI.WebControls.Label lbname;
         
         /// <summary>
-        /// labelname control.
+        /// tbname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelname;
+        protected global::System.Web.UI.WebControls.TextBox tbname;
         
         /// <summary>
-        /// textboxname control.
+        /// lbswd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textboxname;
+        protected global::System.Web.UI.WebControls.Label lbswd;
         
         /// <summary>
-        /// labeldob control.
+        /// tbswd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labeldob;
+        protected global::System.Web.UI.WebControls.TextBox tbswd;
         
         /// <summary>
-        /// textboxdob control.
+        /// lbdob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textboxdob;
+        protected global::System.Web.UI.WebControls.Label lbdob;
         
         /// <summary>
-        /// labeladdress control.
+        /// tbdob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labeladdress;
+        protected global::System.Web.UI.WebControls.TextBox tbdob;
         
         /// <summary>
-        /// textboxaddress control.
+        /// lb_bgrp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textboxaddress;
+        protected global::System.Web.UI.WebControls.Label lb_bgrp;
         
         /// <summary>
-        /// labeldate control.
+        /// d_bgrp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labeldate;
+        protected global::System.Web.UI.WebControls.DropDownList d_bgrp;
         
         /// <summary>
-        /// textboxdate control.
+        /// lbaddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textboxdate;
+        protected global::System.Web.UI.WebControls.Label lbaddress;
         
         /// <summary>
-        /// dlduplicate_btn control.
+        /// tbaddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button dlduplicate_btn;
+        protected global::System.Web.UI.WebControls.TextBox tbaddress;
+        
+        /// <summary>
+        /// lbtype control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbtype;
+        
+        /// <summary>
+        /// d_vehtype control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList d_vehtype;
+        
+        /// <summary>
+        /// lbqual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbqual;
+        
+        /// <summary>
+        /// tbqual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbqual;
+        
+        /// <summary>
+        /// lbdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbdate;
+        
+        /// <summary>
+        /// tbdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbdate;
+        
+        /// <summary>
+        /// apply_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button apply_btn;
     }
 }

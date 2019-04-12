@@ -16,11 +16,13 @@ namespace ertosystem.erto_userforms
         {
             obj.Hid = Session["user"].ToString();
             obj.Userid = lbuserid1.Text;
+            //Session["uid"] = lbuserid1.Text;
             obj.Hname = lbname1.Text;
             obj.Hdob = lbdob1.Text;
             obj.Haddress = lbaddress2.Text;
             obj.Hmobile_no = lbmob2.Text;
             obj.ExecuteSelect();
+           // lbuser_id.Text = Session["uid"].ToString();
 
             DataTable dt1 = new DataTable();
             dt1 = obj.ExecuteSelect();
@@ -31,6 +33,7 @@ namespace ertosystem.erto_userforms
                 lbdob1.Text = Convert.ToString(dt1.Rows[0][2]);
                 lbaddress2.Text = Convert.ToString(dt1.Rows[0][3]);
                 lbmob2.Text = Convert.ToString(dt1.Rows[0][4]);
+                
 
             }
         }

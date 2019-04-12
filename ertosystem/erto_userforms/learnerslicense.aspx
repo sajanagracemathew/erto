@@ -32,6 +32,7 @@
         .auto-style9 {
             text-align: left;
             color: #666666;
+            height: 35px;
         }
         .auto-style10 {
             width: 205px;
@@ -41,14 +42,28 @@
             text-decoration: underline;
             font-size: large;
         }
+        .auto-style12 {
+            text-align: left;
+            color: #666666;
+            width: 159px;
+            height: 35px;
+        }
+        .auto-style13 {
+            width: 159px;
+        }
+        .auto-style14 {
+            width: 159px;
+            height: 32px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <p>
 &nbsp;</p>
     <p>
-        <strong>LEARNER&#39;S LICENSE</strong></p>
+        <strong>&nbsp; LEARNER&#39;S LICENSE</strong></p>
     <p>
+        &nbsp;&nbsp;
         A candidate is required to appear for test with following documents</p>
     <p>
         &nbsp;&nbsp;&nbsp;&nbsp; 1.Age proof</p>
@@ -58,79 +73,92 @@
         &nbsp;&nbsp;&nbsp;&nbsp; 3.Passport size photographs</p>
     <table class="nav-justified">
         <tr>
+            <td class="auto-style12"></td>
             <td class="auto-style9" colspan="4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; APPLY LEARNER</strong></td>
         </tr>
         <tr>
+            <td class="auto-style13">
+                &nbsp;</td>
             <td class="auto-style1">
                 <asp:Label ID="lbuserid" runat="server" Text="User_Id"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:TextBox ID="tbuserid" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox ID="tbuserid" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" Width="150px"></asp:TextBox>
             </td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td class="auto-style13">
+                &nbsp;</td>
             <td class="auto-style1">
                 <asp:Label ID="lbname" runat="server" Text="Name"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:TextBox ID="tbname" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox ID="tbname" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" Width="150px"></asp:TextBox>
             </td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td class="auto-style13">
+                &nbsp;</td>
             <td class="auto-style1">
                 <asp:Label ID="lbdob" runat="server" Text="DOB"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:TextBox ID="tbdob" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox ID="tbdob" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" Width="150px"></asp:TextBox>
             </td>
             <td class="auto-style3">
-                <asp:Label ID="Label1" runat="server" Text="Age proof/Address proof(ID,Adhar card)"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Age proof/Address proof(ID/Adhar card)"></asp:Label>
             </td>
             <td>
-                <asp:FileUpload ID="FileUpload1" runat="server" Width="138px" />
+                <asp:FileUpload ID="FileUpload1" runat="server" Width="150px" />
             </td>
         </tr>
         <tr>
+            <td class="auto-style14">
+                &nbsp;</td>
             <td class="auto-style4">
                 <asp:Label ID="lbaddress" runat="server" Text="Address"></asp:Label>
             </td>
             <td class="auto-style5">
-                <asp:TextBox ID="tbaddress" runat="server" Height="41px" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" TextMode="MultiLine"></asp:TextBox>
+                <asp:TextBox ID="tbaddress" runat="server" Height="41px" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" TextMode="MultiLine" Width="150px"></asp:TextBox>
             </td>
             <td class="auto-style6">
                 <asp:Label ID="lbdate" runat="server" Text="Date"></asp:Label>
             </td>
             <td class="auto-style7">
-                <asp:TextBox ID="tbdate" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" Width="133px"></asp:TextBox>
+                <asp:TextBox ID="tbdate" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" Width="150px"></asp:TextBox>
             </td>
         </tr>
         <tr>
+            <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
         </tr>
         <tr>
+            <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style8">
-                <asp:Button ID="Save_btn" runat="server" ForeColor="#666666" Text="Save" Width="67px" />
-            </td>
+                &nbsp;</td>
             <td class="auto-style10">
-                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style11">Take Test</asp:HyperLink>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style8">
+                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style11">Take Test</asp:HyperLink>
+            </td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>

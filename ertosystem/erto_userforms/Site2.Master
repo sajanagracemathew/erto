@@ -26,7 +26,7 @@
                 </div>
                 <div id="info">
                     <ul>
-                        <li>Tel: xxxxx xxxxxxxxxx</li>
+                        <li>Tel: +91-120-2459168</li>
                         <li>| </li>
                         <li>Mail: info@domain.com</li>
                         <li>| </li>
@@ -45,8 +45,8 @@
                         <li><a runat="server" href="~/">Registration&Services</a>
                             <ul>
                                 <li><a runat="server" href="~/erto_userforms/vehicle_reg">Vehicle Registration</a></li>
-                                <li><a runat="server" href="~/erto_userforms/vehicle_reg">Learner's License</a></li>
-                                <li><a runat="server" href="~/erto_userforms/">Driving License</a></li>
+                                <li><a runat="server" href="~/erto_userforms/learnerslicense">Learner's License</a></li>
+                                <li><a runat="server" href="~/erto_userforms/drivinglicense">Driving License</a></li>
                                 <li><a runat="server" href="~/erto_userforms/renewdrivinglicense">Renewal of Driving License</a></li>
                                 <li><a runat="server" href="~/erto_userforms/duplicateDl">Duplicate Driving License</a></li>
                             </ul>
@@ -54,8 +54,8 @@
                         <li><a runat="server" href="~/Contact">Fee/Tax/Fine</a>
                             <ul>
                                 <li><a runat="server" href="~/erto_userforms/fee">Fee</a></li>
-                                <li><a runat="server" href="#">Tax</a></li>
-                                <li><a runat="server" href="#">Fine</a></li>
+                                <li><a runat="server" href="~/erto_userforms/tax">Tax</a></li>
+                                <li><a runat="server" href="~/erto_userforms/fine">Fine</a></li>
                             </ul>
                             <li><a runat="server" href="~/erto_userforms/transfer">Transfer&NOC</a></li>
                         <li><a runat="server" href="~/Contact">Complaints</a></li>

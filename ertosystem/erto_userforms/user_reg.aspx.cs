@@ -60,8 +60,8 @@ namespace ertosystem.erto_userforms
                 }
                 uobj.InsertUser();
                 uobj.InsertLogin2();
-                
-                Response.Write("Registered successfully");
+
+                lbsuccess.Text = "Registered Successfully";
 
                 tbname.Text = "";
                 tbdob.Text = "";

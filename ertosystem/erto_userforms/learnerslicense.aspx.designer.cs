@@ -121,15 +121,6 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.TextBox tbdate;
         
         /// <summary>
-        /// Save_btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Save_btn;
-        
-        /// <summary>
         /// HyperLink1 control.
         /// </summary>
         /// <remarks>

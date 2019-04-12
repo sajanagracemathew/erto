@@ -32,7 +32,7 @@ namespace ertosystem.Classes
         private string hdob;
         private string haddress;
         private string hmobile_no;
-
+        
         public string Hname { get => hname; set => hname = value; }
         public string Hdob { get => hdob; set => hdob = value; }
         public string Haddress { get => haddress; set => haddress = value; }

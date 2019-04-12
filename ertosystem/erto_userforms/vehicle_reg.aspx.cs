@@ -17,14 +17,16 @@ namespace ertosystem.erto_userforms
         public string usrname = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            ddistrict.AutoPostBack = true;
 
-           
+
             tbregdate.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
             if (!IsPostBack)
             {
                 BindDistrict();
                 obj.GenerateAutoID();
                 veh_id1.Text = obj.Oveh_id;
+                
             }
             obj.Oid = Session["user"].ToString();
             obj.User_id1 = tbuserid.Text;
@@ -65,6 +67,7 @@ namespace ertosystem.erto_userforms
             obj.Ochassisnum = Convert.ToInt32(tbchassis.Text);
             //obj.Ofitnesscer = FileUpload2.FileName;
             obj.Oregdate = tbregdate.Text;
+            obj.Veh_no = Label1.Text.ToString();
 
             String filename = Path.GetFileName(FileUpload3.PostedFile.FileName);
             string ext = Path.GetExtension(filename);
@@ -84,9 +87,10 @@ namespace ertosystem.erto_userforms
                 string picpath = "~/Uploads/Fitness_cer/" + veh_id1.Text + ".pdf";
                 obj.Ofitnesscer = picpath;
             }
+            obj.GenereateVehno();
             obj.InsertVehiclereg_Parameter();
            
-            Response.Write("<script>alert('Submitted Successfully...Please Pay the Registration Fees(online/manually)')</script>");
+            //Response.Write("<script>alert('Submitted Successfully...Please Pay the Registration Fees(online/manually)')</script>");
 
             tbuserid.Text = "";
             lbveh_id.Text = "";
@@ -102,11 +106,7 @@ namespace ertosystem.erto_userforms
             
         }
 
-        protected void ddistrict_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            obj.D_district = ddistrict.SelectedValue.ToString();
-           
-        }
+        
 
         private void BindDistrict()
         {
@@ -116,10 +116,22 @@ namespace ertosystem.erto_userforms
             dispdistrict = obj.FetchDistrict();
             if (dispdistrict.Rows.Count > 0)
             {
-
                 ddistrict.DataSource = dispdistrict;               
                 ddistrict.DataBind();
+                
             }
+        }
+        protected void ddistrict_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            // Label1.Text = ddistrict.SelectedItem.Text.ToString();
+            obj.D_district = ddistrict.Text;
+            //obj.FetchDistrictCode();
+            Label1.Visible = false;
+            //Label1.Text = obj.Code;
+            int cnt=obj.GenereateVehno();
+            Label1.Text =Convert.ToString(cnt);
+            
         }
     }
 

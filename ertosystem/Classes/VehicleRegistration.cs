@@ -43,6 +43,9 @@ namespace ertosystem.Classes
         private int ochassisnum;
         private string ofitnesscer;
         private string oregdate;
+        //private string dist;
+        private string veh_no;
+        private string code;
 
         public string Oveh_id { get => oveh_id; set => oveh_id = value; }
         public string Oswd { get => oswd; set => oswd = value; }
@@ -62,6 +65,9 @@ namespace ertosystem.Classes
         //public int User_id { get => User_id1; set => User_id1 = value; }
         public string User_id1 { get => user_id; set => user_id = value; }
         public string D_district { get => d_district; set => d_district = value; }
+        public string Veh_no { get => veh_no; set => veh_no = value; }
+        //public string Dist { get => dist; set => dist = value; }
+        public string Code { get => code; set => code = value; }
 
 
         //public DateTime Oregdate { get => oregdate; set => oregdate = value; }
@@ -71,7 +77,7 @@ namespace ertosystem.Classes
             OpenConection();
             oregdate = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(oregdate);
-            string qry = "insert into vehicleregistration_table values(@veh_id,@usr_id,@swd,@address_proof,@d_dist,@veh_type,@veh_company,@veh_model,@veh_manuf,@areaname,@chassis_num,@fitness_cer,@reg_date);";
+            string qry = "insert into vehicleregistration_table values(@veh_id,@usr_id,@swd,@address_proof,@d_dist,@veh_type,@veh_company,@veh_model,@veh_manuf,@areaname,@chassis_num,@fitness_cer,@reg_date,@vehno);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@veh_id", oveh_id);
             cmd.Parameters.AddWithValue("@usr_id", User_id1);
@@ -89,6 +95,7 @@ namespace ertosystem.Classes
             cmd.Parameters.AddWithValue("@chassis_num", ochassisnum);
             cmd.Parameters.AddWithValue("@fitness_cer", ofitnesscer);
             cmd.Parameters.AddWithValue("@reg_date", oregdate);
+            cmd.Parameters.AddWithValue("@vehno", veh_no);
             cmd.ExecuteNonQuery();
         }
         public DataTable ExecuteSelect()
@@ -103,19 +110,7 @@ namespace ertosystem.Classes
             CloseConnection();
             return dt1;
         }
-        public DataTable ExecuteSelectQueries()
-        {
-            OpenConection();
-
-            DataTable dispdistrict = new DataTable();
-            SqlCommand command = new SqlCommand("select * from districtcode_table where district_id='" + d_district + "' ", con);
-
-            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
-
-            da.Fill(dispdistrict);
-            CloseConnection();
-            return dispdistrict;
-        }
+       
         public void GenerateAutoID()
         {
             OpenConection();
@@ -149,6 +144,27 @@ namespace ertosystem.Classes
             da.Fill(dispdistrict);
             CloseConnection();
             return dispdistrict;
+        }
+        
+        public int GenereateVehno()
+        {
+            
+            OpenConection();
+             SqlCommand command = new SqlCommand("select max(Vehicle_No) from vehicleregistration_table where District='" + d_district + "'", con);
+            int count;
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                count = Convert.ToInt32(cnt);
+                count++;
+                //oveh_id = "VEH" + count;
+            }
+            else
+            {
+                count = 1000;
+                //oveh_id = "VEH" + count;
+            }
+            return count;
         }
     }
 }

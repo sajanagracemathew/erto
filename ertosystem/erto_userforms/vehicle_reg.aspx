@@ -95,6 +95,14 @@
             width: 155px;
             height: 29px;
         }
+        .auto-style75 {
+            width: 210px;
+            height: 30px;
+            text-align: center;
+        }
+        .auto-style76 {
+            text-decoration: underline;
+        }
     </style>
 </asp:Content>
 
@@ -117,7 +125,7 @@
                     </td>
                     <td class="auto-style48">
                         <asp:DropDownList ID="ddistrict" runat="server" Width="174px" DataTextField="District" DataValueField="District_id" 
-                            OnSelectedIndexChanged="ddistrict_SelectedIndexChanged">
+                            OnSelectedIndexChanged="ddistrict_SelectedIndexChanged" AutoPostBack="True">
                             <asp:ListItem>--Select District--</asp:ListItem>
                         </asp:DropDownList>
                     </td>
@@ -244,30 +252,41 @@
                 <tr>
                     <td class="auto-style60"></td>
                     <td class="auto-style67">
-                        &nbsp;</td>
-                    <td class="auto-style50">
-                        &nbsp;</td>
-                    <td class="auto-style71"></td>
-                    <td class="auto-style48">&nbsp;</td>
+                        </td>
+                    <td class="auto-style75">
+                        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style76" ForeColor="#0000CC" NavigateUrl="~/erto_userforms/Fee.aspx">Fee payment</asp:HyperLink>
+                    </td>
+                    <td class="auto-style71">&nbsp;</td>
+                    <td class="auto-style48"></td>
                 </tr>
                 <tr>
                     <td class="auto-style37"></td>
                     <td class="auto-style70">
+                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    </td>
+                    <td class="auto-style53">
+                        &nbsp;</td>
+                    <td class="auto-style74"></td>
+                    <td class="auto-style14">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style37">&nbsp;</td>
+                    <td class="auto-style70">
                         &nbsp;</td>
                     <td class="auto-style53">
-                        <strong>
-                        <asp:Button ID="register_btn" runat="server" Text="Register" Width="73px" OnClick="register_btn_Click" ForeColor="#666666" />
-                        </strong>
-                    </td>
-                    <td class="auto-style74"></td>
+                        &nbsp;</td>
+                    <td class="auto-style74">&nbsp;</td>
                     <td class="auto-style14">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style60"></td>
                     <td class="auto-style67">
                         &nbsp;</td>
-                    <td class="auto-style50">
-                        &nbsp;</td>
+                    <td class="auto-style75">
+                        <strong>
+                        <asp:Button ID="register_btn" runat="server" Text="Register" Width="73px" OnClick="register_btn_Click" ForeColor="#666666" />
+                        </strong>
+                    </td>
                     <td class="auto-style71"></td>
                     <td class="auto-style48">&nbsp;</td>
                 </tr>

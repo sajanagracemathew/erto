@@ -13,6 +13,24 @@ namespace ertosystem.erto_userforms {
     public partial class paymentpage {
         
         /// <summary>
+        /// lbuserid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbuserid;
+        
+        /// <summary>
+        /// tbuserid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbuserid;
+        
+        /// <summary>
         /// d_applntype control.
         /// </summary>
         /// <remarks>
@@ -20,6 +38,15 @@ namespace ertosystem.erto_userforms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList d_applntype;
+        
+        /// <summary>
+        /// rb_debit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rb_debit;
         
         /// <summary>
         /// ScriptManager1 control.
@@ -49,39 +76,39 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.TextBox tbfee;
         
         /// <summary>
-        /// RadioButton1 control.
+        /// rb_netbanking control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+        protected global::System.Web.UI.WebControls.RadioButton rb_netbanking;
         
         /// <summary>
-        /// RadioButton2 control.
+        /// paynow_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
+        protected global::System.Web.UI.WebControls.Button paynow_btn;
         
         /// <summary>
-        /// RadioButton3 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton3;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// ok_btn control.
+        /// HyperLink1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ok_btn;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
     }
 }

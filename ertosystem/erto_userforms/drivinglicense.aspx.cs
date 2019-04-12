@@ -9,13 +9,13 @@ using ertosystem.Classes;
 
 namespace ertosystem.erto_userforms
 {
-    public partial class learnerslicense : System.Web.UI.Page
+    public partial class drivinglicense : System.Web.UI.Page
     {
-        LearnersLicense obj = new LearnersLicense();
+        DrivingLicense obj = new DrivingLicense();
         protected void Page_Load(object sender, EventArgs e)
         {
             tbdate.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
-            obj.Ll_id = Session["user"].ToString();
+            obj.Dl_id = Session["user"].ToString();
             obj.Uid = tbuserid.Text;
             obj.Name = tbname.Text;
             obj.Dob = tbdob.Text;
@@ -34,9 +34,9 @@ namespace ertosystem.erto_userforms
             }
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        protected void apply_btn_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

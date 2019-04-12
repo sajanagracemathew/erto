@@ -154,7 +154,9 @@
     <tr>
         <td style="width: 201px; height: 20px">&nbsp;</td>
         <td style="width: 185px; height: 20px">&nbsp;</td>
-        <td style="width: 191px; height: 20px"></td>
+        <td style="width: 191px; height: 20px">
+            <asp:Label ID="lbsuccess" runat="server" style="color: #009900"></asp:Label>
+        </td>
         <td style="height: 20px"></td>
     </tr>
     <tr>

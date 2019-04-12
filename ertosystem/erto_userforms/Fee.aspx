@@ -26,10 +26,12 @@
         .auto-style8 {
             width: 279px;
             color: #FFFFFF;
+            height: 33px;
         }
         .auto-style9 {
             color: #FFFFFF;
             width: 190px;
+            height: 33px;
         }
         .auto-style10 {
             width: 190px;
@@ -62,8 +64,8 @@
         <td class="auto-style4">
             <table class="auto-style2">
                 <tr>
-                    <td class="auto-style8" style="background-color: #000000"><strong>Type of Applications</strong></td>
-                    <td class="auto-style9" style="background-color: #000000"><strong>Fee(in Rs)</strong></td>
+                    <td class="auto-style8" style="background-color: #000000">Type of Applications</td>
+                    <td class="auto-style9" style="background-color: #000000">Fee(in Rs)</td>
                 </tr>
                 <tr>
                     <td class="auto-style12">Vehicle Registration</td>

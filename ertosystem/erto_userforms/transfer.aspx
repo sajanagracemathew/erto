@@ -46,20 +46,20 @@
         <tr>
             <td class="auto-style3">&nbsp;</td>
             <td class="auto-style2">
-                <asp:Label ID="lbvehid" runat="server" Text="Vehicle_ID"></asp:Label>
-            </td>
-            <td class="auto-style1">
-                <asp:TextBox ID="tbvehid" runat="server"  Width="165px"></asp:TextBox>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style2">
                 <asp:Label ID="lbvehno" runat="server" Text="Vehicle Number"></asp:Label>
             </td>
             <td class="auto-style1">
                 <asp:TextBox ID="tbvehno" runat="server"  Width="165px"></asp:TextBox>
+            </td>
+            <td>*Eg:KL-01-A-1234</td>
+        </tr>
+        <tr>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style2">
+                <asp:Label ID="lbvehid" runat="server" Text="Vehicle_ID"></asp:Label>
+            </td>
+            <td class="auto-style1">
+                <asp:TextBox ID="tbvehid" runat="server"  Width="165px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>

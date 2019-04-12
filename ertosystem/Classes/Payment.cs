@@ -26,11 +26,85 @@ namespace ertosystem.Classes
             SqlCommand cmd = new SqlCommand(Query_, con);
             cmd.ExecuteNonQuery();
         }
+        private string p_id;
+        private string uid;
         private string appln_type;
         private string fee;
+        private string pay_option;
+        private string paydate;
+        //private string vehicle_number;
+        private string veh_no;
+        private string tax;
+        private string fine;
+        
+        private string veh_num;
 
         public string Appln_type { get => appln_type; set => appln_type = value; }
         public string Fee { get => fee; set => fee = value; }
+        public string Uid { get => uid; set => uid = value; }
+        public string Paydate { get => paydate; set => paydate = value; }
+        public string Pay_option { get => pay_option; set => pay_option = value; }
+        public string P_id { get => p_id; set => p_id = value; }
+        public string Veh_no { get => veh_no; set => veh_no = value; }
+        public string Tax { get => tax; set => tax = value; }
+        public string Fine { get => fine; set => fine = value; }
+        public string Veh_num { get => veh_num; set => veh_num = value; }
+        //public string Vehicle_number { get => vehicle_number; set => vehicle_number = value; }
+
+        public void InsertParameter()
+        {
+            OpenConection();
+            paydate = System.DateTime.Now.ToString("dd/MM/yyyy");
+            DateTime ddoc = Convert.ToDateTime(paydate);
+            string qry = "insert into pay_table values(@usr_id,@applntype,@fees,@option,@date);";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@usr_id", uid);
+            cmd.Parameters.AddWithValue("@applntype",appln_type );
+            cmd.Parameters.AddWithValue("@fees", fee);
+            cmd.Parameters.AddWithValue("@option", pay_option);
+            cmd.Parameters.AddWithValue("@date", paydate);
+            cmd.ExecuteNonQuery();
+        }
+        public void Insert_taxParameter()
+        {
+            OpenConection();
+            paydate = System.DateTime.Now.ToString("dd/MM/yyyy");
+            DateTime ddoc = Convert.ToDateTime(paydate);
+            string qry = "insert into tax_table values(@usr_id,@veh_number,@tax1,@option,@date);";
+            SqlCommand cmd1 = new SqlCommand(qry, con);
+            cmd1.Parameters.AddWithValue("@usr_id", uid);
+            cmd1.Parameters.AddWithValue("@veh_number", veh_no);
+            cmd1.Parameters.AddWithValue("@tax1",tax);
+            cmd1.Parameters.AddWithValue("@option", pay_option);
+            cmd1.Parameters.AddWithValue("@date", paydate);
+            cmd1.ExecuteNonQuery();
+        }
+        public void Insert_fineParameter()
+        {
+            OpenConection();
+            paydate = System.DateTime.Now.ToString("dd/MM/yyyy");
+            DateTime ddoc = Convert.ToDateTime(paydate);
+            string qry = "insert into fine_table values(@usr_id,@veh_number,@fine1,@option,@date);";
+            SqlCommand cmd1 = new SqlCommand(qry, con);
+            cmd1.Parameters.AddWithValue("@usr_id", uid);
+            cmd1.Parameters.AddWithValue("@veh_number", veh_no);
+            cmd1.Parameters.AddWithValue("@fine1", fine);
+            cmd1.Parameters.AddWithValue("@option", pay_option);
+            cmd1.Parameters.AddWithValue("@date", paydate);
+            cmd1.ExecuteNonQuery();
+        }
+        public DataTable ExecuteSelect()
+        {
+            OpenConection();
+
+            DataTable dt1 = new DataTable();
+            SqlCommand cmd2 = new SqlCommand("select user_id from userregistration_table where username=@usrname", con);
+            cmd2.Parameters.AddWithValue("@usrname", p_id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);// this will query your database and return the result to your datatable
+            da.Fill(dt1);
+            CloseConnection();
+            return dt1;
+        }
 
         public DataTable FetchFee()
         {
@@ -61,5 +135,20 @@ namespace ertosystem.Classes
                 return 0;
             }
         }
+        public string Display_vehno()
+        {
+            OpenConection();
+           SqlCommand command = new SqlCommand("select CONCAT(dtCode.code,' - ',vehreg.Vehicle_No) from vehicleregistration_table vehreg left outer join districtcode_table dtCode on vehreg.[District] = dtCode.[District_id] ", con);
+           
+
+            object cMax = command.ExecuteScalar();
+            if (cMax != DBNull.Value)
+            {
+                veh_num = (string)cMax;
+                
+            }
+            return veh_num;
+        }
+        
     }
 }

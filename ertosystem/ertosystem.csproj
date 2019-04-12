@@ -122,12 +122,16 @@
     <Content Include="erto_adminforms\adminhome.aspx" />
     <Content Include="erto_adminforms\Emp_reg.aspx" />
     <Content Include="erto_adminforms\Rto_reg.aspx" />
+    <Content Include="erto_userforms\drivinglicense.aspx" />
     <Content Include="erto_userforms\duplicateDl.aspx" />
     <Content Include="erto_userforms\Fee.aspx" />
+    <Content Include="erto_userforms\Fine.aspx" />
     <Content Include="erto_userforms\learnerslicense.aspx" />
+    <Content Include="erto_userforms\paymentconfirm.aspx" />
     <Content Include="erto_userforms\paymentpage.aspx" />
     <Content Include="erto_userforms\renewdrivinglicense.aspx" />
     <Content Include="erto_userforms\login.aspx" />
+    <Content Include="erto_userforms\tax.aspx" />
     <Content Include="erto_userforms\transfer.aspx" />
     <Content Include="erto_userforms\userhome.aspx" />
     <Content Include="erto_userforms\user_reg.aspx" />
@@ -202,8 +206,10 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classes\DrivingLicense.cs" />
     <Compile Include="Classes\DuplicateDlicense.cs" />
     <Compile Include="Classes\EmpRegistration.cs" />
+    <Compile Include="Classes\LearnersLicense.cs" />
     <Compile Include="Classes\Logins.cs" />
     <Compile Include="Classes\Payment.cs" />
     <Compile Include="Classes\RenewDl.cs" />
@@ -254,6 +260,13 @@
     <Compile Include="erto_adminforms\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="erto_userforms\drivinglicense.aspx.cs">
+      <DependentUpon>drivinglicense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\drivinglicense.aspx.designer.cs">
+      <DependentUpon>drivinglicense.aspx</DependentUpon>
+    </Compile>
     <Compile Include="erto_userforms\duplicateDl.aspx.cs">
       <DependentUpon>duplicateDl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -268,12 +281,26 @@
     <Compile Include="erto_userforms\Fee.aspx.designer.cs">
       <DependentUpon>Fee.aspx</DependentUpon>
     </Compile>
+    <Compile Include="erto_userforms\Fine.aspx.cs">
+      <DependentUpon>Fine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\Fine.aspx.designer.cs">
+      <DependentUpon>Fine.aspx</DependentUpon>
+    </Compile>
     <Compile Include="erto_userforms\learnerslicense.aspx.cs">
       <DependentUpon>learnerslicense.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="erto_userforms\learnerslicense.aspx.designer.cs">
       <DependentUpon>learnerslicense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\paymentconfirm.aspx.cs">
+      <DependentUpon>paymentconfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\paymentconfirm.aspx.designer.cs">
+      <DependentUpon>paymentconfirm.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\paymentpage.aspx.cs">
       <DependentUpon>paymentpage.aspx</DependentUpon>
@@ -302,6 +329,13 @@
     </Compile>
     <Compile Include="erto_userforms\Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\tax.aspx.cs">
+      <DependentUpon>tax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\tax.aspx.designer.cs">
+      <DependentUpon>tax.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\transfer.aspx.cs">
       <DependentUpon>transfer.aspx</DependentUpon>

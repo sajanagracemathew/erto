@@ -86,7 +86,9 @@
                 <td class="auto-style7">
                     <asp:TextBox ID="tbuserid" runat="server" Height="21px" Width="160px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Label ID="lbuser_id" runat="server"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style3">&nbsp;</td>
