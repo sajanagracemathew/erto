@@ -16,10 +16,7 @@ namespace ertosystem.erto_userforms
         VehicleRegistration obj = new VehicleRegistration();
         public string usrname = "";
         protected void Page_Load(object sender, EventArgs e)
-        {
-            ddistrict.AutoPostBack = true;
-
-
+        {            
             tbregdate.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
             if (!IsPostBack)
             {
@@ -51,44 +48,9 @@ namespace ertosystem.erto_userforms
 
         protected void register_btn_Click(object sender, EventArgs e)
         {
-            obj.Oveh_id = veh_id1.Text;
-            obj.User_id1 = tbuserid.Text;
-            obj.D_district = ddistrict.Text;
-            obj.UnameT = lbveh_owner1.Text;
-            obj.Oswd = tbregswd.Text;
-            obj.Odob = lbownerdob1.Text;
-            obj.Oaddress = lbowneraddress1.Text;
-            //obj.Oproof = FileUpload3.FileName;
-            obj.Oveh_type = dpvehtype.Text;
-            obj.Oveh_company = tbvehcompany.Text;
-            obj.Oveh_model = tbvehmodel.Text;
-            obj.Oveh_manuf = tbvehmanuf.Text; ;
-            obj.Oareaname = tbareaname.Text;
-            obj.Ochassisnum = Convert.ToInt32(tbchassis.Text);
-            //obj.Ofitnesscer = FileUpload2.FileName;
-            obj.Oregdate = tbregdate.Text;
-            obj.Veh_no = Label1.Text.ToString();
-
-            String filename = Path.GetFileName(FileUpload3.PostedFile.FileName);
-            string ext = Path.GetExtension(filename);
-            if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
-            {
-                string src = Server.MapPath("~/Uploads/Add_proof") + "\\" + veh_id1.Text + ".pdf";
-                FileUpload3.PostedFile.SaveAs(src);
-                string picpath = "~/Uploads/Add_proof/" + veh_id1.Text + ".pdf";
-                obj.Oproof = picpath;
-            }
-            String filename1 = Path.GetFileName(FileUpload2.PostedFile.FileName);
-            string ext1 = Path.GetExtension(filename1);
-            if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
-            {
-                string src = Server.MapPath("~/Uploads/Fitness_cer") + "\\" + veh_id1.Text + ".pdf";
-                FileUpload2.PostedFile.SaveAs(src);
-                string picpath = "~/Uploads/Fitness_cer/" + veh_id1.Text + ".pdf";
-                obj.Ofitnesscer = picpath;
-            }
-            obj.GenereateVehno();
-            obj.InsertVehiclereg_Parameter();
+            
+            
+            
            
             //Response.Write("<script>alert('Submitted Successfully...Please Pay the Registration Fees(online/manually)')</script>");
 
@@ -103,7 +65,9 @@ namespace ertosystem.erto_userforms
             tbvehmanuf.Text = "";
             tbchassis.Text = "";
             tbregdate.Text = "";
-            
+            obj.Vehicle_no = tbdisplay.Text;
+            obj.Oveh_id = Session["V_Id"].ToString();
+            obj.UpdateVehNo();
         }
 
         
@@ -125,13 +89,70 @@ namespace ertosystem.erto_userforms
         {
 
             // Label1.Text = ddistrict.SelectedItem.Text.ToString();
-            obj.D_district = ddistrict.Text;
+            //obj.D_district = ddistrict.Text;
             //obj.FetchDistrictCode();
-            Label1.Visible = false;
-            //Label1.Text = obj.Code;
-            int cnt=obj.GenereateVehno();
-            Label1.Text =Convert.ToString(cnt);
             
+            //Label1.Text = obj.Code;
+           // int cnt=obj.GenereateVehno();
+           // Label1.Text =Convert.ToString(cnt);
+            
+        }
+
+        protected void continue_btn_Click(object sender, EventArgs e)
+        {
+            
+            Label2.Visible = true;
+            tbdisplay.Visible = true;
+            obj.Oveh_id = Session["V_Id"].ToString();
+            string vehicle_no=obj.Display_vehno();
+            tbdisplay.Text= vehicle_no.ToString();
+        }
+
+        protected void btnFeepayment_Click(object sender, EventArgs e)
+        {
+            obj.Oveh_id = veh_id1.Text;
+            Session["V_Id"] = obj.Oveh_id;
+            obj.User_id1 = tbuserid.Text;
+            obj.D_district = ddistrict.Text;
+            obj.UnameT = lbveh_owner1.Text;
+            obj.Oswd = tbregswd.Text;
+            obj.Odob = lbownerdob1.Text;
+            obj.Oaddress = lbowneraddress1.Text;
+            //obj.Oproof = FileUpload3.FileName;
+            obj.Oveh_type = dpvehtype.Text;
+            obj.Oveh_company = tbvehcompany.Text;
+            obj.Oveh_model = tbvehmodel.Text;
+            obj.Oveh_manuf = tbvehmanuf.Text; ;
+            obj.Oareaname = tbareaname.Text;
+            obj.Ochassisnum = Convert.ToInt32(tbchassis.Text);
+            //obj.Ofitnesscer = FileUpload2.FileName;
+            obj.Oregdate = tbregdate.Text;
+            
+            obj.D_district = ddistrict.Text;
+            int cnt1 = obj.GenereateVehno();
+            //Label1.Visible = false;
+            //Label1.Text = Convert.ToString(cnt);
+            obj.Veh_no = Convert.ToString(cnt1);
+            String filename = Path.GetFileName(FileUpload3.PostedFile.FileName);
+            string ext = Path.GetExtension(filename);
+            if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
+            {
+                string src = Server.MapPath("~/Uploads/Add_proof") + "\\" + veh_id1.Text + ".pdf";
+                FileUpload3.PostedFile.SaveAs(src);
+                string picpath = "~/Uploads/Add_proof/" + veh_id1.Text + ".pdf";
+                obj.Oproof = picpath;
+            }
+            String filename1 = Path.GetFileName(FileUpload2.PostedFile.FileName);
+            string ext1 = Path.GetExtension(filename1);
+            if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
+            {
+                string src = Server.MapPath("~/Uploads/Fitness_cer") + "\\" + veh_id1.Text + ".pdf";
+                FileUpload2.PostedFile.SaveAs(src);
+                string picpath = "~/Uploads/Fitness_cer/" + veh_id1.Text + ".pdf";
+                obj.Ofitnesscer = picpath;
+            }
+            obj.InsertVehiclereg_Parameter();
+            Response.Redirect("~/erto_userforms/Fee.aspx");
         }
     }
 

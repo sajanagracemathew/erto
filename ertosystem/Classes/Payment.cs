@@ -37,7 +37,7 @@ namespace ertosystem.Classes
         private string tax;
         private string fine;
         
-        private string veh_num;
+        //private string veh_num;
 
         public string Appln_type { get => appln_type; set => appln_type = value; }
         public string Fee { get => fee; set => fee = value; }
@@ -48,7 +48,7 @@ namespace ertosystem.Classes
         public string Veh_no { get => veh_no; set => veh_no = value; }
         public string Tax { get => tax; set => tax = value; }
         public string Fine { get => fine; set => fine = value; }
-        public string Veh_num { get => veh_num; set => veh_num = value; }
+        //public string Veh_num { get => veh_num; set => veh_num = value; }
         //public string Vehicle_number { get => vehicle_number; set => vehicle_number = value; }
 
         public void InsertParameter()
@@ -135,20 +135,7 @@ namespace ertosystem.Classes
                 return 0;
             }
         }
-        public string Display_vehno()
-        {
-            OpenConection();
-           SqlCommand command = new SqlCommand("select CONCAT(dtCode.code,' - ',vehreg.Vehicle_No) from vehicleregistration_table vehreg left outer join districtcode_table dtCode on vehreg.[District] = dtCode.[District_id] ", con);
-           
-
-            object cMax = command.ExecuteScalar();
-            if (cMax != DBNull.Value)
-            {
-                veh_num = (string)cMax;
-                
-            }
-            return veh_num;
-        }
+        
         
     }
 }

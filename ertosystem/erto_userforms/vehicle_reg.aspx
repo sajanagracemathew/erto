@@ -100,8 +100,18 @@
             height: 30px;
             text-align: center;
         }
-        .auto-style76 {
-            text-decoration: underline;
+        .auto-style77 {
+            width: 155px;
+            height: 30px;
+            text-align: right;
+        }
+        .auto-style78 {
+            width: 210px;
+            height: 29px;
+            text-align: left;
+        }
+        .auto-style79 {
+            color: #0000CC;
         }
     </style>
 </asp:Content>
@@ -125,7 +135,7 @@
                     </td>
                     <td class="auto-style48">
                         <asp:DropDownList ID="ddistrict" runat="server" Width="174px" DataTextField="District" DataValueField="District_id" 
-                            OnSelectedIndexChanged="ddistrict_SelectedIndexChanged" AutoPostBack="True">
+                            OnSelectedIndexChanged="ddistrict_SelectedIndexChanged">
                             <asp:ListItem>--Select District--</asp:ListItem>
                         </asp:DropDownList>
                     </td>
@@ -254,15 +264,17 @@
                     <td class="auto-style67">
                         </td>
                     <td class="auto-style75">
-                        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style76" ForeColor="#0000CC" NavigateUrl="~/erto_userforms/Fee.aspx">Fee payment</asp:HyperLink>
+                        <asp:Button ID="btnFeepayment" runat="server" OnClick="btnFeepayment_Click" Text="Fee Payment" />
                     </td>
-                    <td class="auto-style71">&nbsp;</td>
-                    <td class="auto-style48"></td>
+                    <td class="auto-style77">
+                        <asp:Button ID="continue_btn" runat="server" OnClick="continue_btn_Click" Text="Continue" Width="86px" />
+                    </td>
+                    <td class="auto-style48">(Press Continue button after fee payment)</td>
                 </tr>
                 <tr>
                     <td class="auto-style37"></td>
                     <td class="auto-style70">
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
                     </td>
                     <td class="auto-style53">
                         &nbsp;</td>
@@ -273,10 +285,22 @@
                     <td class="auto-style37">&nbsp;</td>
                     <td class="auto-style70">
                         &nbsp;</td>
-                    <td class="auto-style53">
-                        &nbsp;</td>
+                    <td class="auto-style78">
+                        <asp:Label ID="Label2" runat="server" Text="Your Vehicle Number is:" Visible="False"></asp:Label>
+                        <strong>
+                        <asp:TextBox ID="tbdisplay" runat="server" CssClass="auto-style79" Height="22px" ReadOnly="True" Visible="False" Width="157px"></asp:TextBox>
+                        </strong></td>
                     <td class="auto-style74">&nbsp;</td>
                     <td class="auto-style14">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style60"></td>
+                    <td class="auto-style67">
+                        &nbsp;</td>
+                    <td class="auto-style75">
+                        &nbsp;</td>
+                    <td class="auto-style71"></td>
+                    <td class="auto-style48">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style60"></td>
@@ -291,12 +315,12 @@
                     <td class="auto-style48">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style60"></td>
+                    <td class="auto-style60">&nbsp;</td>
                     <td class="auto-style67">
                         &nbsp;</td>
                     <td class="auto-style50">
                         &nbsp;</td>
-                    <td class="auto-style71"></td>
+                    <td class="auto-style71">&nbsp;</td>
                     <td class="auto-style48">&nbsp;</td>
                 </tr>
                 </table>  

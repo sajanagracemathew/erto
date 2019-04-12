@@ -46,6 +46,7 @@ namespace ertosystem.Classes
         //private string dist;
         private string veh_no;
         private string code;
+        private string vehicle_no;
 
         public string Oveh_id { get => oveh_id; set => oveh_id = value; }
         public string Oswd { get => oswd; set => oswd = value; }
@@ -68,6 +69,7 @@ namespace ertosystem.Classes
         public string Veh_no { get => veh_no; set => veh_no = value; }
         //public string Dist { get => dist; set => dist = value; }
         public string Code { get => code; set => code = value; }
+        public string Vehicle_no { get => vehicle_no; set => vehicle_no = value; }
 
 
         //public DateTime Oregdate { get => oregdate; set => oregdate = value; }
@@ -77,7 +79,7 @@ namespace ertosystem.Classes
             OpenConection();
             oregdate = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(oregdate);
-            string qry = "insert into vehicleregistration_table values(@veh_id,@usr_id,@swd,@address_proof,@d_dist,@veh_type,@veh_company,@veh_model,@veh_manuf,@areaname,@chassis_num,@fitness_cer,@reg_date,@vehno);";
+            string qry = "insert into vehicleregistration_table(Veh_Id,User_Id,SWD,Address_proof,District,Veh_type,Veh_company,Veh_model,Veh_manufactureyear,Areaname,Chassis_number,Fitness_certificate,Registration_date,Vehicleno_lastdigits) values(@veh_id,@usr_id,@swd,@address_proof,@d_dist,@veh_type,@veh_company,@veh_model,@veh_manuf,@areaname,@chassis_num,@fitness_cer,@reg_date,@vehno);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@veh_id", oveh_id);
             cmd.Parameters.AddWithValue("@usr_id", User_id1);
@@ -150,7 +152,7 @@ namespace ertosystem.Classes
         {
             
             OpenConection();
-             SqlCommand command = new SqlCommand("select max(Vehicle_No) from vehicleregistration_table where District='" + d_district + "'", con);
+             SqlCommand command = new SqlCommand("select max(Vehicleno_lastdigits) from vehicleregistration_table where District='" + d_district + "'", con);
             int count;
             object cnt = command.ExecuteScalar();
             if (cnt != DBNull.Value)
@@ -165,6 +167,29 @@ namespace ertosystem.Classes
                 //oveh_id = "VEH" + count;
             }
             return count;
+        }
+        public string Display_vehno()
+        {
+            OpenConection();
+            SqlCommand command = new SqlCommand("select CONCAT(dtCode.code,' - ',vehreg.Vehicleno_lastdigits) from vehicleregistration_table vehreg left outer join districtcode_table dtCode on vehreg.[District] = dtCode.[District_id] where vehreg.User_Id='" + user_id+ "' and Veh_Id='" + oveh_id + "' ", con);
+
+
+            object cMax = command.ExecuteScalar();
+            if (cMax != DBNull.Value)
+            {
+                vehicle_no = (string)cMax;
+
+            }
+            return vehicle_no;
+        }
+        public void UpdateVehNo()
+        {
+            OpenConection();
+            string qry = "update vehicleregistration_table set Vehicle_no=@vehicleNo where User_Id='"+user_id+ "' and Veh_Id='"+oveh_id+"'";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@vehicleNo", vehicle_no);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
         }
     }
 }
