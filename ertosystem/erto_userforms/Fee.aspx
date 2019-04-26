@@ -104,8 +104,8 @@
                     <td class="auto-style5">500</td>
                 </tr>
                 <tr>
-                    <td class="auto-style12"></td>
-                    <td class="auto-style10"></td>
+                    <td class="auto-style12">Transfer and NOC</td>
+                    <td class="auto-style10">1000</td>
                 </tr>
             </table>
         </td>

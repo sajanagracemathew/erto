@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ertosystem.NewFolder1
+namespace ertosystem.erto_empforms
 {
     public partial class Site3 : System.Web.UI.MasterPage
     {

@@ -319,6 +319,16 @@
                     <td class="auto-style67">
                         &nbsp;</td>
                     <td class="auto-style50">
+                        <asp:Label ID="lbregister" runat="server" ForeColor="#006600"></asp:Label>
+                    </td>
+                    <td class="auto-style71">&nbsp;</td>
+                    <td class="auto-style48">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style60">&nbsp;</td>
+                    <td class="auto-style67">
+                        &nbsp;</td>
+                    <td class="auto-style50">
                         &nbsp;</td>
                     <td class="auto-style71">&nbsp;</td>
                     <td class="auto-style48">&nbsp;</td>

@@ -43,8 +43,8 @@ namespace ertosystem.erto_userforms
                 if (type1 == "employee")
                 {
                     Session["employee"] = tbloginusername.Text;
-                    Label1.Text = "Login Success...!";
-                    //Response.Redirect("~/erto_empforms/employhome.aspx");
+                    //Label1.Text = "Login Success...!";
+                    Response.Redirect("~/erto_empforms/emphome.aspx");
                 }
                 if (type1 == "user")
                 {

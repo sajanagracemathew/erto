@@ -96,5 +96,19 @@ namespace ertosystem.Classes
             CloseConnection();
             return dt2;
         }
+        public string Fetch_vehid()
+        {
+            OpenConection();
+            SqlCommand command = new SqlCommand("select Veh_Id from vehicleregistration_table where Vehicle_no='" + veh_number + "' ", con);
+
+
+            object cMax = command.ExecuteScalar();
+            if (cMax != DBNull.Value)
+            {
+                veh_id = (string)cMax;
+
+            }
+            return veh_id;
+        }
     }
 }

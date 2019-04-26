@@ -27,16 +27,16 @@ namespace ertosystem.erto_userforms
                 tbcurrentname.Text = dt1.Rows[0]["name"].ToString();
 
             }
-            obj.Veh_id = tbvehid.Text;
-            obj.ExecuteSelectQueries();
+            //obj.Veh_id = tbvehid.Text;
+            //obj.ExecuteSelectQueries();
 
-            DataTable dt2 = new DataTable();
-            dt2 = obj.ExecuteSelectQueries();
-            if (dt2.Rows.Count > 0)
-            {
-                tbvehid.Text = dt2.Rows[0]["Vehicle_ID"].ToString();
+            //DataTable dt2 = new DataTable();
+            //dt2 = obj.ExecuteSelectQueries();
+            //if (dt2.Rows.Count > 0)
+            //{
+              //  tbvehid.Text = dt2.Rows[0]["Vehicle_ID"].ToString();
 
-            }
+           // }
 
         }
 
@@ -62,13 +62,14 @@ namespace ertosystem.erto_userforms
             }
             String filename1 = Path.GetFileName(uploadnoc_cer.PostedFile.FileName);
             string ext1 = Path.GetExtension(filename1);
-            if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
+            if (ext1.ToLower() == ".doc" || ext1.ToLower() == ".docx" || ext1.ToLower() == ".pdf")
             {
                 string src = Server.MapPath("~/Uploads/Noc_cer") + "\\" + tbvehid.Text + ".pdf";
                 uploadnoc_cer.PostedFile.SaveAs(src);
                 string picpath = "~/Uploads/Noc_cer/" + tbvehid.Text + ".pdf";
                 obj.Noc = picpath;
             }
+            
             obj.InsertTransfer_Parameter();
 
             Response.Write("<script>alert('Application Submitted Successfully...Please Pay the Fees(online/manually)')</script>");
@@ -83,6 +84,15 @@ namespace ertosystem.erto_userforms
             tbdate.Text = "";
         }
 
-        
+        protected void tbvehno_TextChanged(object sender, EventArgs e)
+        {
+            obj.Veh_number = tbvehno.Text;
+            tbvehid.Text=obj.Fetch_vehid();
+        }
+
+        protected void tbvehid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

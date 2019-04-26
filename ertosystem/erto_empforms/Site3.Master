@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ertosystem.erto_adminforms.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="ertosystem.erto_empforms.Site3" %>
 
 <!DOCTYPE html>
 
@@ -42,20 +42,21 @@
             <div id="topbar">
                 <div id="topnav">
                     <ul>
-                        <li><a runat="server" href ="~/erto_adminforms/adminhome" style="font-size: medium">Home</a></li>
-                        <li><a runat="server" href="~/">Registration</a>
+                        <li><a runat="server" href ="~/erto_empforms/emphome" style="font-size: medium">Home</a></li>
+                        <li><a runat="server" href="~/">Applications</a>
                             <ul>
-                                <li><a runat="server" href="~/erto_adminforms/Rto_reg">Officer Registration</a></li>
-                                <li><a runat="server" href="~/erto_adminforms/Emp_reg">Employee Registration</a></li>
+                                <li><a runat="server" href="~/erto_empforms/registrations">Vehicle Registrations</a></li>
+                                <li><a runat="server" href="~/erto_empforms/Rto_reg">Leaner's License</a></li>
+                                <li><a runat="server" href="~/erto_empforms/Rto_reg">Driving License</a></li>
+                                <li><a runat="server" href="~/erto_empforms/renew">Renewal of Driving License</a></li>
+                                <li><a runat="server" href="~/erto_empforms/duplicate">Duplicate Driving License</a></li>
+                                <li><a runat="server" href="~/erto_empforms/transferview">Transfer&NOC</a></li>
                             </ul>
-                        </li>  
-                        <li><a runat="server" href="#">Details</a>
-                            <ul>
-                                <li><a runat="server" href="~/erto_adminforms/rtodetails">Officer details</a></li>
-                                <li><a runat="server" href="~/erto_adminforms/empdetails">Employee details</a></li>
-                                <li><a runat="server" href="~/erto_adminforms/userdetails">User details</a></li>
-                            </ul>
-                        </li>
+                        </li> 
+                        <li><a runat="server" href="~/erto_empforms/searchvehicle">Search Vehicles</a>
+                        <li><a runat="server" href="#">Payment Details</a>
+                        <li><a runat="server" href="#">Test Result</a>
+                        <li><a runat="server" href="#">Change Password</a>
                         
                     </ul>
                 </div>
@@ -64,7 +65,7 @@
         </div>
 
         <div class="wrapper col6">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
         <div id="footer">
@@ -79,5 +80,4 @@
     </form>
 </body>
 </html>
-
 

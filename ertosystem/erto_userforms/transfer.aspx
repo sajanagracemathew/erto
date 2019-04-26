@@ -49,9 +49,11 @@
                 <asp:Label ID="lbvehno" runat="server" Text="Vehicle Number"></asp:Label>
             </td>
             <td class="auto-style1">
-                <asp:TextBox ID="tbvehno" runat="server"  Width="165px"></asp:TextBox>
+                <asp:TextBox ID="tbvehno" runat="server"  Width="165px" AutoPostBack="True" OnTextChanged="tbvehno_TextChanged"></asp:TextBox>
             </td>
-            <td>*Eg:KL-01-A-1234</td>
+            <td>*Eg:KL-01-A-1234<asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
@@ -59,7 +61,14 @@
                 <asp:Label ID="lbvehid" runat="server" Text="Vehicle_ID"></asp:Label>
             </td>
             <td class="auto-style1">
-                <asp:TextBox ID="tbvehid" runat="server"  Width="165px"></asp:TextBox>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:TextBox ID="tbvehid" runat="server" OnTextChanged="tbvehid_TextChanged" Width="165px"></asp:TextBox>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="tbvehno" EventName="TextChanged" />
+                    </Triggers>
+                </asp:UpdatePanel>
             </td>
             <td>&nbsp;</td>
         </tr>

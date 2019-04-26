@@ -120,8 +120,17 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="erto_adminforms\adminhome.aspx" />
+    <Content Include="erto_adminforms\empdetails.aspx" />
     <Content Include="erto_adminforms\Emp_reg.aspx" />
+    <Content Include="erto_adminforms\rtodetails.aspx" />
     <Content Include="erto_adminforms\Rto_reg.aspx" />
+    <Content Include="erto_adminforms\userdetails.aspx" />
+    <Content Include="erto_empforms\duplicate.aspx" />
+    <Content Include="erto_empforms\emphome.aspx" />
+    <Content Include="erto_empforms\registrations.aspx" />
+    <Content Include="erto_empforms\renew.aspx" />
+    <Content Include="erto_empforms\searchvehicle.aspx" />
+    <Content Include="erto_empforms\transferview.aspx" />
     <Content Include="erto_userforms\drivinglicense.aspx" />
     <Content Include="erto_userforms\duplicateDl.aspx" />
     <Content Include="erto_userforms\Fee.aspx" />
@@ -149,7 +158,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="erto_adminforms\Site1.Master" />
     <Content Include="erto_userforms\Site2.Master" />
-    <Content Include="NewFolder1\Site3.Master" />
+    <Content Include="erto_empforms\Site3.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="layout\index.html" />
     <Content Include="layout\styles\forms.css" />
@@ -160,6 +169,7 @@
     <Content Include="layout\styles\layout.css" />
     <Content Include="layout\styles\navi.css" />
     <Content Include="layout\styles\tables.css" />
+    <Content Include="Photos\home.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -209,6 +219,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Classes\DrivingLicense.cs" />
     <Compile Include="Classes\DuplicateDlicense.cs" />
+    <Compile Include="Classes\Employ.cs" />
     <Compile Include="Classes\EmpRegistration.cs" />
     <Compile Include="Classes\LearnersLicense.cs" />
     <Compile Include="Classes\Logins.cs" />
@@ -240,12 +251,26 @@
     <Compile Include="erto_adminforms\adminhome.aspx.designer.cs">
       <DependentUpon>adminhome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="erto_adminforms\empdetails.aspx.cs">
+      <DependentUpon>empdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_adminforms\empdetails.aspx.designer.cs">
+      <DependentUpon>empdetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="erto_adminforms\Emp_reg.aspx.cs">
       <DependentUpon>Emp_reg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="erto_adminforms\Emp_reg.aspx.designer.cs">
       <DependentUpon>Emp_reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_adminforms\rtodetails.aspx.cs">
+      <DependentUpon>rtodetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_adminforms\rtodetails.aspx.designer.cs">
+      <DependentUpon>rtodetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_adminforms\Rto_reg.aspx.cs">
       <DependentUpon>Rto_reg.aspx</DependentUpon>
@@ -260,6 +285,62 @@
     </Compile>
     <Compile Include="erto_adminforms\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="erto_adminforms\userdetails.aspx.cs">
+      <DependentUpon>userdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_adminforms\userdetails.aspx.designer.cs">
+      <DependentUpon>userdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\duplicate.aspx.cs">
+      <DependentUpon>duplicate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\duplicate.aspx.designer.cs">
+      <DependentUpon>duplicate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\emphome.aspx.cs">
+      <DependentUpon>emphome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\emphome.aspx.designer.cs">
+      <DependentUpon>emphome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\registrations.aspx.cs">
+      <DependentUpon>registrations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\registrations.aspx.designer.cs">
+      <DependentUpon>registrations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\renew.aspx.cs">
+      <DependentUpon>renew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\renew.aspx.designer.cs">
+      <DependentUpon>renew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\searchvehicle.aspx.cs">
+      <DependentUpon>searchvehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\searchvehicle.aspx.designer.cs">
+      <DependentUpon>searchvehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\transferview.aspx.cs">
+      <DependentUpon>transferview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\transferview.aspx.designer.cs">
+      <DependentUpon>transferview.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\drivinglicense.aspx.cs">
       <DependentUpon>drivinglicense.aspx</DependentUpon>
@@ -369,13 +450,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\Site3.Master.cs">
-      <DependentUpon>Site3.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewFolder1\Site3.Master.designer.cs">
-      <DependentUpon>Site3.Master</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -415,7 +489,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="erto_empforms\" />
     <Folder Include="erto_officerforms\" />
     <Folder Include="Images\" />
     <Folder Include="Uploads\Add_proof\" />
