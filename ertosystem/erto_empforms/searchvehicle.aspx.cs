@@ -20,7 +20,7 @@ namespace ertosystem.erto_empforms
         {
             obj.Veh_id = ddvehid.Text;
             System.Data.DataTable dtReg = new DataTable();
-            dtReg = obj.DisplayDetails();
+            dtReg = obj.VehicleDetails();
             if (dtReg.Rows.Count > 0)
             {
                 GridView1.DataSource = dtReg;

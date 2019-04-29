@@ -68,7 +68,8 @@ namespace ertosystem.erto_userforms
             obj.Vehicle_no = tbdisplay.Text;
             obj.Oveh_id = Session["V_Id"].ToString();
             obj.UpdateVehNo();
-            lbregister.Text = "Registered Successfully";
+            Response.Write("<script>alert('Registered Successfully')</script>");
+            //lbregister.Text = "Registered Successfully";
         }
 
         

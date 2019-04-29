@@ -4,7 +4,7 @@
     <div class="jumbotron">
     
         <div id="logo-container">
-       <asp:Image ID="Image1" runat="server" ImageUrl="~/Photos/home.jpg"  />
+       <asp:Image ID="Image1" runat="server" width="500px" Height="250px" ImageUrl="~/Photos/home.jpg"  />
             </div>
     </div>
     
@@ -12,32 +12,41 @@
         <div class="col-md-4">
             <h2>
                 
-                Getting started</h2>
+                Our Pages</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                <ul class="footer_list">
+                <li>Home</li>
+                <li>About Us</li>
+                <li>User Registration</li>
+                <li>Contact Us</li>
+                </ul>
+                
             </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
+            
         </div>
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
+            <h2>Our Services</h2>
             <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
+                <ul>
+                    <li>Registration</li>
+                    <li>Learner's License</li>
+                    <li>Driving License</li>
+                    <li>Renewal of License</li>
+                    <li>Transfer&NOC</li>
+                </ul>
             </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
+            
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
+            <h2>About Us</h2>
             <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                <marquee direction="up" behavior="scroll" scrollamount="1" scrolldelay="50">
+                E-RTO has been designed to automate the process of registration
+                of vehicle,issuing driving license and other services.System can make the daily 
+                activities efficient and providing the fast response to store and retrieve information.
+                </marquee>
             </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+            
         </div>
     </div>
 

@@ -5,6 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace ertosystem.Classes
 {
     public class Logins
@@ -30,9 +31,13 @@ namespace ertosystem.Classes
 
         private string username;
         private string password;
+        private string Email;
+        private string msg;
 
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
+        public string Email1 { get => Email; set => Email = value; }
+        public string Msg { get => msg; set => msg = value; }
 
         public DataTable ExecuteSelectQueries()
         {
@@ -51,7 +56,16 @@ namespace ertosystem.Classes
 
             CloseConnection();
             return dtReg;
-        } 
+        }
 
+        public void FetchEmail()
+        {
+            OpenConection();
+            string qry = "select email,password from userregistration_table where email='"+ Email+"'";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@email", Email);
+            CloseConnection();
+        }
+        
     }
 }

@@ -47,7 +47,7 @@ namespace ertosystem.Classes
             DataTable dt1 = new DataTable();
             SqlCommand cmd1 = new SqlCommand("select user_id,name,dob,address,mob_number from userregistration_table where username=@usrname", con);
             cmd1.Parameters.AddWithValue("@usrname", hid);
-            SqlDataAdapter da = new SqlDataAdapter(cmd1);// this will query your database and return the result to your datatable
+            SqlDataAdapter da = new SqlDataAdapter(cmd1);
             da.Fill(dt1);
             CloseConnection();
             return dt1;
