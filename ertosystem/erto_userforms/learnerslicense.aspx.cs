@@ -38,5 +38,10 @@ namespace ertosystem.erto_userforms
         {
 
         }
+
+        protected void rtotest_btn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/testInstructions.aspx");
+        }
     }
 }

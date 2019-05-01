@@ -38,10 +38,6 @@
             width: 205px;
             text-align: center;
         }
-        .auto-style11 {
-            text-decoration: underline;
-            font-size: large;
-        }
         .auto-style12 {
             text-align: left;
             color: #666666;
@@ -152,7 +148,7 @@
             <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style8">
-                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style11">Take Test</asp:HyperLink>
+                <asp:Button ID="rtotest_btn" runat="server" ForeColor="Blue" OnClick="rtotest_btn_Click" Text="Take Test" />
             </td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>

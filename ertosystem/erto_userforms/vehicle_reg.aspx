@@ -309,10 +309,10 @@
                     <td class="auto-style67">
                         </td>
                     <td class="auto-style75">
-                        <asp:Button ID="btnFeepayment" runat="server" OnClick="btnFeepayment_Click" Text="Fee Payment" />
+                        <asp:Button ID="btnFeepayment" runat="server" OnClick="btnFeepayment_Click" Text="Fee Payment" Width="116px" />
                     </td>
                     <td class="auto-style77">
-                        <asp:Button ID="continue_btn" runat="server" OnClick="continue_btn_Click" Text="Continue" Width="86px" />
+                        <asp:Button ID="continue_btn" runat="server" OnClick="continue_btn_Click" Text="Continue" Width="94px" />
                     </td>
                     <td class="auto-style80">(Press Continue button after fee payment)</td>
                     <td class="auto-style80">&nbsp;</td>

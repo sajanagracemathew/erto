@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace ertosystem.Classes
 {
@@ -99,6 +100,18 @@ namespace ertosystem.Classes
                 eusername = "EMP" + count;
             }
 
+        }
+        public DataTable SendEmail()
+        {
+            OpenConection();
+            DataTable fetchdet = new DataTable();
+
+            SqlCommand command = new SqlCommand("select Email,Username,Password from empregistration_table where Username=(select MAX(Username) from empregistration_table)", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+
+            da.Fill(fetchdet);
+            CloseConnection();
+            return fetchdet;
         }
     }
 }

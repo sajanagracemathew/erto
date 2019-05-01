@@ -13,6 +13,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <p class="center">
+        &nbsp;</p>
+    <p class="center">
         <span class="auto-style2"><strong>Vehicle Registrations</strong></span><br />
 </p>
 <p>

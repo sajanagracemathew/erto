@@ -5,15 +5,17 @@
         color: #000000;
     }
         .auto-style2 {
-            margin-left: 165px;
+            margin-left: 184px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <p class="center">
-    &nbsp;<span class="auto-style1"><strong>Applications for Duplicate Driving License&nbsp;</strong></span></p>
+    &nbsp;</p>
+    <p class="center">
+        <span class="auto-style1"><strong>Applications for Duplicate Driving License&nbsp;</strong></span></p>
 <p class="center">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="auto-style2" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="775px">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="auto-style2" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="938px">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="User_id" HeaderText="User_id" SortExpression="User_id" />

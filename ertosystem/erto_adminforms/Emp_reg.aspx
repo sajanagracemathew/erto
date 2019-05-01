@@ -241,6 +241,7 @@
             <asp:TextBox ID="empid" runat="server" ReadOnly="True" Width="165px"></asp:TextBox>
         </td>
         <td class="auto-style22">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="empid" ErrorMessage="Please enter username" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
     </tr>
     <tr>
@@ -270,7 +271,7 @@
             <asp:Button ID="submit2_btn" runat="server" OnClick="submit2_btn_Click" Text="SUBMIT" ForeColor="#666666" />
         </td>
         <td class="auto-style46">
-            <asp:Button ID="send2_btn" runat="server" Text="SEND" Width="59px" ForeColor="#666666" />
+            <asp:Button ID="send2_btn" runat="server" Text="SEND" Width="59px" ForeColor="#666666" OnClick="send2_btn_Click" />
         </td>
         <td style="height: 20px"></td>
     </tr>

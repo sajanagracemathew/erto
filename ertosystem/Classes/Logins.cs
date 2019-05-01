@@ -31,13 +31,14 @@ namespace ertosystem.Classes
 
         private string username;
         private string password;
-        private string Email;
+        private string email;
         private string msg;
 
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
-        public string Email1 { get => Email; set => Email = value; }
+       
         public string Msg { get => msg; set => msg = value; }
+        public string Email { get => email; set => email = value; }
 
         public DataTable ExecuteSelectQueries()
         {
@@ -58,13 +59,17 @@ namespace ertosystem.Classes
             return dtReg;
         }
 
-        public void FetchEmail()
+        public DataTable FetchEmail()
         {
             OpenConection();
-            string qry = "select email,password from userregistration_table where email='"+ Email+"'";
-            SqlCommand cmd = new SqlCommand(qry, con);
-            cmd.Parameters.AddWithValue("@email", Email);
+            DataTable fetchdet = new DataTable();
+
+            SqlCommand command = new SqlCommand("select username,password from userregistration_table where email='" + email+"'",con);
+            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
+
+            da.Fill(fetchdet);
             CloseConnection();
+            return fetchdet;
         }
         
     }

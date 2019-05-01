@@ -7,6 +7,9 @@ using System.Web.UI.WebControls;
 using ertosystem.Classes;
 using System.Data;
 using System.IO;
+using System.Net;
+using System.Net.Mail;
+using System.Drawing;
 
 namespace ertosystem.erto_adminforms
 {
@@ -56,9 +59,62 @@ namespace ertosystem.erto_adminforms
             eobj.InsertEmp_Parameter();
             eobj.InsertLogin1();
 
-          
-            Response.Write("Registered Successfully");
 
+            ////// send mail ///////
+
+
+            string email = "";
+            string username = "";
+            string password = "";
+            DataTable dt1 = new DataTable();
+            dt1 = eobj.SendEmail();
+            if (dt1.Rows.Count > 0)
+            {
+                email = dt1.Rows[0]["Email"].ToString();
+                username = dt1.Rows[0]["Username"].ToString();
+                password = dt1.Rows[0]["Password"].ToString();
+
+
+            }
+
+
+            using (StringWriter sw = new StringWriter())
+            {
+                using (HtmlTextWriter hw = new HtmlTextWriter(sw))
+                {
+                    //DetailsView1.RenderControl(hw);
+                    StringReader sr = new StringReader(sw.ToString());
+                    MailMessage msg1 = new MailMessage();
+                    msg1.From = new MailAddress("sajanagracerto@gmail.com");
+                    msg1.To.Add(email);
+                    msg1.Subject = "Your Password";
+                    msg1.Body = string.Format("Hello : <h1>{0}</h1> is Your username<br/>Your password is <h1>{1}</h1>", username, password);
+
+                    msg1.IsBodyHtml = true;
+
+                    SmtpClient smt = new SmtpClient();
+                    smt.Host = "smtp.gmail.com";
+                    System.Net.NetworkCredential ntwd = new NetworkCredential();
+                    ntwd.UserName = "sajanagracerto@gmail.com";//Your Email ID  
+                    ntwd.Password = "ertomathew9337"; //   
+                    smt.UseDefaultCredentials = true;
+                    smt.Credentials = ntwd;
+                    smt.Port = 587;
+                    smt.EnableSsl = true;
+                    smt.Send(msg1);
+                    // lblMessage.Text = "Email Sent Successfully";  
+                    // lblMessage.ForeColor = System.Drawing.Color.ForestGreen;  
+                    //Response.Write("<script>alert('Mail sent successfully')</script>");
+                }
+            }
+
+
+
+
+
+            ///// clear fields
+
+            //Response.Write("Registered Successfully");
             tbempname.Text = "";
             tbempdob.Text = "";
             tbempaddress.Text = "";
@@ -71,6 +127,14 @@ namespace ertosystem.erto_adminforms
 
 
 
+
         }
+
+        protected void send2_btn_Click(object sender, EventArgs e)
+        {
+
+
+            //eobj.Eemail = tbempemail.Text;
+             }
     }
 }

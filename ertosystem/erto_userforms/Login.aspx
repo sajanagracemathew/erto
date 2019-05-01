@@ -258,7 +258,7 @@
                     <asp:TextBox ID="tbloginpassword" runat="server" TextMode="Password" Height="16px" Width="263px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbloginpassword" ErrorMessage="*" ForeColor="#CC0000"></asp:RequiredFieldValidator></div> 
                     <div class="auto-style82"> 
-                                <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#CC0000">Forgot Password?</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#CC0000" NavigateUrl="~/erto_userforms/forgetpassword.aspx">Forgot Password?</asp:HyperLink>
                                 </div>
                    <div class="auto-style80"> <strong>
                     <asp:Button ID="Login_btn" runat="server" CssClass="auto-style70" OnClick="Login_btn_Click" Text="Login" Width="100px" Height="31px" />
