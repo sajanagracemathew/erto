@@ -4,7 +4,7 @@
     <div class="jumbotron">
     
         <div id="logo-container">
-       <asp:Image ID="Image1" runat="server" width="500px" Height="250px" ImageUrl="~/Photos/home.jpg"  />
+       <asp:Image ID="Image1" runat="server" Height="200px" Width="350px" ImageUrl="~/Images_erto/home.jpg"  />
             </div>
     </div>
     
@@ -14,9 +14,9 @@
                 
                 Our Pages</h2>
             <p>
-                <ul class="footer_list">
+                <ul>
                 <li>Home</li>
-                <li>About Us</li>
+                <li>About Us</li>  
                 <li>User Registration</li>
                 <li>Contact Us</li>
                 </ul>
@@ -28,7 +28,7 @@
             <h2>Our Services</h2>
             <p>
                 <ul>
-                    <li>Registration</li>
+                    <li>Vehicle Registration</li>
                     <li>Learner's License</li>
                     <li>Driving License</li>
                     <li>Renewal of License</li>

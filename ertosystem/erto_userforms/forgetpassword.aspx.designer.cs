@@ -40,6 +40,15 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.Button getpass_btn;
         
         /// <summary>
+        /// home_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button home_btn;
+        
+        /// <summary>
         /// lbmsg control.
         /// </summary>
         /// <remarks>

@@ -34,7 +34,14 @@ namespace ertosystem.erto_userforms
                 lbaddress2.Text = Convert.ToString(dt1.Rows[0][3]);
                 lbmob2.Text = Convert.ToString(dt1.Rows[0][4]);
                 
-
+                if(dt1.Rows[0]["photo"].ToString().Length>1)
+                {
+                    userimg.ImageUrl = dt1.Rows[0]["photo"].ToString();
+                }
+                else
+                {
+                    userimg.ImageUrl = "Images_erto/user_img.jpg";
+                }
             }
         }
     }

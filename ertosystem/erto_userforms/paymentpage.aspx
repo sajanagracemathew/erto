@@ -53,18 +53,36 @@
         .auto-style16 {
             text-decoration: underline;
         }
+        .auto-style17 {
+            width: 171px;
+            height: 66px;
+        }
+        .auto-style18 {
+            width: 171px;
+            height: 44px;
+        }
+        .auto-style19 {
+            width: 171px;
+        }
+        .auto-style20 {
+            width: 171px;
+            height: 30px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <p>
         <table class="nav-justified">
             <tr>
+                <td class="auto-style17">&nbsp;</td>
                 <td class="auto-style9"></td>
                 <td class="auto-style10">
                 </td>
                 <td class="auto-style11"> </td>
             </tr>
             <tr>
+                <td class="auto-style18">
+                    &nbsp;</td>
                 <td class="auto-style6">
                     <asp:Label ID="lbuserid" runat="server" Text="User_id"></asp:Label>
                 </td>
@@ -74,6 +92,7 @@
                 <td class="auto-style8"> <strong><span class="auto-style2">Payment Options</span></strong></td>
             </tr>
             <tr>
+                <td class="auto-style18">&nbsp;</td>
                 <td class="auto-style6">&nbsp;Application Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                 <td class="auto-style7">
         <asp:DropDownList ID="d_applntype" runat="server" Width="185px" OnSelectedIndexChanged="d_applntype_SelectedIndexChanged" AutoPostBack="True" Height="27px" >
@@ -83,6 +102,7 @@
                     </span></strong></td>
             </tr>
             <tr>
+                <td class="auto-style19">&nbsp;</td>
                 <td class="auto-style4">Total amount to be paid(Rs) </td>
                 <td class="auto-style3">
                     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -101,6 +121,7 @@
                 </td>
             </tr>
             <tr>
+                <td class="auto-style19">&nbsp;</td>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style3">&nbsp;</td>
                 <td>
@@ -108,12 +129,14 @@
                 </td>
             </tr>
             <tr>
+                <td class="auto-style20">&nbsp;</td>
                 <td class="auto-style13"></td>
                 <td class="auto-style14"></td>
                 <td class="auto-style15">
                     </td>
             </tr>
             <tr>
+                <td class="auto-style19">&nbsp;</td>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style5">
                     <asp:Button ID="paynow_btn" runat="server" OnClick="paynow_btn_Click" Text="Pay" Width="64px" />
@@ -121,6 +144,7 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style19">&nbsp;</td>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style5">
                     <asp:Label ID="Label1" runat="server" ForeColor="#009933"></asp:Label>
@@ -130,12 +154,14 @@
                 </td>
             </tr>
             <tr>
+                <td class="auto-style19">&nbsp;</td>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style3">
 &nbsp; </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style19">&nbsp;</td>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style3">&nbsp;</td>
                 <td>&nbsp;</td>

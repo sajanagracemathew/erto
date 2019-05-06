@@ -75,11 +75,12 @@ namespace ertosystem.Classes
         {
             OpenConection();
             etype = "employee";
-            string qry1 = "insert into Login_table values(@type,@username,@password);";
+            string qry1 = "insert into Login_table values(@type,@username,@password,@email);";
             SqlCommand cmd1 = new SqlCommand(qry1, con);
             cmd1.Parameters.AddWithValue("@type", etype);
             cmd1.Parameters.AddWithValue("@username", eusername);
             cmd1.Parameters.AddWithValue("@password", epassword);
+            cmd1.Parameters.AddWithValue("@email", eemail);
             cmd1.ExecuteNonQuery();
         }
         public void GenerateAutoID()

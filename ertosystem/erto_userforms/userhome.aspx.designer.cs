@@ -49,6 +49,15 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.Label lbname1;
         
         /// <summary>
+        /// userimg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image userimg;
+        
+        /// <summary>
         /// lbdob control.
         /// </summary>
         /// <remarks>

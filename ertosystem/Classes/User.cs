@@ -77,7 +77,7 @@ namespace ertosystem.Classes
         {
             OpenConection();
             utype = "user";
-            string qry1 = "insert into Login_table values ('" + utype + "','" + username + "','" + password + "');";
+            string qry1 = "insert into Login_table values ('" + utype + "','" + username + "','" + password + "','" + email + "');";
             ExecuteQueries(qry1);
         }
     }

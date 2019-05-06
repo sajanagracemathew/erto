@@ -48,10 +48,10 @@
                 <asp:TextBox ID="tbuserid" runat="server" Width="156px"></asp:TextBox>
             </td>
             <td>
-                <asp:Label ID="lblearner_no" runat="server" Text="Learner No"></asp:Label>
+                <asp:Label ID="lbappln_no" runat="server" Text="LL Application No"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="tblearner_no" runat="server" Width="156px"></asp:TextBox>
+                <asp:TextBox ID="tbappln_no" runat="server" Width="156px"></asp:TextBox>
             </td>
         </tr>
         <tr>

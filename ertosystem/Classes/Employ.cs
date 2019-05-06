@@ -49,7 +49,7 @@ namespace ertosystem.Classes
             OpenConection();
 
             DataTable dt1 = new DataTable();
-            SqlCommand cmd1 = new SqlCommand("select Name,DOB,Address,Mobile_number from empregistration_table where Username=@usrname", con);
+            SqlCommand cmd1 = new SqlCommand("select Name,DOB,Address,Mobile_number,Photo from empregistration_table where Username=@usrname", con);
             cmd1.Parameters.AddWithValue("@usrname", fetchid);
             SqlDataAdapter da = new SqlDataAdapter(cmd1);
             da.Fill(dt1);

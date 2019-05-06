@@ -32,7 +32,14 @@ namespace ertosystem.erto_empforms
                 lbdob1.Text = Convert.ToString(dt1.Rows[0][1]);
                 lbaddress2.Text = Convert.ToString(dt1.Rows[0][2]);
                 lbmob2.Text = Convert.ToString(dt1.Rows[0][3]);
-
+                if (dt1.Rows[0]["Photo"].ToString().Length > 1)
+                {
+                    empimg.ImageUrl = dt1.Rows[0]["Photo"].ToString();
+                }
+                else
+                {
+                    empimg.ImageUrl = "Images_erto/user_img.jpg";
+                }
 
             }
         }

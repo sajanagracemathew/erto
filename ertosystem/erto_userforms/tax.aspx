@@ -18,7 +18,8 @@
         }
         .auto-style6 {
             width: 226px;
-            text-align: right;
+            text-align: left;
+            height: 68px;
         }
         .auto-style7 {
             font-size: medium;
@@ -42,6 +43,28 @@
         }
         .auto-style13 {
             width: 360px;
+        }
+        .auto-style14 {
+            color: #666666;
+        }
+        .auto-style15 {
+            width: 180px;
+            height: 68px;
+        }
+        .auto-style16 {
+            width: 360px;
+            height: 68px;
+        }
+        .auto-style17 {
+            width: 402px;
+            height: 68px;
+        }
+        .auto-style18 {
+            height: 68px;
+        }
+        .auto-style19 {
+            width: 360px;
+            text-align: center;
         }
     </style>
 </asp:Content>
@@ -81,10 +104,16 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style5">
-                <asp:Label ID="lbtax" runat="server" Text="Tax in Rs"></asp:Label>
+                <asp:Label ID="lbveh_type" runat="server" Text="Vehicle_Type"></asp:Label>
             </td>
             <td class="auto-style13">
-                <asp:TextBox ID="tbtax" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="ddveh_type" runat="server" Height="19px" Width="128px">
+                    <asp:ListItem>--Select--</asp:ListItem>
+                    <asp:ListItem>2 wheeler</asp:ListItem>
+                    <asp:ListItem>3 wheeler</asp:ListItem>
+                    <asp:ListItem>4 wheeler</asp:ListItem>
+                    <asp:ListItem></asp:ListItem>
+                </asp:DropDownList>
             </td>
             <td class="auto-style12">&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:RadioButton ID="rb_netbanking" runat="server" Text="Net banking" />
@@ -93,17 +122,51 @@
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
+            <td class="auto-style5">
+                <asp:Label ID="lbvalue" runat="server" Text="Purchase Value"></asp:Label>
+            </td>
+            <td class="auto-style13">
+                <asp:DropDownList ID="ddvalue" runat="server" OnSelectedIndexChanged="ddvalue_SelectedIndexChanged" AutoPostBack="True" Width="128px">
+                </asp:DropDownList>
+            </td>
             <td class="auto-style12">&nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td class="auto-style15"></td>
+            <td class="auto-style6">
+                <asp:Label ID="lbtax" runat="server" Text="Tax in Rs"></asp:Label>
+            </td>
+            <td class="auto-style16">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:TextBox ID="tbtax" runat="server" Width="128px"></asp:TextBox>
+                    </ContentTemplate>
+                    <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="ddvalue" EventName="SelectedIndexChanged" />
+                     </Triggers>
+                </asp:UpdatePanel>
+                <br />
+            </td>
+            <td class="auto-style17"></td>
+            <td class="auto-style18"></td>
+        </tr>
+        <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
+            <td class="auto-style5">&nbsp;</td>
             <td class="auto-style13">
-                <asp:Button ID="Button1" runat="server" Text="Pay" OnClick="Button1_Click" Width="52px" />
+                &nbsp;</td>
+            <td class="auto-style12">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style5">&nbsp;</td>
+            <td class="auto-style19">
+                <asp:Button ID="Button1" runat="server" Text="Pay" OnClick="Button1_Click" Width="52px" CssClass="auto-style14" />
             </td>
             <td class="auto-style12">&nbsp;</td>
             <td>&nbsp;</td>
@@ -111,23 +174,9 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style13">
+            <td class="auto-style19">
                 <asp:Label ID="Label1" runat="server" CssClass="auto-style10"></asp:Label>
             </td>
-            <td class="auto-style12">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
-            <td class="auto-style12">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
             <td class="auto-style12">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

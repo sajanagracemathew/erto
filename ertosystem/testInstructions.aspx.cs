@@ -13,9 +13,21 @@ namespace ertosystem
         {
             if (Request.QueryString["timeout"] != null)
             {
-                lbstatus.Text = "You test time expired, please try again!";
+                lbstatus.Text = "Your test time expired, please try again!";
+                btnStartTest.Visible = false;
+                home_btn.Visible = false;
             }
+           
+        }
 
+        protected void home_btn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/erto_userforms/userhome.aspx");
+        }
+
+        protected void btnStartTest_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("testInstructions.aspx");
         }
     }
 }

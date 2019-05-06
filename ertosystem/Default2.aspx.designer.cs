@@ -49,21 +49,21 @@ namespace ertosystem {
         protected global::System.Web.UI.UpdatePanel updPanel;
         
         /// <summary>
-        /// grdquestions0 control.
+        /// grdquestions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdquestions0;
+        protected global::System.Web.UI.WebControls.GridView grdquestions;
         
         /// <summary>
-        /// btnSubmit0 control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit0;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

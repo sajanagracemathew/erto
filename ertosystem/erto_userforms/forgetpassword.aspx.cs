@@ -32,8 +32,8 @@ namespace ertosystem.erto_userforms
             dt1 = obj.FetchEmail();
             if (dt1.Rows.Count > 0)
             {
-                username = dt1.Rows[0]["username"].ToString();
-                password = dt1.Rows[0]["password"].ToString();
+                username = dt1.Rows[0]["Username"].ToString();
+                password = dt1.Rows[0]["Password"].ToString();
         
 
             }
@@ -53,22 +53,24 @@ namespace ertosystem.erto_userforms
 
                     msg1.IsBodyHtml = true;
 
-                    SmtpClient smt = new SmtpClient();
-                    smt.Host = "smtp.gmail.com";
-                    System.Net.NetworkCredential ntwd = new NetworkCredential();
-                    ntwd.UserName = "sajanagracerto@gmail.com";//Your Email ID  
-                    ntwd.Password = "ertomathew9337"; //   
-                    smt.UseDefaultCredentials = true;
-                    smt.Credentials = ntwd;
-                    smt.Port = 587;
-                    smt.EnableSsl = true;
-                    smt.Send(msg1);
+                    NetworkCredential login = new NetworkCredential("sajanagracerto@gmail.com", "ertomathew9337");
+
+                    SmtpClient client = new SmtpClient("smtp.gmail.com");
+                    client.EnableSsl = true;
+                    client.UseDefaultCredentials = false;
+                    client.Credentials = login;
+                    client.Send(msg1);
                     // lblMessage.Text = "Email Sent Successfully";  
                     // lblMessage.ForeColor = System.Drawing.Color.ForestGreen;  
                     Response.Write("<script>alert('Mail sent successfully')</script>");
                 }
             }
 
+        }
+
+        protected void home_btn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Default.aspx");
         }
     }
 }

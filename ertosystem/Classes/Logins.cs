@@ -50,7 +50,7 @@ namespace ertosystem.Classes
             cmd.Parameters.AddWithValue("@password", Password);
             DataTable dtReg = new DataTable();
 
-            String type1 = "";
+            string type1 = "";
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dtReg);
@@ -64,7 +64,7 @@ namespace ertosystem.Classes
             OpenConection();
             DataTable fetchdet = new DataTable();
 
-            SqlCommand command = new SqlCommand("select username,password from userregistration_table where email='" + email+"'",con);
+            SqlCommand command = new SqlCommand("select Username,Password from Login_table where email='" + email+"'",con);
             SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
 
             da.Fill(fetchdet);

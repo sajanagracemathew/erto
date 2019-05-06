@@ -126,11 +126,15 @@
     <Content Include="erto_adminforms\rtodetails.aspx" />
     <Content Include="erto_adminforms\Rto_reg.aspx" />
     <Content Include="erto_adminforms\userdetails.aspx" />
+    <Content Include="erto_empforms\changepassword.aspx" />
     <Content Include="erto_empforms\duplicate.aspx" />
     <Content Include="erto_empforms\emphome.aspx" />
+    <Content Include="erto_empforms\fee_details.aspx" />
+    <Content Include="erto_empforms\fine_details.aspx" />
     <Content Include="erto_empforms\registrations.aspx" />
     <Content Include="erto_empforms\renew.aspx" />
     <Content Include="erto_empforms\searchvehicle.aspx" />
+    <Content Include="erto_empforms\tax_details.aspx" />
     <Content Include="erto_empforms\transferview.aspx" />
     <Content Include="erto_empforms\userdetails.aspx" />
     <Content Include="erto_userforms\drivinglicense.aspx" />
@@ -146,6 +150,9 @@
     <Content Include="erto_userforms\renewdrivinglicense.aspx" />
     <Content Include="erto_userforms\login.aspx" />
     <Content Include="erto_userforms\tax.aspx" />
+    <Content Include="erto_userforms\Taxhome.aspx" />
+    <Content Include="erto_userforms\testdrop.aspx" />
+    <Content Include="erto_userforms\testresult.aspx" />
     <Content Include="erto_userforms\transfer.aspx" />
     <Content Include="erto_userforms\userhome.aspx" />
     <Content Include="erto_userforms\user_reg.aspx" />
@@ -165,6 +172,7 @@
     <Content Include="erto_userforms\Site2.Master" />
     <Content Include="erto_empforms\Site3.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Images_erto\user_img.jpg" />
     <Content Include="layout\index.html" />
     <Content Include="layout\styles\forms.css" />
     <Content Include="layout\styles\images\black_file.gif" />
@@ -174,7 +182,8 @@
     <Content Include="layout\styles\layout.css" />
     <Content Include="layout\styles\navi.css" />
     <Content Include="layout\styles\tables.css" />
-    <Content Include="Photos\home.jpg" />
+    <Content Include="Images_erto\admin.jpg" />
+    <Content Include="Images_erto\home.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -306,6 +315,13 @@
     <Compile Include="erto_adminforms\userdetails.aspx.designer.cs">
       <DependentUpon>userdetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="erto_empforms\changepassword.aspx.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\changepassword.aspx.designer.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="erto_empforms\duplicate.aspx.cs">
       <DependentUpon>duplicate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -319,6 +335,20 @@
     </Compile>
     <Compile Include="erto_empforms\emphome.aspx.designer.cs">
       <DependentUpon>emphome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\fee_details.aspx.cs">
+      <DependentUpon>fee_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\fee_details.aspx.designer.cs">
+      <DependentUpon>fee_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\fine_details.aspx.cs">
+      <DependentUpon>fine_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\fine_details.aspx.designer.cs">
+      <DependentUpon>fine_details.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_empforms\registrations.aspx.cs">
       <DependentUpon>registrations.aspx</DependentUpon>
@@ -347,6 +377,13 @@
     </Compile>
     <Compile Include="erto_empforms\Site3.Master.designer.cs">
       <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\tax_details.aspx.cs">
+      <DependentUpon>tax_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\tax_details.aspx.designer.cs">
+      <DependentUpon>tax_details.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_empforms\transferview.aspx.cs">
       <DependentUpon>transferview.aspx</DependentUpon>
@@ -459,6 +496,27 @@
     </Compile>
     <Compile Include="erto_userforms\tax.aspx.designer.cs">
       <DependentUpon>tax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\Taxhome.aspx.cs">
+      <DependentUpon>Taxhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\Taxhome.aspx.designer.cs">
+      <DependentUpon>Taxhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\testdrop.aspx.cs">
+      <DependentUpon>testdrop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\testdrop.aspx.designer.cs">
+      <DependentUpon>testdrop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\testresult.aspx.cs">
+      <DependentUpon>testresult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\testresult.aspx.designer.cs">
+      <DependentUpon>testresult.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\transfer.aspx.cs">
       <DependentUpon>transfer.aspx</DependentUpon>

@@ -51,7 +51,7 @@
             width: 159px;
             height: 32px;
         }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <p>
@@ -148,7 +148,15 @@
             <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style8">
-                <asp:Button ID="rtotest_btn" runat="server" ForeColor="Blue" OnClick="rtotest_btn_Click" Text="Take Test" />
+                &nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style13">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style8">
+                <asp:Button ID="rtotest_btn" runat="server" ForeColor="Blue" OnClick="rtotest_btn_Click" Text="Take Mock Test" />
             </td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>

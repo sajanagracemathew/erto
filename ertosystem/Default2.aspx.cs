@@ -13,9 +13,12 @@ namespace ertosystem
 {
     public partial class Default2 : System.Web.UI.Page
     {
+        //Default2 obj = new Default2();
         DataTable dt = new DataTable();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+          
             if (!IsPostBack)
             {
                 BindGrid();
@@ -26,8 +29,8 @@ namespace ertosystem
           
             SqlDataAdapter adp = new SqlDataAdapter("select * from tblQuestions", ConfigurationManager.ConnectionStrings["myConn"].ToString());
             adp.Fill(dt);
-            grdquestions0.DataSource = dt;
-            grdquestions0.DataBind();
+            grdquestions.DataSource = dt;
+            grdquestions.DataBind();
         }
         protected void grdquestions_RowDataBound(object sender, GridViewRowEventArgs e)
         {
@@ -48,6 +51,11 @@ namespace ertosystem
                     }
                 }
             }
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

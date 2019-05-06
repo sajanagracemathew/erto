@@ -88,26 +88,22 @@ namespace ertosystem.erto_adminforms
                     msg1.From = new MailAddress("sajanagracerto@gmail.com");
                     msg1.To.Add(email);
                     msg1.Subject = "Your Password";
-                    msg1.Body = string.Format("Hello : <h1>{0}</h1> is Your username<br/>Your password is <h1>{1}</h1>", username, password);
+                    msg1.Body = string.Format("Hello : <h1>{0}</h1> is your username <br/>Your password is <h1>{1}</h1>", username, password);
 
                     msg1.IsBodyHtml = true;
 
-                    SmtpClient smt = new SmtpClient();
-                    smt.Host = "smtp.gmail.com";
-                    System.Net.NetworkCredential ntwd = new NetworkCredential();
-                    ntwd.UserName = "sajanagracerto@gmail.com";//Your Email ID  
-                    ntwd.Password = "ertomathew9337"; //   
-                    smt.UseDefaultCredentials = true;
-                    smt.Credentials = ntwd;
-                    smt.Port = 587;
-                    smt.EnableSsl = true;
-                    smt.Send(msg1);
+                    NetworkCredential login = new NetworkCredential("sajanagracerto@gmail.com", "ertomathew9337");
+
+                    SmtpClient client = new SmtpClient("smtp.gmail.com");
+                    client.EnableSsl = true;
+                    client.UseDefaultCredentials = false;
+                    client.Credentials = login;
+                    client.Send(msg1);
                     // lblMessage.Text = "Email Sent Successfully";  
                     // lblMessage.ForeColor = System.Drawing.Color.ForestGreen;  
-                    //Response.Write("<script>alert('Mail sent successfully')</script>");
+                    Response.Write("<script>alert('Mail sent successfully')</script>");
                 }
             }
-
 
 
 

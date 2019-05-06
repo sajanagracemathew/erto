@@ -32,6 +32,7 @@ namespace ertosystem.Classes
         private string hdob;
         private string haddress;
         private string hmobile_no;
+        private string hphoto;
         
         public string Hname { get => hname; set => hname = value; }
         public string Hdob { get => hdob; set => hdob = value; }
@@ -39,13 +40,14 @@ namespace ertosystem.Classes
         public string Hmobile_no { get => hmobile_no; set => hmobile_no = value; }
         public string Hid { get => hid; set => hid = value; }
         public string Userid { get => userid; set => userid = value; }
+        public string Hphoto { get => hphoto; set => hphoto = value; }
 
         public DataTable ExecuteSelect()
         {
             OpenConection();
 
             DataTable dt1 = new DataTable();
-            SqlCommand cmd1 = new SqlCommand("select user_id,name,dob,address,mob_number from userregistration_table where username=@usrname", con);
+            SqlCommand cmd1 = new SqlCommand("select user_id,name,dob,address,mob_number,photo from userregistration_table where username=@usrname", con);
             cmd1.Parameters.AddWithValue("@usrname", hid);
             SqlDataAdapter da = new SqlDataAdapter(cmd1);
             da.Fill(dt1);

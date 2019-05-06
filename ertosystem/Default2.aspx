@@ -20,22 +20,22 @@
                             <td>
                                 <table style="width: 100%;">
                                     <tr>
-                                        <td style="float: left;"><b><span id="timerText0"></span><span id="spnthankyou0"></span></b></td>
-                                        <td style="float: right; background-color: yellow; color: black;"><b><span id="lbresult0"></span></b></td>
+                                        <td style="float: left;"><b><span id="timerText"></span><span id="spnthankyou"></span></b></td>
+                                        <td style="float: right; background-color: yellow; color: black;"><b><span id="lbresult"></span></b></td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <asp:GridView ID="grdquestions0" runat="server" AutoGenerateColumns="false" DataKeyNames="QuestionId" OnRowDataBound="grdquestions_RowDataBound" Width="100%">
+                                <asp:GridView ID="grdquestions" runat="server" AutoGenerateColumns="false" OnRowDataBound="grdquestions_RowDataBound" DataKeyNames="QuestionId" Width="100%">
                                     <Columns>
-                                        <asp:TemplateField HeaderText="Asp .Net Online Test">
+                                        <asp:TemplateField HeaderText="RTO Online Test">
                                             <ItemTemplate>
-                                                <table id='<%#Eval("QuestionId") %>0' class="tableclass">
+                                                <table class="tableclass" id='<%#Eval("QuestionId") %>'>
                                                     <tr>
                                                         <td><b>Question <%#Eval("QuestionId") %> -: <%#Eval("Question") %></b>
-                                                            <asp:HiddenField ID="hdnquestionId0" runat="server" />
+                                                            <asp:HiddenField ID="hdnquestionId" runat="server"/>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -46,35 +46,34 @@
                                                                         <table class="tblOptions">
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:RadioButton ID="rdOption5" runat="server" GroupName='<%#Eval("QuestionId") %>' Text='<%#Eval("Option1") %>' />
+                                                                                    <asp:RadioButton ID="rdOption1" runat="server" Text='<%#Eval("Option1") %>' GroupName='<%#Eval("QuestionId") %>' />
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:RadioButton ID="rdOption6" runat="server" GroupName='<%#Eval("QuestionId") %>' Text='<%#Eval("Option2") %>' />
+                                                                                    <asp:RadioButton ID="rdOption2" runat="server" Text='<%#Eval("Option2") %>' GroupName='<%#Eval("QuestionId") %>' />
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:RadioButton ID="rdOption7" runat="server" GroupName='<%#Eval("QuestionId") %>' Text='<%#Eval("Option3") %>' />
-                                                                                </td>
+                                                                                    <asp:RadioButton ID="rdOption3" runat="server" Text='<%#Eval("Option3") %>' GroupName='<%#Eval("QuestionId") %>' /></td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:RadioButton ID="rdOption8" runat="server" GroupName='<%#Eval("QuestionId") %>' Text='<%#Eval("Option4") %>' />
-                                                                                </td>
+                                                                                    <asp:RadioButton ID="rdOption4" runat="server" Text='<%#Eval("Option4") %>' GroupName='<%#Eval("QuestionId") %>' /></td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:Label ID="lbquestionstatus0" runat="server"></asp:Label>
+                                                                                    <asp:Label ID="lbquestionstatus" runat="server"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td class="correctAnswer">Correct Answer Is -:
-                                                                                    <asp:Label ID="lbAnswer0" runat="server" Text='<%#Eval("QuestionAnswer") %>'></asp:Label>
+                                                                                    <asp:Label ID="lbAnswer" runat="server" Text='<%#Eval("QuestionAnswer") %>'></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
+
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -85,11 +84,12 @@
                                         </asp:TemplateField>
                                     </Columns>
                                 </asp:GridView>
+
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <asp:Button ID="btnSubmit0" runat="server" CssClass="btn" OnClientClick="return CheckIfAllQuestionAnswerHasBeenSubmitted()" Text="Submit" />
+                                <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn" OnClientClick="return CheckIfAllQuestionAnswerHasBeenSubmitted()" OnClick="btnSubmit_Click" />
                             </td>
                         </tr>
                     </table>
@@ -97,7 +97,7 @@
             </asp:UpdatePanel>
             <script>
                 //Set the number of minutes you need
-                var mins = 1;
+                var mins = 5;
                 var secs = mins * 60;
                 var currentSeconds = 0;
                 var currentMinutes = 0;
@@ -123,7 +123,9 @@
                         setTimeout('Decrement()', 1000);
                     }
                     else {
-                        window.location.href = "default.aspx?timeout=1"
+                       
+                        window.location.href = "testInstructions.aspx?timeout=1"
+                      
                     }
                 }
 
@@ -164,7 +166,7 @@
 
                             }
                         });
-                        $("#lbresult").text("Final Result-:" + CountFinalResult + "/7");
+                        $("#lbresult").text("Final Result-:" + CountFinalResult + "/20");
                         $("#btnSubmit").attr("disabled", "disabled"); //disable button if all questions answer has been given
                         $("#btnSubmit").removeClass("btn");
                         $("#btnSubmit").addClass("btndiabled");
@@ -193,7 +195,7 @@
 
 
                 function CheckTheCountOfQuestionHasBeenAnswered() {
-                    TotalQuestions = $('.tblOptions').length;
+                    //TotalQuestions = $('.tblOptions').length.toString;
                     var TotalGivenAnswerCount = 0;
                     var flagtocheckcount = 0;
                     $(".tblOptions").each(function () {
@@ -205,11 +207,13 @@
                         }
                     })
                     CountCheckCheckQuestion = TotalGivenAnswerCount;
+                TotalQuestions = 20;
                 }
+                
 
             </script>
 
-            <style>
+            <style aria-expanded="undefined">
                 .border {
                     border-color: red;
                     border-width: 2px;
@@ -273,4 +277,5 @@
     </form>
 </body>
 </html>
+
 
