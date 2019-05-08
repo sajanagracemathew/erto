@@ -38,6 +38,7 @@ namespace ertosystem.Classes
         private string ins_cer;
         private string noc;
         private string date;
+        private string update_button;
 
         public string Ownername { get => ownername; set => ownername = value; }
         public string Veh_id { get => veh_id; set => veh_id = value; }
@@ -50,6 +51,8 @@ namespace ertosystem.Classes
         public string Noc { get => noc; set => noc = value; }
         public string Date { get => date; set => date = value; }
         public string Trans_id { get => trans_id; set => trans_id = value; }
+        public string Update_button { get => update_button; set => update_button = value; }
+
         //public string Vid { get => vid; set => vid = value; }
 
         public void InsertTransfer_Parameter()
@@ -57,11 +60,12 @@ namespace ertosystem.Classes
             OpenConection();
             Date = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(Date);
-            string qry = "insert into transfer_table values(@cownername,@cveh_id,@cveh_no,@nownername,@ndob,@nswd,@naddress,@veh_inscer,@veh_noc,@cdate);";
+            string qry = "insert into transfer_table (Current_ownername,Vehicle_number,Veh_Id,New_ownername,DOB,SWD,Address,Veh_insurancecer,Noc,Date)values(@cownername,@cveh_no,@cveh_id,@nownername,@ndob,@nswd,@naddress,@veh_inscer,@veh_noc,@cdate);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@cownername", ownername);
-            cmd.Parameters.AddWithValue("@cveh_id", veh_id);
+            
             cmd.Parameters.AddWithValue("@cveh_no", veh_number);
+            cmd.Parameters.AddWithValue("@cveh_id", veh_id);
             cmd.Parameters.AddWithValue("@nownername", newownername);
             cmd.Parameters.AddWithValue("@ndob", dob);
             cmd.Parameters.AddWithValue("@nswd", swd);
@@ -109,6 +113,29 @@ namespace ertosystem.Classes
 
             }
             return veh_id;
+        }
+        public DataTable DisplayRequestDetails()
+        {
+            OpenConection();
+            DataTable dtReg1 = new DataTable();
+            string qry = "Select Current_ownername,Vehicle_number,Veh_Id,New_ownername,DOB,Address,Veh_insurancecer,Noc,Date,is_approved, CASE WHEN is_approved=0 THEN 'NOT APPROVED' ELSE 'APPROVED' END AS APR_STATUS from transfer_table  ";
+
+            SqlCommand cmd2 = new SqlCommand(qry, con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+            da.Fill(dtReg1);
+            CloseConnection();
+            return dtReg1;
+        }
+        public void UpdateTable()
+        {
+            OpenConection();
+
+            SqlCommand cmd3 = new SqlCommand("update transfer_table set is_approved='1' where Current_ownername=@oname", con);
+
+            cmd3.Parameters.AddWithValue("@oname", Update_button);
+
+            cmd3.ExecuteNonQuery();
         }
     }
 }

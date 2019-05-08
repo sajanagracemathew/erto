@@ -33,6 +33,7 @@ namespace ertosystem.Classes
         private string dob;
         private string address;
         private string date;
+        private string update_button;
 
         public string Dupid { get => dupid; set => dupid = value; }
         public string Licensenumber { get => licensenumber; set => licensenumber = value; }
@@ -41,6 +42,7 @@ namespace ertosystem.Classes
         public string Address { get => address; set => address = value; }
         public string Date { get => date; set => date = value; }
         public string Uid { get => uid; set => uid = value; }
+        public string Update_button { get => update_button; set => update_button = value; }
 
         public void InsertDuplicatelicense_Parameter()
         {
@@ -65,6 +67,29 @@ namespace ertosystem.Classes
             da.Fill(dt1);
             CloseConnection();
             return dt1;
+        }
+        public DataTable DisplayRequestDetails()
+        {
+            OpenConection();
+            DataTable dtReg1 = new DataTable();
+            string qry = "Select User_id,License_no,Date,is_approved, CASE WHEN is_approved=0 THEN 'NOT APPROVED' ELSE 'APPROVED' END AS APR_STATUS from duplicatedl_table  ";
+
+            SqlCommand cmd2 = new SqlCommand(qry, con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+            da.Fill(dtReg1);
+            CloseConnection();
+            return dtReg1;
+        }
+        public void UpdateTable()
+        {
+            OpenConection();
+
+            SqlCommand cmd3 = new SqlCommand("update duplicatedl_table set is_approved='1' where User_id=@usr_id", con);
+
+            cmd3.Parameters.AddWithValue("@usr_id", update_button);
+
+            cmd3.ExecuteNonQuery();
         }
     }
 }

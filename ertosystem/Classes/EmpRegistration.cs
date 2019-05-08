@@ -38,6 +38,7 @@ namespace ertosystem.Classes
         private string eusername;
         private string epassword;
         private string etype;
+        private string newpwd;
 
         public string Ename { get => ename; set => ename = value; }
         public string Edob { get => edob; set => edob = value; }
@@ -51,6 +52,7 @@ namespace ertosystem.Classes
         public string Epassword { get => epassword; set => epassword = value; }
         public string Etype { get => etype; set => etype = value; }
         public string Egender { get => egender; set => egender = value; }
+        public string Newpwd { get => newpwd; set => newpwd = value; }
 
         public void InsertEmp_Parameter()
         {
@@ -113,6 +115,24 @@ namespace ertosystem.Classes
             da.Fill(fetchdet);
             CloseConnection();
             return fetchdet;
+        }
+        public void UpdateEmployregPassword()
+        {
+            OpenConection();
+            string qry3 = "update empregistration_table set Password=@updatepwd where Username=@username;";
+            SqlCommand cmd = new SqlCommand(qry3, con);
+            cmd.Parameters.AddWithValue("@updatepwd", newpwd);
+            cmd.Parameters.AddWithValue("@username", eusername);
+            cmd.ExecuteNonQuery();
+        }
+        public void UpdateEmployloginPassword()
+        {
+            OpenConection();
+            string qry3 = "update Login_table set Password=@updatepwd where Login_type='employee' and Username=@username;";
+            SqlCommand cmd = new SqlCommand(qry3, con);
+            cmd.Parameters.AddWithValue("@updatepwd", newpwd);
+            cmd.Parameters.AddWithValue("@username", eusername);
+            cmd.ExecuteNonQuery();
         }
     }
 }

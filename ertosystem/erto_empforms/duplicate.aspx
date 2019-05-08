@@ -5,7 +5,7 @@
         color: #000000;
     }
         .auto-style2 {
-            margin-left: 184px;
+            margin-left: 140px;
         }
     </style>
 </asp:Content>
@@ -14,13 +14,24 @@
     &nbsp;</p>
     <p class="center">
         <span class="auto-style1"><strong>Applications for Duplicate Driving License&nbsp;</strong></span></p>
+    <p class="center">
+        &nbsp;</p>
 <p class="center">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="auto-style2" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="938px">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="auto-style2" ForeColor="#333333" GridLines="None" Width="910px" OnRowCommand="GridView1_RowCommand" OnRowDataBound="GridView1_RowDataBound">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:BoundField DataField="User_id" HeaderText="User_id" SortExpression="User_id" />
-            <asp:BoundField DataField="License_no" HeaderText="License_no" SortExpression="License_no" />
-            <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+            <asp:BoundField DataField="User_id" HeaderText="User_id" />
+            <asp:BoundField DataField="License_no" HeaderText="License_no" />
+            <asp:BoundField DataField="Date" HeaderText="Date" />
+            <asp:BoundField DataField="is_approved" HeaderText="is_approved" />
+            <asp:TemplateField ShowHeader="False">
+            <ItemTemplate>
+                <asp:HiddenField ID="hdnApp" runat="server" Value='<%# Eval("is_approved") %>' />
+                <asp:Button ID="Button1" runat="server" CausesValidation="false" CommandArgument='<%# Eval("APR_STATUS") %>' 
+                    CommandName="ShowStatus" Text='<%# Eval("APR_STATUS") %>' OnClick ="btnApprove_Click"  />
+            </ItemTemplate>
+                <ControlStyle ForeColor="Red" />
+        </asp:TemplateField>
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -33,6 +44,5 @@
         <SortedDescendingCellStyle BackColor="#E9EBEF" />
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myConn %>" SelectCommand="SELECT [User_id], [License_no], [Date] FROM [duplicatedl_table]"></asp:SqlDataSource>
 </p>
 </asp:Content>

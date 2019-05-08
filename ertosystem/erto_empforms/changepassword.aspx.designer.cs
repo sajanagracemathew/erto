@@ -31,6 +31,15 @@ namespace ertosystem.erto_empforms {
         protected global::System.Web.UI.WebControls.TextBox tbnew_pass;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// lbconfirm_pass control.
         /// </summary>
         /// <remarks>
@@ -65,5 +74,14 @@ namespace ertosystem.erto_empforms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button changepass_btn;
+        
+        /// <summary>
+        /// lbsuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbsuccess;
     }
 }

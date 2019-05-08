@@ -63,7 +63,7 @@
                                 
                             </ul>
                         <li><a runat="server" href="#">Test Result</a>
-                        <li><a runat="server" href="#">Change Password</a>
+                        <li><a runat="server" href="~/erto_empforms/changepassword">Change Password</a>
                         
                     </ul>
                 </div>

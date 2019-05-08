@@ -33,6 +33,7 @@ namespace ertosystem.Classes
         private string edob;
         private string eaddress;
         private string emob;
+        
 
         public string Veh_id { get => veh_id; set => veh_id = value; }
         public string User_Id { get => user_Id; set => user_Id = value; }
@@ -41,6 +42,7 @@ namespace ertosystem.Classes
         public string Eaddress { get => eaddress; set => eaddress = value; }
         public string Emob { get => emob; set => emob = value; }
         public string Fetchid { get => fetchid; set => fetchid = value; }
+        
 
 
         //public int User_id { get => user_id; set => user_id = value; }
@@ -81,5 +83,6 @@ namespace ertosystem.Classes
             CloseConnection();
             return dtReg1;
         }
+       
     }
 }

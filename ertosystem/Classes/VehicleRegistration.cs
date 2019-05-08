@@ -47,6 +47,7 @@ namespace ertosystem.Classes
         private string veh_no;
         private string code;
         private string vehicle_no;
+        //private string update_button;
 
         public string Oveh_id { get => oveh_id; set => oveh_id = value; }
         public string Oswd { get => oswd; set => oswd = value; }
@@ -70,6 +71,7 @@ namespace ertosystem.Classes
         //public string Dist { get => dist; set => dist = value; }
         public string Code { get => code; set => code = value; }
         public string Vehicle_no { get => vehicle_no; set => vehicle_no = value; }
+        //public string Update_button { get => update_button; set => update_button = value; }
 
 
         //public DateTime Oregdate { get => oregdate; set => oregdate = value; }
@@ -191,5 +193,6 @@ namespace ertosystem.Classes
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
+        
     }
 }

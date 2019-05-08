@@ -34,6 +34,8 @@
             <asp:BoundField DataField="Fitness_certificate" HeaderText="Fitness_certificate" SortExpression="Fitness_certificate" />
             <asp:BoundField DataField="Registration_date" HeaderText="Registration_date" SortExpression="Registration_date" />
             <asp:BoundField DataField="Vehicle_no" HeaderText="Vehicle_no" SortExpression="Vehicle_no" />
+         
+                
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
