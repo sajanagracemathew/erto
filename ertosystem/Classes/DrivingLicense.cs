@@ -50,12 +50,23 @@ namespace ertosystem.Classes
         public string Veh_type { get => veh_type; set => veh_type = value; }
         public string Date { get => date; set => date = value; }
         public string Dl_id { get => dl_id; set => dl_id = value; }
+        
 
-        public void InsertParameter()
+        public void InsertDrivinglicense_Parameter()
         {
             OpenConection();
             date = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(date);
+            string qry = "insert into Drivinglicense_table (User_id,Learnerappln_no,SWD,Blood_grp,Qual,Veh_type,Date) values(@usrid,@appln_no,@swd1,@bloodgp,@qual,@vehtype,@date);";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@usrid", uid);
+            cmd.Parameters.AddWithValue("@appln_no", learner_no);
+            cmd.Parameters.AddWithValue("@swd1", swd);
+            cmd.Parameters.AddWithValue("@bloodgp", d_bgrp);
+            cmd.Parameters.AddWithValue("@qual", qualification);
+            cmd.Parameters.AddWithValue("@vehtype", veh_type);
+            cmd.Parameters.AddWithValue("@date", date);
+            cmd.ExecuteNonQuery();
         }
 
         public DataTable ExecuteSelect()
@@ -65,7 +76,7 @@ namespace ertosystem.Classes
             DataTable dt1 = new DataTable();
             SqlCommand cmd1 = new SqlCommand("select user_id,name,dob,address from userregistration_table where username=@usrname", con);
             cmd1.Parameters.AddWithValue("@usrname", dl_id);
-            SqlDataAdapter da = new SqlDataAdapter(cmd1);// this will query your database and return the result to your datatable
+            SqlDataAdapter da = new SqlDataAdapter(cmd1);
             da.Fill(dt1);
             CloseConnection();
             return dt1;

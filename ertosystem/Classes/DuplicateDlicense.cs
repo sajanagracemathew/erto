@@ -49,7 +49,7 @@ namespace ertosystem.Classes
             OpenConection();
             date = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(date);
-            string qry = "insert into duplicatedl_table values(@usrid,@license_no,@ddate);";
+            string qry = "insert into duplicatedl_table (User_id,License_no,Date) values(@usrid,@license_no,@ddate);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@usrid", uid);
             cmd.Parameters.AddWithValue("@license_no", licensenumber);
@@ -72,7 +72,7 @@ namespace ertosystem.Classes
         {
             OpenConection();
             DataTable dtReg1 = new DataTable();
-            string qry = "Select User_id,License_no,Date,is_approved, CASE WHEN is_approved=0 THEN 'NOT APPROVED' ELSE 'APPROVED' END AS APR_STATUS from duplicatedl_table  ";
+            string qry = "Select User_id,License_no,Date,is_verified, CASE WHEN is_verified=0 THEN 'NOT VERIFIED' ELSE 'VERIFIED' END AS APR_STATUS from duplicatedl_table  ";
 
             SqlCommand cmd2 = new SqlCommand(qry, con);
 
@@ -85,7 +85,7 @@ namespace ertosystem.Classes
         {
             OpenConection();
 
-            SqlCommand cmd3 = new SqlCommand("update duplicatedl_table set is_approved='1' where User_id=@usr_id", con);
+            SqlCommand cmd3 = new SqlCommand("update duplicatedl_table set is_verified='1' where User_id=@usr_id", con);
 
             cmd3.Parameters.AddWithValue("@usr_id", update_button);
 

@@ -51,7 +51,7 @@ namespace ertosystem.Classes
             OpenConection();
             currentdate = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(currentdate);
-            string qry = "insert into renewdrivinglicense_table values(@usrid,@license_no,@current_date,@expire_date);";
+            string qry = "insert into renewdrivinglicense_table (User_id,License_no,Currentdate,Expire_date) values(@usrid,@license_no,@current_date,@expire_date);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@usrid", uid);
             cmd.Parameters.AddWithValue("@license_no", licensenumber);
@@ -75,7 +75,7 @@ namespace ertosystem.Classes
         {
             OpenConection();
             DataTable dtReg1 = new DataTable();
-            string qry ="Select User_id,License_no,Currentdate,Expire_date,is_approved, CASE WHEN is_approved=0 THEN 'NOT APPROVED' ELSE 'APPROVED' END AS APR_STATUS from renewdrivinglicense_table  ";
+            string qry ="Select User_id,License_no,Currentdate,Expire_date,is_verified, CASE WHEN is_verified=0 THEN 'NOT VERIFIED' ELSE 'VERIFIED' END AS APR_STATUS from renewdrivinglicense_table  ";
 
             SqlCommand cmd2 = new SqlCommand(qry, con);
 
@@ -85,6 +85,29 @@ namespace ertosystem.Classes
             return dtReg1;
         }
         public void UpdateTable()
+        {
+            OpenConection();
+
+            SqlCommand cmd3 = new SqlCommand("update renewdrivinglicense_table set is_verified='1' where User_id=@usr_id", con);
+
+            cmd3.Parameters.AddWithValue("@usr_id", update_button);
+
+            cmd3.ExecuteNonQuery();
+        }
+        public DataTable DisplayofficerRequestDetails()
+        {
+            OpenConection();
+            DataTable dtReg1 = new DataTable();
+            string qry = "Select User_id,License_no,Currentdate,Expire_date,is_verified,is_approved, CASE WHEN is_approved=0 THEN 'NOT APPROVED' ELSE 'APPROVED' END AS APR_STATUS from renewdrivinglicense_table WHERE is_verified='1' ";
+
+            SqlCommand cmd2 = new SqlCommand(qry, con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+            da.Fill(dtReg1);
+            CloseConnection();
+            return dtReg1;
+        }
+        public void UpdateTable1()
         {
             OpenConection();
 

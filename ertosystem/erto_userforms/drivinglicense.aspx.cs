@@ -36,7 +36,26 @@ namespace ertosystem.erto_userforms
 
         protected void apply_btn_Click(object sender, EventArgs e)
         {
-            
+            obj.Uid = tbuserid.Text;
+            obj.Learner_no = tbappln_no.Text;
+            obj.Swd = tbswd.Text;
+            obj.D_bgrp = d_bgrp.Text;
+            obj.Veh_type = d_vehtype.Text;
+            obj.Qualification = tbqual.Text;
+            obj.Date = tbdate.Text;
+            obj.InsertDrivinglicense_Parameter();
+            Response.Write("<script>alert('Application Submitted Successfully..Please Pay the Fees(online/manually)..Your Test details will be informed later')</script>");
+
+            tbuserid.Text = "";
+            tbappln_no.Text = "";
+            tbname.Text = "";
+            tbdob.Text = "";
+            tbaddress.Text = "";
+            tbswd.Text = "";
+            d_bgrp.Text = "";
+            d_vehtype.Text = "";
+            tbqual.Text = "";
+            tbdate.Text = "";
         }
     }
 }

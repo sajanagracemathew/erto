@@ -1,12 +1,12 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ertosystem.erto_adminforms.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site4.master.cs" Inherits="ertosystem.erto_officerforms.Site4" %>
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head runat="server">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <meta charset="utf-8" />
+     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> E-RTO</title>
 
@@ -18,7 +18,7 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
 </head>
 <body id="top">
-    <form runat="server">
+    <form id="form1" runat="server">
         <div class="wrapper col1">
             <div id="header">
                 <div id="logo">
@@ -42,21 +42,25 @@
             <div id="topbar">
                 <div id="topnav">
                     <ul>
-                        <li><a runat="server" href ="~/erto_adminforms/adminhome" style="font-size: medium">Home</a></li>
-                        <li><a runat="server" href="~/">Registration</a>
+                        <li><a runat="server" href ="~/erto_officerforms/officerhome" style="font-size: medium">Home</a></li>
+                        <li><a runat="server" href="~/">Applications</a>
                             <ul>
-                                <li><a runat="server" href="~/erto_adminforms/Rto_reg">Officer Registration</a></li>
-                                <li><a runat="server" href="~/erto_adminforms/Emp_reg">Employee Registration</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/veh_registrations">Vehicle Registrations</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/learnersofficer">Learner's License</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/dlofficer">Driving License</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/renewlicense">Renew License</a></li>
+                                <li><a runat="server" href="~/erto_empforms/duplicateofficer">Duplicate License</a></li>
+                                <li><a runat="server" href="~/erto_empforms/transferofficer">Transfer&NOC</a></li>
                             </ul>
                         </li>  
                         <li><a runat="server" href="#">Details</a>
                             <ul>
-                                <li><a runat="server" href="~/erto_adminforms/rtodetails">Officer details</a></li>
                                 <li><a runat="server" href="~/erto_adminforms/empdetails">Employee details</a></li>
                                 <li><a runat="server" href="~/erto_adminforms/userdetails">User details</a></li>
                             </ul>
                         </li>
-                        
+                        <li><a runat="server" href="~/">Search Vehicles</a></li>
+                        <li><a runat="server" href="~/">Reports</a></li>
                     </ul>
                 </div>
                 <br class="clear" />
@@ -79,5 +83,3 @@
     </form>
 </body>
 </html>
-
-

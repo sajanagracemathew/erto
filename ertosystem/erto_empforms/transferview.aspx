@@ -19,6 +19,7 @@
     &nbsp;<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="auto-style2" ForeColor="#333333" GridLines="None" Width="1103px" OnRowDataBound="GridView1_RowDataBound">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
+            <asp:BoundField DataField="Transfer_id" HeaderText="Transfer_id" />
             <asp:BoundField DataField="Current_ownername" HeaderText="Current_ownername" />
             <asp:BoundField DataField="Vehicle_number" HeaderText="Vehicle_number" />
             <asp:BoundField DataField="Veh_Id" HeaderText="Veh_Id" />
@@ -28,9 +29,10 @@
             <asp:BoundField DataField="Veh_insurancecer" HeaderText="Veh_insurancecer" />
             <asp:BoundField DataField="Noc" HeaderText="Noc" />
             <asp:BoundField DataField="Date" HeaderText="Date" />
+            <asp:BoundField HeaderText="is_verified" DataField="is_verified" />
             <asp:TemplateField ShowHeader="False">
             <ItemTemplate>
-                <asp:HiddenField ID="hdnApp" runat="server" Value='<%# Eval("is_approved") %>' />
+                <asp:HiddenField ID="hdnApp" runat="server" Value='<%# Eval("is_verified") %>' />
                 <asp:Button ID="Button1" runat="server" CausesValidation="false" CommandArgument='<%# Eval("APR_STATUS") %>' 
                     CommandName="ShowStatus" Text='<%# Eval("APR_STATUS") %>' OnClick ="btnApprove_Click"  />
             </ItemTemplate>

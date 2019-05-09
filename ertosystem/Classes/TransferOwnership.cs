@@ -60,7 +60,7 @@ namespace ertosystem.Classes
             OpenConection();
             Date = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(Date);
-            string qry = "insert into transfer_table (Current_ownername,Vehicle_number,Veh_Id,New_ownername,DOB,SWD,Address,Veh_insurancecer,Noc,Date)values(@cownername,@cveh_no,@cveh_id,@nownername,@ndob,@nswd,@naddress,@veh_inscer,@veh_noc,@cdate);";
+            string qry = "insert into transfer_table (Current_ownername,Vehicle_number,Veh_Id,New_ownername,DOB,SWD,Address,Veh_insurancecer,Noc,Date) values(@cownername,@cveh_no,@cveh_id,@nownername,@ndob,@nswd,@naddress,@veh_inscer,@veh_noc,@cdate);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@cownername", ownername);
             
@@ -118,7 +118,7 @@ namespace ertosystem.Classes
         {
             OpenConection();
             DataTable dtReg1 = new DataTable();
-            string qry = "Select Current_ownername,Vehicle_number,Veh_Id,New_ownername,DOB,Address,Veh_insurancecer,Noc,Date,is_approved, CASE WHEN is_approved=0 THEN 'NOT APPROVED' ELSE 'APPROVED' END AS APR_STATUS from transfer_table  ";
+            string qry = "Select Transfer_id,Current_ownername,Vehicle_number,Veh_Id,New_ownername,DOB,Address,Veh_insurancecer,Noc,Date,is_verified, CASE WHEN is_verified=0 THEN 'NOT VERIFIED' ELSE 'VERIFIED' END AS APR_STATUS from transfer_table  ";
 
             SqlCommand cmd2 = new SqlCommand(qry, con);
 
@@ -131,9 +131,9 @@ namespace ertosystem.Classes
         {
             OpenConection();
 
-            SqlCommand cmd3 = new SqlCommand("update transfer_table set is_approved='1' where Current_ownername=@oname", con);
+            SqlCommand cmd3 = new SqlCommand("update transfer_table set is_verified='1' where Transfer_id=@trans_id", con);
 
-            cmd3.Parameters.AddWithValue("@oname", Update_button);
+            cmd3.Parameters.AddWithValue("@trans_id", Update_button);
 
             cmd3.ExecuteNonQuery();
         }

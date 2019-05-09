@@ -23,10 +23,10 @@
             <asp:BoundField DataField="User_id" HeaderText="User_id" />
             <asp:BoundField DataField="License_no" HeaderText="License_no" />
             <asp:BoundField DataField="Date" HeaderText="Date" />
-            <asp:BoundField DataField="is_approved" HeaderText="is_approved" />
+            <asp:BoundField DataField="is_verified" HeaderText="is_verified" />
             <asp:TemplateField ShowHeader="False">
             <ItemTemplate>
-                <asp:HiddenField ID="hdnApp" runat="server" Value='<%# Eval("is_approved") %>' />
+                <asp:HiddenField ID="hdnApp" runat="server" Value='<%# Eval("is_verified") %>' />
                 <asp:Button ID="Button1" runat="server" CausesValidation="false" CommandArgument='<%# Eval("APR_STATUS") %>' 
                     CommandName="ShowStatus" Text='<%# Eval("APR_STATUS") %>' OnClick ="btnApprove_Click"  />
             </ItemTemplate>
