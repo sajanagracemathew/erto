@@ -69,7 +69,7 @@
             width: 210px;
         }
         .auto-style38 {
-            text-align: center;
+            text-align: right;
             height: 20px;
             width: 210px;
         }
@@ -271,8 +271,7 @@
             <asp:Button ID="submit2_btn" runat="server" OnClick="submit2_btn_Click" Text="SUBMIT" ForeColor="#666666" />
         </td>
         <td class="auto-style46">
-            <asp:Button ID="send2_btn" runat="server" Text="SEND" Width="59px" ForeColor="#666666" OnClick="send2_btn_Click" />
-        </td>
+            &nbsp;</td>
         <td style="height: 20px"></td>
     </tr>
     <tr>

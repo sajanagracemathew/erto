@@ -55,7 +55,7 @@
             <asp:HyperLink ID="fee_link" runat="server" BackColor="Silver" CssClass="auto-style13" ForeColor="#000099" NavigateUrl="paymentpage.aspx">E-payment</asp:HyperLink>
             <br />
             <br />
-            <asp:HyperLink ID="challanlink" runat="server" BackColor="Silver" CssClass="auto-style13" ForeColor="#000099">E-challan</asp:HyperLink>
+            <asp:HyperLink ID="challanlink" runat="server" BackColor="Silver" CssClass="auto-style13" ForeColor="#000099" NavigateUrl="~/Images_erto/challan.pdf">E-challan</asp:HyperLink>
             <br />
             <br />
             <br />

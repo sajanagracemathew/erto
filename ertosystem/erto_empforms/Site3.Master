@@ -46,8 +46,8 @@
                         <li><a runat="server" href="~/">Applications</a>
                             <ul>
                                 <li><a runat="server" href="~/erto_empforms/registrations">Vehicle Registrations</a></li>
-                                <li><a runat="server" href="~/erto_empforms/Rto_reg">Leaner's License</a></li>
-                                <li><a runat="server" href="~/erto_empforms/Rto_reg">Driving License</a></li>
+                                <li><a runat="server" href="~/erto_empforms/learners">Leaner's License</a></li>
+                                <li><a runat="server" href="~/erto_empforms/drivinglicense">Driving License</a></li>
                                 <li><a runat="server" href="~/erto_empforms/renew">Renewal of Driving License</a></li>
                                 <li><a runat="server" href="~/erto_empforms/duplicate">Duplicate Driving License</a></li>
                                 <li><a runat="server" href="~/erto_empforms/transferview">Transfer&NOC</a></li>
@@ -57,8 +57,8 @@
                         <li><a runat="server" href="~/erto_empforms/userdetails">User Details</a>
                         <li><a runat="server" href="~/">Payment Details</a>
                             <ul>
-                                <li><a runat="server" href="~/erto_empforms/fee_details">Fee</a></li>
-                                <li><a runat="server" href="~/erto_empforms/tax_details">Tax</a></li>
+                                <li><a runat="server" href="~/erto_empforms/feeview">Fee</a></li>
+                                <li><a runat="server" href="~/erto_empforms/taxview">Tax</a></li>
                                 <li><a runat="server" href="~/erto_empforms/fine_details">Fine</a></li>
                                 
                             </ul>

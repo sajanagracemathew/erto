@@ -22,13 +22,13 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.Label lbmarks;
         
         /// <summary>
-        /// tbmarks control.
+        /// tbscore control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbmarks;
+        protected global::System.Web.UI.WebControls.TextBox tbscore;
         
         /// <summary>
         /// lbappln_no control.
@@ -56,15 +56,6 @@ namespace ertosystem.erto_userforms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbstatus;
-        
-        /// <summary>
-        /// ok_btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ok_btn;
         
         /// <summary>
         /// llapply_btn control.

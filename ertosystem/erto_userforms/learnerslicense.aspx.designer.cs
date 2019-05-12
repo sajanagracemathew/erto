@@ -31,6 +31,24 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.TextBox tbuserid;
         
         /// <summary>
+        /// lbappln_no control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbappln_no;
+        
+        /// <summary>
+        /// tbappln_no control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbappln_no;
+        
+        /// <summary>
         /// lbname control.
         /// </summary>
         /// <remarks>
@@ -76,13 +94,13 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// FileUpload1 control.
+        /// proofupload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload proofupload;
         
         /// <summary>
         /// lbaddress control.
@@ -119,6 +137,15 @@ namespace ertosystem.erto_userforms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbdate;
+        
+        /// <summary>
+        /// apply_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button apply_btn;
         
         /// <summary>
         /// rtotest_btn control.

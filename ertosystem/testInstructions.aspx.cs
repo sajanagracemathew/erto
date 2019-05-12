@@ -15,7 +15,7 @@ namespace ertosystem
             {
                 lbstatus.Text = "Your test time expired, please try again!";
                 btnStartTest.Visible = false;
-                home_btn.Visible = false;
+                home_btn.Visible = true;
             }
            
         }
@@ -28,6 +28,7 @@ namespace ertosystem
         protected void btnStartTest_Click(object sender, EventArgs e)
         {
             Response.Redirect("testInstructions.aspx");
+            btnStartTest.Visible = false;
         }
     }
 }

@@ -86,6 +86,7 @@ namespace ertosystem.erto_userforms
                 ddistrict.DataBind();
                 
             }
+            ddistrict.Items.Insert(0, new ListItem("--Select--", "0"));
         }
         protected void ddistrict_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -146,7 +147,7 @@ namespace ertosystem.erto_userforms
             }
             String filename1 = Path.GetFileName(FileUpload2.PostedFile.FileName);
             string ext1 = Path.GetExtension(filename1);
-            if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
+            if (ext1.ToLower() == ".doc" || ext1.ToLower() == ".docx" || ext1.ToLower() == ".pdf")
             {
                 string src = Server.MapPath("~/Uploads/Fitness_cer") + "\\" + veh_id1.Text + ".pdf";
                 FileUpload2.PostedFile.SaveAs(src);

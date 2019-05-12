@@ -137,5 +137,28 @@ namespace ertosystem.Classes
 
             cmd3.ExecuteNonQuery();
         }
+        public DataTable DisplayofficerRequestDetails()
+        {
+            OpenConection();
+            DataTable dtReg1 = new DataTable();
+            string qry = "Select Transfer_id,Current_ownername,Vehicle_number,Veh_Id,New_ownername,DOB,Address,Date,is_verified,is_approved, CASE WHEN is_approved=0 THEN 'NOT APPROVED' ELSE 'APPROVED' END AS APR_STATUS from transfer_table  WHERE is_verified='1'";
+
+            SqlCommand cmd2 = new SqlCommand(qry, con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+            da.Fill(dtReg1);
+            CloseConnection();
+            return dtReg1;
+        }
+        public void UpdateTable1()
+        {
+            OpenConection();
+
+            SqlCommand cmd3 = new SqlCommand("update transfer_table set is_approved='1' where Transfer_id=@trans_id", con);
+
+            cmd3.Parameters.AddWithValue("@trans_id", Update_button);
+
+            cmd3.ExecuteNonQuery();
+        }
     }
 }

@@ -267,6 +267,7 @@
                     </td>
                     <td class="auto-style81">
                         <asp:FileUpload ID="FileUpload3" runat="server" Width="165px" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </td>
                     <td class="auto-style71">
                         <asp:Label ID="lbchassis" runat="server" Text="Chassis Number"></asp:Label>
@@ -278,7 +279,7 @@
                         &nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style60">&nbsp;</td>
+                    <td class="auto-style60"></td>
                     <td class="auto-style67">
                         <asp:Label ID="lbregdate" runat="server" Text="Registration Date"></asp:Label>
                     </td>
@@ -290,9 +291,10 @@
                     </td>
                     <td class="auto-style48">
                         <asp:FileUpload ID="FileUpload2" runat="server" Width="169px" />
+                        <br />
                     </td>
                     <td class="auto-style48">
-                        &nbsp;</td>
+                        </td>
                 </tr>
                 <tr>
                     <td class="auto-style60"></td>

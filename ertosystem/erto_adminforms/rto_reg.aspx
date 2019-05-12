@@ -88,6 +88,11 @@
             font-weight: 700;
             width: 182px;
         }
+        .auto-style25 {
+            height: 20px;
+            width: 183px;
+            text-align: right;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
@@ -232,12 +237,11 @@
     <tr>
         <td style="text-align: center;" class="auto-style7">
             &nbsp;</td>
-        <td style="text-align: center;" class="auto-style22">
+        <td class="auto-style25">
             <asp:Button ID="submit1_btn" runat="server" Text="SUBMIT" Width="67px" OnClick="submit1_btn_Click" ForeColor="#666666" />
         </td>
         <td style="text-align: center;" class="auto-style2">
-            <asp:Button ID="send_btn" runat="server" Text="SEND" Width="61px" ForeColor="#666666" />
-        </td>
+            &nbsp;</td>
         <td class="auto-style3"></td>
     </tr>
     <tr>

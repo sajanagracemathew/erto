@@ -88,7 +88,7 @@
                 <asp:Label ID="lb_bgrp" runat="server" Text="Blood Group"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="d_bgrp" runat="server" Width="163px">
+                <asp:DropDownList ID="d_bgrp" runat="server" Width="156px">
                     <asp:ListItem>--Select Blood Group--</asp:ListItem>
                     <asp:ListItem>A+</asp:ListItem>
                     <asp:ListItem>A-</asp:ListItem>
@@ -114,7 +114,7 @@
                 <asp:Label ID="lbtype" runat="server" Text="Vehicle Type"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="d_vehtype" runat="server" Height="16px" Width="160px">
+                <asp:DropDownList ID="d_vehtype" runat="server" Height="16px" Width="156px">
                     <asp:ListItem>2wheeler</asp:ListItem>
                     <asp:ListItem>3wheeler</asp:ListItem>
                     <asp:ListItem>4wheeler</asp:ListItem>

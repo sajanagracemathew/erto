@@ -3,6 +3,7 @@
     <style type="text/css">
         .auto-style2 {
             width: 180px;
+            background-color: #C0C0C0;
         }
         .auto-style3 {
             font-size: medium;
@@ -32,6 +33,7 @@
         .auto-style9 {
             width: 180px;
             height: 40px;
+            background-color: #C0C0C0;
         }
     .auto-style10 {
         color: #009933;
@@ -47,10 +49,12 @@
         .auto-style13 {
             width: 180px;
             height: 49px;
+            background-color: #C0C0C0;
         }
         .auto-style14 {
             width: 344px;
             height: 49px;
+            text-align: center;
         }
         .auto-style15 {
             width: 454px;
@@ -58,6 +62,14 @@
         }
         .auto-style16 {
             height: 49px;
+        }
+        .auto-style17 {
+            text-decoration: underline;
+            background-color: #C0C0C0;
+        }
+        .auto-style18 {
+            width: 344px;
+            text-align: center;
         }
     </style>
 </asp:Content>
@@ -82,7 +94,9 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style2"><strong>
+                <asp:HyperLink ID="challanlink" runat="server" CssClass="auto-style17" ForeColor="#3333FF" NavigateUrl="~/Images_erto/challan.pdf" BackColor="Silver">E-Challan</asp:HyperLink>
+                </strong></td>
             <td class="auto-style5">
                 <asp:Label ID="lbveh_no" runat="server" Text="Vehicle No"></asp:Label>
             </td>
@@ -121,13 +135,13 @@
             <td class="auto-style14">
                 <asp:Button ID="Button1" runat="server" Text="Pay" OnClick="Button1_Click" Width="76px" />
             </td>
-            <td class="auto-style15"></td>
+            <td class="auto-style15">&nbsp;</td>
             <td class="auto-style16"></td>
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style8">
+            <td class="auto-style18">
                 <asp:Label ID="Label1" runat="server" CssClass="auto-style10"></asp:Label>
             </td>
             <td class="auto-style12">&nbsp;</td>

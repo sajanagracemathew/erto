@@ -17,7 +17,7 @@
     <p class="auto-style1">
         <strong>FEE DETAILS</strong></p>
     <p class="auto-style1">
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="auto-style2" DataKeyNames="Pay_id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="914px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="auto-style2" DataKeyNames="Pay_id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="944px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="Pay_id" HeaderText="Pay_id" InsertVisible="False" ReadOnly="True" SortExpression="Pay_id" />

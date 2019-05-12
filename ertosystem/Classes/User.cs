@@ -37,6 +37,7 @@ namespace ertosystem.Classes
         private string password;
         private string utype;
         //private string usuccess;
+        private int score;
 
         public string Name { get => name; set => name = value; }
         public string Address { get => address; set => address = value; }
@@ -49,6 +50,10 @@ namespace ertosystem.Classes
         public string Dob { get => dob; set => dob = value; }
         public string Utype { get => utype; set => utype = value; }
         public string Gender { get => gender; set => gender = value; }
+        public int Score { get => score; set => score = value; }
+
+        // public string Score { get => score; set => score = value; }
+
         //public string Usuccess { get => usuccess; set => usuccess = value; }
 
         public string GetUsername()

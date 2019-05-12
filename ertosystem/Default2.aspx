@@ -90,14 +90,19 @@
                         <tr>
                             <td>
                                 <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn" OnClientClick="return CheckIfAllQuestionAnswerHasBeenSubmitted()" OnClick="btnSubmit_Click" />
-                            </td>
+                                <asp:HiddenField ID="HiddenField1" runat="server" />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <strong>
+                                <asp:Button ID="Button1" runat="server" BackColor="#003300" ForeColor="White" Height="36px" OnClick="Button1_Click" Text="View Result" Width="114px" />
+                                </strong>&nbsp;&nbsp;&nbsp;
+                                </td>
                         </tr>
                     </table>
                 </ContentTemplate>
             </asp:UpdatePanel>
             <script>
                 //Set the number of minutes you need
-                var mins = 5;
+                var mins = 10;
                 var secs = mins * 60;
                 var currentSeconds = 0;
                 var currentMinutes = 0;
@@ -167,13 +172,18 @@
                             }
                         });
                         $("#lbresult").text("Final Result-:" + CountFinalResult + "/20");
+                        $('#<%= HiddenField1.ClientID %>').val(CountFinalResult);
+                        //$('<%=HiddenField1%>').val = CountFinalResult;
+                        $("#lbmarks").text(CountFinalResult);
                         $("#btnSubmit").attr("disabled", "disabled"); //disable button if all questions answer has been given
                         $("#btnSubmit").removeClass("btn");
                         $("#btnSubmit").addClass("btndiabled");
                         EndCountDown();
                         $("#timerText").css("display", "none");
                         $("#spnthankyou").append("Thank You for submitting your test.")
+                        $("#lbmarks").text(CountFinalResult);
                         $("input[type=radio]").attr('disabled', true); //disable all radio button after test submitted by user
+                        lb
                         return false;
                     }
                     else {
@@ -207,6 +217,7 @@
                         }
                     })
                     CountCheckCheckQuestion = TotalGivenAnswerCount;
+                    
                 TotalQuestions = 20;
                 }
                 

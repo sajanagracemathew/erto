@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site4.master.cs" Inherits="ertosystem.erto_officerforms.Site4" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> E-RTO</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+</head>
+<body id="top">
+    <form id="form1" runat="server">
+        <div class="wrapper col1">
+            <div id="header">
+                <div id="logo">
+                    <h1><a href="#">E-RTO</a></h1>
+                    <p><strong>Online solutions</strong></p>
+                </div>
+                 <div id="info">
+                     <ul>
+                         <li>Tel: +91-120-2459168</li>
+                         <li>| </li>
+                         <li>Mail: info@rto.com</li>
+                         <li>| </li>
+                         <li><a runat="server" href="~/Default.aspx">Logout</a></li>
+                     </ul>
+                </div>
+                <br class="clear" />
+            </div>
+        </div>
+
+        <div class="wrapper col2">
+            <div id="topbar">
+                <div id="topnav">
+                    <ul>
+                        <li><a runat="server" href ="~/erto_officerforms/officerhome" style="font-size: medium">Home</a></li>
+                        <li><a runat="server" href="~/">Applications</a>
+                            <ul>
+                                <li><a runat="server" href="~/erto_officerforms/veh_registrations">Vehicle Registrations</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/learnersofficer">Learner's License</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/drivinglicenseofficer">Driving License</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/renewlicense">Renew License</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/dupofficer">Duplicate License</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/transferofficer">Transfer&NOC</a></li>
+                            </ul>
+                        </li>  
+                        <li><a runat="server" href="#">Details</a>
+                            <ul>
+                                <li><a runat="server" href="~/erto_officerforms/employdetails">Employee details</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/usrdetails">User details</a></li>
+                            </ul>
+                        </li>
+                        <li><a runat="server" href="~/erto_officerforms/searchvehicleofficer">Search Vehicles</a></li>
+                    </ul>
+                </div>
+                <br class="clear" />
+            </div>
+        </div>
+
+        <div class="wrapper col6">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer">
+        </div>
+        <div class="wrapper col7">
+            <div id="copyright">
+                <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">RTO</a></p>
+                <p class="fl_right"> <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">E-rto</a></p>
+                <br class="clear" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

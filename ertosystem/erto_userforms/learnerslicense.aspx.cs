@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -14,6 +15,13 @@ namespace ertosystem.erto_userforms
         LearnersLicense obj = new LearnersLicense();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+
+                obj.GenerateAutoNo();
+                tbappln_no.Text = obj.Appln_no;
+                //empid.Text = eobj.Eusername;
+            }
             tbdate.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
             obj.Ll_id = Session["user"].ToString();
             obj.Uid = tbuserid.Text;
@@ -42,6 +50,33 @@ namespace ertosystem.erto_userforms
         protected void rtotest_btn_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/testInstructions.aspx");
+        }
+
+        protected void apply_btn_Click(object sender, EventArgs e)
+        {
+            rtotest_btn.Visible = true;
+            obj.Uid = tbuserid.Text;
+            obj.Appln_no = tbappln_no.Text;
+            obj.Date = tbdate.Text;
+            String filename = Path.GetFileName(proofupload.PostedFile.FileName);
+            string ext = Path.GetExtension(filename);
+            if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
+            {
+                string src = Server.MapPath("~/Uploads/Age_proof") + "\\" + tbappln_no.Text + ".pdf";
+                proofupload.PostedFile.SaveAs(src);
+                string picpath = "~/Uploads/Age_proof/" + tbappln_no.Text + ".pdf";
+                obj.Proof = picpath;
+            }
+            obj.InsertLl_Parameter();
+            Response.Write("<script>alert('Application Submitted Successfully..Please Take the onlineTest and Pay the Fees(online/manually)')</script>");
+
+            tbuserid.Text = "";
+            tbname.Text = "";
+            tbdob.Text = "";
+            tbaddress.Text = "";
+            tbappln_no.Text = "";
+            tbdate.Text = "";
+
         }
     }
 }

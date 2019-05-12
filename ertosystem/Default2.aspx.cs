@@ -55,7 +55,15 @@ namespace ertosystem
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session["score"] = HiddenField1.Value;
+            Response.Redirect("~/erto_userforms/testresult");
+            //lbmarks.Text = lbmarks.Text;
+            //Response.Redirect("testresult.aspx?Parameter=" + lbmarks.Text);
         }
     }
 

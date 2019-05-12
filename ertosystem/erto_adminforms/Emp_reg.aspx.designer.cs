@@ -236,14 +236,5 @@ namespace ertosystem.erto_adminforms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submit2_btn;
-        
-        /// <summary>
-        /// send2_btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button send2_btn;
     }
 }

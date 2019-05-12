@@ -5,7 +5,7 @@
             width: 199px;
         }
         .auto-style2 {
-            width: 175px;
+            width: 190px;
         }
         .auto-style3 {
             width: 205px;
@@ -15,7 +15,7 @@
             height: 32px;
         }
         .auto-style5 {
-            width: 175px;
+            width: 190px;
             height: 32px;
         }
         .auto-style6 {
@@ -26,7 +26,7 @@
             height: 32px;
         }
         .auto-style8 {
-            width: 175px;
+            width: 190px;
             text-align: center;
         }
         .auto-style9 {
@@ -51,13 +51,30 @@
             width: 159px;
             height: 32px;
         }
+        .auto-style15 {
+            width: 159px;
+            height: 52px;
+        }
+        .auto-style16 {
+            width: 199px;
+            height: 52px;
+        }
+        .auto-style17 {
+            width: 190px;
+            height: 52px;
+        }
+        .auto-style18 {
+            width: 205px;
+            height: 52px;
+        }
+        .auto-style19 {
+            height: 52px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <p>
-&nbsp;</p>
-    <p>
-        <strong>&nbsp; LEARNER&#39;S LICENSE</strong></p>
+        <strong>&nbsp;&nbsp;&nbsp; LEARNER&#39;S LICENSE</strong></p>
     <p>
         &nbsp;&nbsp;
         A candidate is required to appear for test with following documents</p>
@@ -73,16 +90,20 @@
             <td class="auto-style9" colspan="4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; APPLY LEARNER</strong></td>
         </tr>
         <tr>
-            <td class="auto-style13">
-                &nbsp;</td>
-            <td class="auto-style1">
+            <td class="auto-style15">
+                </td>
+            <td class="auto-style16">
                 <asp:Label ID="lbuserid" runat="server" Text="User_Id"></asp:Label>
             </td>
-            <td class="auto-style2">
+            <td class="auto-style17">
                 <asp:TextBox ID="tbuserid" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" Width="150px"></asp:TextBox>
             </td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style18">
+                <asp:Label ID="lbappln_no" runat="server" Text="Learner Appln_No"></asp:Label>
+            </td>
+            <td class="auto-style19">
+                <asp:TextBox ID="tbappln_no" runat="server" ReadOnly="True" Width="150px"></asp:TextBox>
+            </td>
         </tr>
         <tr>
             <td class="auto-style13">
@@ -109,7 +130,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Age proof/Address proof(ID/Adhar card)"></asp:Label>
             </td>
             <td>
-                <asp:FileUpload ID="FileUpload1" runat="server" Width="150px" />
+                <asp:FileUpload ID="proofupload" runat="server" Width="150px" />
             </td>
         </tr>
         <tr>
@@ -148,16 +169,18 @@
             <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style8">
-                &nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
+                <asp:Button ID="apply_btn" runat="server" ForeColor="#333333" OnClick="apply_btn_Click" Text="Apply" Width="76px" />
+            </td>
+            <td class="auto-style3">
+                <asp:Button ID="rtotest_btn" runat="server" ForeColor="Blue" OnClick="rtotest_btn_Click" Text="Take Test" />
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style8">
-                <asp:Button ID="rtotest_btn" runat="server" ForeColor="Blue" OnClick="rtotest_btn_Click" Text="Take Mock Test" />
-            </td>
+                &nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

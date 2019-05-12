@@ -27,6 +27,7 @@ namespace ertosystem.erto_userforms
                     ddvalue.DataValueField = "Value_id";
                     ddvalue.DataBind();
                 }
+                ddvalue.Items.Insert(0, new ListItem("--Select--", "0"));
             }
             tobj.P_id = Session["user"].ToString();
             tobj.Uid = tbuserid.Text;

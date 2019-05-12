@@ -28,6 +28,7 @@ namespace ertosystem.erto_userforms
                     d_applntype.DataValueField = "Appln_id";
                     d_applntype.DataBind();
                 }
+                d_applntype.Items.Insert(0, new ListItem("--Select--", "0"));
             }
             obj.P_id = Session["user"].ToString();
             obj.Uid = tbuserid.Text;

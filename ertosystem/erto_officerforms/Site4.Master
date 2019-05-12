@@ -47,20 +47,19 @@
                             <ul>
                                 <li><a runat="server" href="~/erto_officerforms/veh_registrations">Vehicle Registrations</a></li>
                                 <li><a runat="server" href="~/erto_officerforms/learnersofficer">Learner's License</a></li>
-                                <li><a runat="server" href="~/erto_officerforms/dlofficer">Driving License</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/drivinglicenseofficer">Driving License</a></li>
                                 <li><a runat="server" href="~/erto_officerforms/renewlicense">Renew License</a></li>
-                                <li><a runat="server" href="~/erto_empforms/duplicateofficer">Duplicate License</a></li>
-                                <li><a runat="server" href="~/erto_empforms/transferofficer">Transfer&NOC</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/dupofficer">Duplicate License</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/transferofficer">Transfer&NOC</a></li>
                             </ul>
                         </li>  
                         <li><a runat="server" href="#">Details</a>
                             <ul>
-                                <li><a runat="server" href="~/erto_adminforms/empdetails">Employee details</a></li>
-                                <li><a runat="server" href="~/erto_adminforms/userdetails">User details</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/employdetails">Employee details</a></li>
+                                <li><a runat="server" href="~/erto_officerforms/usrdetails">User details</a></li>
                             </ul>
                         </li>
-                        <li><a runat="server" href="~/">Search Vehicles</a></li>
-                        <li><a runat="server" href="~/">Reports</a></li>
+                        <li><a runat="server" href="~/erto_officerforms/searchvehicleofficer">Search Vehicles</a></li>
                     </ul>
                 </div>
                 <br class="clear" />

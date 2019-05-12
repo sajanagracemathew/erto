@@ -37,6 +37,7 @@ namespace ertosystem.Classes
         private string qualification;
         private string veh_type;
         private string date;
+        private string update_button;
 
       
         public string Uid { get => uid; set => uid = value; }
@@ -50,7 +51,7 @@ namespace ertosystem.Classes
         public string Veh_type { get => veh_type; set => veh_type = value; }
         public string Date { get => date; set => date = value; }
         public string Dl_id { get => dl_id; set => dl_id = value; }
-        
+        public string Update_button { get => update_button; set => update_button = value; }
 
         public void InsertDrivinglicense_Parameter()
         {
@@ -80,6 +81,52 @@ namespace ertosystem.Classes
             da.Fill(dt1);
             CloseConnection();
             return dt1;
+        }
+        public DataTable DisplayRequestDetails()
+        {
+            OpenConection();
+            DataTable dtReg1 = new DataTable();
+            string qry = "Select User_id,Learnerappln_no,Blood_grp,Qual,Veh_type,Date,is_verified, CASE WHEN is_verified=0 THEN 'NOT VERIFIED' ELSE 'VERIFIED' END AS APR_STATUS from Drivinglicense_table ";
+
+            SqlCommand cmd2 = new SqlCommand(qry, con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+            da.Fill(dtReg1);
+            CloseConnection();
+            return dtReg1;
+        }
+        public void UpdateTable()
+        {
+            OpenConection();
+
+            SqlCommand cmd3 = new SqlCommand("update Drivinglicense_table set is_verified='1' where User_id=@usr_id", con);
+
+            cmd3.Parameters.AddWithValue("@usr_id", update_button);
+
+            cmd3.ExecuteNonQuery();
+        }
+        public DataTable DisplayofficerRequestDetails()
+        {
+            OpenConection();
+            DataTable dtReg1 = new DataTable();
+            string qry = "Select User_id,Learnerappln_no,Blood_grp,Date,is_verified,is_approved, CASE WHEN is_approved=0 THEN 'NOT APPROVED' ELSE 'APPROVED' END AS APR_STATUS from Drivinglicense_table WHERE is_verified='1' ";
+
+            SqlCommand cmd2 = new SqlCommand(qry, con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+            da.Fill(dtReg1);
+            CloseConnection();
+            return dtReg1;
+        }
+        public void UpdateTable1()
+        {
+            OpenConection();
+
+            SqlCommand cmd3 = new SqlCommand("update Drivinglicense_table set is_approved='1' where User_id=@usr_id", con);
+
+            cmd3.Parameters.AddWithValue("@usr_id", update_button);
+
+            cmd3.ExecuteNonQuery();
         }
     }
 }

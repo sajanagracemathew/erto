@@ -91,5 +91,28 @@ namespace ertosystem.Classes
 
             cmd3.ExecuteNonQuery();
         }
+        public DataTable DisplayofficerRequestDetails()
+        {
+            OpenConection();
+            DataTable dtReg1 = new DataTable();
+            string qry = "Select User_id,License_no,Date,is_verified,is_approved, CASE WHEN is_approved=0 THEN 'NOT APPROVED' ELSE 'APPROVED' END AS APR_STATUS from duplicatedl_table WHERE is_verified='1' ";
+
+            SqlCommand cmd2 = new SqlCommand(qry, con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+            da.Fill(dtReg1);
+            CloseConnection();
+            return dtReg1;
+        }
+        public void UpdateTable1()
+        {
+            OpenConection();
+
+            SqlCommand cmd3 = new SqlCommand("update duplicatedl_table set is_approved='1' where User_id=@usr_id", con);
+
+            cmd3.Parameters.AddWithValue("@usr_id", update_button);
+
+            cmd3.ExecuteNonQuery();
+        }
     }
 }
