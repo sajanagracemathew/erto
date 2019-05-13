@@ -31,22 +31,31 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.TextBox tbuserid;
         
         /// <summary>
-        /// lbappln_no control.
+        /// lbtestid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbappln_no;
+        protected global::System.Web.UI.WebControls.Label lbtestid;
         
         /// <summary>
-        /// tbappln_no control.
+        /// tbtestid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbappln_no;
+        protected global::System.Web.UI.WebControls.TextBox tbtestid;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// lbname control.

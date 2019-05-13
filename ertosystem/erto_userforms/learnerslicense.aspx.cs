@@ -18,8 +18,8 @@ namespace ertosystem.erto_userforms
             if (!IsPostBack)
             {
 
-                obj.GenerateAutoNo();
-                tbappln_no.Text = obj.Appln_no;
+                //obj.GenerateAutoNo();
+                //tbappln_no.Text = obj.Appln_no;
                 //empid.Text = eobj.Eusername;
             }
             tbdate.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
@@ -54,17 +54,17 @@ namespace ertosystem.erto_userforms
 
         protected void apply_btn_Click(object sender, EventArgs e)
         {
-            rtotest_btn.Visible = true;
+         
             obj.Uid = tbuserid.Text;
-            obj.Appln_no = tbappln_no.Text;
+            obj.Testid = tbtestid.Text;
             obj.Date = tbdate.Text;
             String filename = Path.GetFileName(proofupload.PostedFile.FileName);
             string ext = Path.GetExtension(filename);
             if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
             {
-                string src = Server.MapPath("~/Uploads/Age_proof") + "\\" + tbappln_no.Text + ".pdf";
+                string src = Server.MapPath("~/Uploads/Age_proof") + "\\" + tbtestid.Text + ".pdf";
                 proofupload.PostedFile.SaveAs(src);
-                string picpath = "~/Uploads/Age_proof/" + tbappln_no.Text + ".pdf";
+                string picpath = "~/Uploads/Age_proof/" + tbtestid.Text + ".pdf";
                 obj.Proof = picpath;
             }
             obj.InsertLl_Parameter();
@@ -74,7 +74,7 @@ namespace ertosystem.erto_userforms
             tbname.Text = "";
             tbdob.Text = "";
             tbaddress.Text = "";
-            tbappln_no.Text = "";
+            tbtestid.Text = "";
             tbdate.Text = "";
 
         }

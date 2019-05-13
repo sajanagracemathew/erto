@@ -28,12 +28,15 @@ namespace ertosystem.Classes
         }
         private string ll_id;
         private string uid;
+        private string testid;
         private string appln_no;
         private string name;
         private string dob;
         private string address;
         private string proof;
         private string date;
+        private string score;
+        private string status;
         private string update_btn;
 
         public string Ll_id { get => ll_id; set => ll_id = value; }
@@ -45,19 +48,34 @@ namespace ertosystem.Classes
         public string Date { get => date; set => date = value; }
         public string Appln_no { get => appln_no; set => appln_no = value; }
         public string Update_btn { get => update_btn; set => update_btn = value; }
+        public string Testid { get => testid; set => testid = value; }
+        public string Score { get => score; set => score = value; }
+        public string Status { get => status; set => status = value; }
 
         public void InsertLl_Parameter()
         {
             OpenConection();
             date = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(date);
-            string qry = "insert into learnerlicense_table (User_id,Appln_no,Proof,Date) values(@usrid,@appln_no,@proof,@date);";
+            string qry = "insert into learnerlicense_table (User_id,Test_id,Proof,Date) values(@usrid,@test_id,@proof,@date);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@usrid", uid);
-            cmd.Parameters.AddWithValue("@appln_no", appln_no);
+            cmd.Parameters.AddWithValue("@test_id", testid);
             cmd.Parameters.AddWithValue("@proof", proof);
             cmd.Parameters.AddWithValue("@date", date);
             cmd.ExecuteNonQuery();
+        }
+
+        public void UpdateLearner()
+        {
+            OpenConection();
+            string qry = "update learnerlicense_table set Score=@score1,Status=@status1,LearnerAppln_no=@appln where User_id='" + uid + "'";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@score1", score);
+            cmd.Parameters.AddWithValue("@status1", status);
+            cmd.Parameters.AddWithValue("@appln", appln_no);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
         }
 
         public DataTable ExecuteSelect()

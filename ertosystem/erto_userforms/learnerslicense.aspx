@@ -99,10 +99,11 @@
                 <asp:TextBox ID="tbuserid" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" Width="150px"></asp:TextBox>
             </td>
             <td class="auto-style18">
-                <asp:Label ID="lbappln_no" runat="server" Text="Learner Appln_No"></asp:Label>
+                <asp:Label ID="lbtestid" runat="server" Text="Test_id"></asp:Label>
             </td>
             <td class="auto-style19">
-                <asp:TextBox ID="tbappln_no" runat="server" ReadOnly="True" Width="150px"></asp:TextBox>
+                <asp:TextBox ID="tbtestid" runat="server" Width="150px"></asp:TextBox>
+            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbtestid" ErrorMessage="Enter a valid Test id" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -160,20 +161,20 @@
             <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style8">
-                &nbsp;</td>
+                <asp:Button ID="apply_btn" runat="server" ForeColor="#333333" OnClick="apply_btn_Click" Text="Apply" Width="76px" />
+            </td>
             <td class="auto-style10">
-                &nbsp;</td>
+                <asp:Button ID="rtotest_btn" runat="server" ForeColor="Blue" OnClick="rtotest_btn_Click" Text="Take Test" />
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style8">
-                <asp:Button ID="apply_btn" runat="server" ForeColor="#333333" OnClick="apply_btn_Click" Text="Apply" Width="76px" />
-            </td>
+                &nbsp;</td>
             <td class="auto-style3">
-                <asp:Button ID="rtotest_btn" runat="server" ForeColor="Blue" OnClick="rtotest_btn_Click" Text="Take Test" />
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
