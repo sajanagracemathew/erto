@@ -55,7 +55,7 @@
     </p>
     <p class="auto-style2">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="llapply_btn" runat="server" BackColor="Silver" CssClass="col-xs-offset-0" ForeColor="#333333" Text="OK" Visible="False" Width="179px" OnClick="llapply_btn_Click" />
+        <asp:Button ID="llapply_btn" runat="server" BackColor="Silver" CssClass="col-xs-offset-0" ForeColor="#333333" Text="APPLY" Visible="False" Width="148px" OnClick="llapply_btn_Click" />
     </p>
     <p class="auto-style2">
         &nbsp;</p>

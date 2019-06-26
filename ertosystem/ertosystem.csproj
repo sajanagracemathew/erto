@@ -134,6 +134,7 @@
     <Content Include="erto_empforms\fee_details.aspx" />
     <Content Include="erto_empforms\fine_details.aspx" />
     <Content Include="erto_empforms\learners.aspx" />
+    <Content Include="erto_empforms\learnerstest.aspx" />
     <Content Include="erto_empforms\registrations.aspx" />
     <Content Include="erto_empforms\renew.aspx" />
     <Content Include="erto_empforms\searchvehicle.aspx" />
@@ -141,6 +142,7 @@
     <Content Include="erto_empforms\tax_details.aspx" />
     <Content Include="erto_empforms\transferview.aspx" />
     <Content Include="erto_empforms\userdetails.aspx" />
+    <Content Include="erto_empforms\viewtestresult.aspx" />
     <Content Include="erto_officerforms\drivinglicenseofficer.aspx" />
     <Content Include="erto_officerforms\dupofficer.aspx" />
     <Content Include="erto_officerforms\employdetails.aspx" />
@@ -154,9 +156,11 @@
     <Content Include="erto_userforms\drivinglicense.aspx" />
     <Content Include="erto_userforms\duplicateDl.aspx" />
     <Content Include="erto_userforms\Fee.aspx" />
+    <Content Include="erto_userforms\feereceipt.aspx" />
     <Content Include="erto_userforms\Fine.aspx" />
+    <Content Include="erto_userforms\finereceipt.aspx" />
     <Content Include="erto_userforms\forgetpassword.aspx" />
-    <Content Include="erto_userforms\instructions.aspx" />
+    <Content Include="erto_userforms\forms.aspx" />
     <Content Include="erto_userforms\learnerslicense.aspx" />
     <Content Include="erto_userforms\onlinetestaspx.aspx" />
     <Content Include="erto_userforms\paymentconfirm.aspx" />
@@ -165,11 +169,13 @@
     <Content Include="erto_userforms\login.aspx" />
     <Content Include="erto_userforms\tax.aspx" />
     <Content Include="erto_userforms\Taxhome.aspx" />
-    <Content Include="erto_userforms\testdrop.aspx" />
+    <Content Include="erto_userforms\taxreceipt.aspx" />
+    <Content Include="erto_userforms\testhome.aspx" />
     <Content Include="erto_userforms\testresult.aspx" />
     <Content Include="erto_userforms\transfer.aspx" />
     <Content Include="erto_userforms\userhome.aspx" />
     <Content Include="erto_userforms\user_reg.aspx" />
+    <Content Include="erto_userforms\vehicledetails.aspx" />
     <Content Include="erto_userforms\vehicle_reg.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -187,7 +193,11 @@
     <Content Include="erto_empforms\Site3.Master" />
     <Content Include="Images_erto\challan.pdf" />
     <Content Include="erto_officerforms\Site4.Master" />
+    <Content Include="Images_erto\fitness.pdf" />
+    <Content Include="Images_erto\insurance.pdf" />
+    <Content Include="Images_erto\noc.pdf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Images_erto\changepass.jpg" />
     <Content Include="Images_erto\officer.jpg" />
     <Content Include="Images_erto\user_img.jpg" />
     <Content Include="layout\index.html" />
@@ -388,6 +398,13 @@
     <Compile Include="erto_empforms\learners.aspx.designer.cs">
       <DependentUpon>learners.aspx</DependentUpon>
     </Compile>
+    <Compile Include="erto_empforms\learnerstest.aspx.cs">
+      <DependentUpon>learnerstest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\learnerstest.aspx.designer.cs">
+      <DependentUpon>learnerstest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="erto_empforms\registrations.aspx.cs">
       <DependentUpon>registrations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -443,6 +460,13 @@
     </Compile>
     <Compile Include="erto_empforms\userdetails.aspx.designer.cs">
       <DependentUpon>userdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_empforms\viewtestresult.aspx.cs">
+      <DependentUpon>viewtestresult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_empforms\viewtestresult.aspx.designer.cs">
+      <DependentUpon>viewtestresult.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_officerforms\drivinglicenseofficer.aspx.cs">
       <DependentUpon>drivinglicenseofficer.aspx</DependentUpon>
@@ -542,12 +566,26 @@
     <Compile Include="erto_userforms\Fee.aspx.designer.cs">
       <DependentUpon>Fee.aspx</DependentUpon>
     </Compile>
+    <Compile Include="erto_userforms\feereceipt.aspx.cs">
+      <DependentUpon>feereceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\feereceipt.aspx.designer.cs">
+      <DependentUpon>feereceipt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="erto_userforms\Fine.aspx.cs">
       <DependentUpon>Fine.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="erto_userforms\Fine.aspx.designer.cs">
       <DependentUpon>Fine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\finereceipt.aspx.cs">
+      <DependentUpon>finereceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\finereceipt.aspx.designer.cs">
+      <DependentUpon>finereceipt.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\forgetpassword.aspx.cs">
       <DependentUpon>forgetpassword.aspx</DependentUpon>
@@ -556,12 +594,12 @@
     <Compile Include="erto_userforms\forgetpassword.aspx.designer.cs">
       <DependentUpon>forgetpassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="erto_userforms\instructions.aspx.cs">
-      <DependentUpon>instructions.aspx</DependentUpon>
+    <Compile Include="erto_userforms\forms.aspx.cs">
+      <DependentUpon>forms.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="erto_userforms\instructions.aspx.designer.cs">
-      <DependentUpon>instructions.aspx</DependentUpon>
+    <Compile Include="erto_userforms\forms.aspx.designer.cs">
+      <DependentUpon>forms.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\learnerslicense.aspx.cs">
       <DependentUpon>learnerslicense.aspx</DependentUpon>
@@ -626,12 +664,19 @@
     <Compile Include="erto_userforms\Taxhome.aspx.designer.cs">
       <DependentUpon>Taxhome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="erto_userforms\testdrop.aspx.cs">
-      <DependentUpon>testdrop.aspx</DependentUpon>
+    <Compile Include="erto_userforms\taxreceipt.aspx.cs">
+      <DependentUpon>taxreceipt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="erto_userforms\testdrop.aspx.designer.cs">
-      <DependentUpon>testdrop.aspx</DependentUpon>
+    <Compile Include="erto_userforms\taxreceipt.aspx.designer.cs">
+      <DependentUpon>taxreceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\testhome.aspx.cs">
+      <DependentUpon>testhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\testhome.aspx.designer.cs">
+      <DependentUpon>testhome.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\testresult.aspx.cs">
       <DependentUpon>testresult.aspx</DependentUpon>
@@ -660,6 +705,13 @@
     </Compile>
     <Compile Include="erto_userforms\user_reg.aspx.designer.cs">
       <DependentUpon>user_reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erto_userforms\vehicledetails.aspx.cs">
+      <DependentUpon>vehicledetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erto_userforms\vehicledetails.aspx.designer.cs">
+      <DependentUpon>vehicledetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="erto_userforms\vehicle_reg.aspx.cs">
       <DependentUpon>vehicle_reg.aspx</DependentUpon>

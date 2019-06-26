@@ -20,7 +20,7 @@
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="Tax_id" HeaderText="Tax_id" InsertVisible="False" ReadOnly="True" SortExpression="Tax_id" />
-                <asp:BoundField DataField="User_id" HeaderText="User_id" SortExpression="User_id" />
+                <asp:BoundField DataField="user_id" HeaderText="User_id" SortExpression="User_id" />
                 <asp:BoundField DataField="Veh_Number" HeaderText="Veh_Number" SortExpression="Veh_Number" />
                 <asp:BoundField DataField="Veh_Type" HeaderText="Veh_Type" SortExpression="Veh_Type" />
                 <asp:BoundField DataField="Tax" HeaderText="Tax" SortExpression="Tax" />

@@ -21,7 +21,7 @@
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="Pay_id" HeaderText="Pay_id" InsertVisible="False" ReadOnly="True" SortExpression="Pay_id" />
-                <asp:BoundField DataField="User_Id" HeaderText="User_Id" SortExpression="User_Id" />
+                <asp:BoundField DataField="user_id" HeaderText="User_Id" SortExpression="User_Id" />
                 <asp:BoundField DataField="Fee" HeaderText="Fee" SortExpression="Fee" />
                 <asp:BoundField DataField="Pay_option" HeaderText="Pay_option" SortExpression="Pay_option" />
                 <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />

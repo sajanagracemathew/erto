@@ -98,7 +98,9 @@
                 <td class="auto-style7">
                     <asp:TextBox ID="textboxlicenseno" runat="server" Width="160px" Height="23px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="textboxlicenseno" ErrorMessage="Please enter License no" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style3">&nbsp;</td>

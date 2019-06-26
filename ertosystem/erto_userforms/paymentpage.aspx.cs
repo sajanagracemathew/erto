@@ -32,6 +32,7 @@ namespace ertosystem.erto_userforms
             }
             obj.P_id = Session["user"].ToString();
             obj.Uid = tbuserid.Text;
+            obj.Username = tbusername.Text;
             obj.ExecuteSelect();
 
             DataTable dt1 = new DataTable();
@@ -39,6 +40,7 @@ namespace ertosystem.erto_userforms
             if (dt1.Rows.Count > 0)
             {
                 tbuserid.Text = dt1.Rows[0]["user_id"].ToString();
+                tbusername.Text=dt1.Rows[0]["username"].ToString();
             }
         }
         protected void ok_btn_Click(object sender, EventArgs e)
@@ -95,9 +97,16 @@ namespace ertosystem.erto_userforms
             {
                 HyperLink1.Visible = false;
             }
+        
             tbuserid.Text = "";
             //d_applntype.Text = "";
             tbfee.Text = "";
+            tbusername.Text = "";
+        }
+
+        protected void receipt_btn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/erto_userforms/feereceipt.aspx");
         }
     }
 }

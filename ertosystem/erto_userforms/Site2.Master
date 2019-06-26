@@ -51,6 +51,7 @@
                                 <li><a runat="server" href="~/erto_userforms/duplicateDl">Duplicate Driving License</a></li>
                             </ul>
                         </li>
+                        <li><a runat="server" href="~/erto_userforms/forms">Forms</a></li>
                         <li><a runat="server" href="~/Contact">Fee/Tax/Fine</a>
                             <ul>
                                 <li><a runat="server" href="~/erto_userforms/fee">Fee</a></li>
@@ -58,7 +59,8 @@
                                 <li><a runat="server" href="~/erto_userforms/fine">Fine</a></li>
                             </ul>
                             <li><a runat="server" href="~/erto_userforms/transfer">Transfer&NOC</a></li>
-                       
+                            <li><a runat="server" href="~/erto_userforms/vehicledetails">Vehicles Details</a></li>
+                            <li><a runat="server" href="~/erto_userforms/testhome">Take Test</a></li>  
 
                     </ul>
                 </div>

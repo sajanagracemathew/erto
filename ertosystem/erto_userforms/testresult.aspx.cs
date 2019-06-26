@@ -68,7 +68,7 @@ namespace ertosystem.erto_userforms
             obj.Status = tbstatus1.Text;
             obj.Appln_no = tbappln_no.Text;
             obj.UpdateLearner();
-            if(tbstatus1.Text=="pass")
+            if (tbstatus1.Text == "pass")
             {
                 Response.Write("<script>alert('Application Submitted Successfully..Please Pay the Fees(online/manually)')</script>");
             }
@@ -76,7 +76,11 @@ namespace ertosystem.erto_userforms
             {
                 Response.Write("<script>alert('Sorry..You have failed the test')</script>");
             }
-            
+
+            tbscore.Text = "";
+            tbstatus.Text = "";
+            tbstatus1.Text = "";
+            tbappln_no.Text = "";
         }
     }
 }

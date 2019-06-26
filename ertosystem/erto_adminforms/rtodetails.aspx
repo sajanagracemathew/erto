@@ -31,9 +31,12 @@
                                         <asp:BoundField DataField="Mobile_number" HeaderText="Mobile_number" SortExpression="Mobile_number" />
                                         <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                                         <asp:BoundField DataField="DOJ" HeaderText="DOJ" SortExpression="DOJ" />
-                                        <asp:BoundField DataField="Photo" HeaderText="Photo" SortExpression="Photo" />
                                         <asp:BoundField DataField="Username" HeaderText="Username" ReadOnly="True" SortExpression="Username" />
                                         <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
+                                        <asp:TemplateField HeaderText="photo">
+                    <ItemTemplate> 
+                        <asp:Image ID="Image1" runat="server" Height="100" Width="100" ImageUrl='<%# Eval("Photo") %>' /></ItemTemplate>
+                </asp:TemplateField>
                         </Columns> 
                       <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                       <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />

@@ -49,13 +49,13 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.DropDownList ddistrict;
         
         /// <summary>
-        /// Label2 control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
         /// lbuserid control.
@@ -94,15 +94,6 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.DropDownList dpvehtype;
         
         /// <summary>
-        /// tbdisplay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbdisplay;
-        
-        /// <summary>
         /// lbregname control.
         /// </summary>
         /// <remarks>
@@ -139,6 +130,15 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.TextBox tbvehcompany;
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// lbregsod control.
         /// </summary>
         /// <remarks>
@@ -173,6 +173,15 @@ namespace ertosystem.erto_userforms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbvehmodel;
+        
+        /// <summary>
+        /// tbdisplay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbdisplay;
         
         /// <summary>
         /// lbregdob control.

@@ -138,7 +138,7 @@ namespace ertosystem.Classes
         {
             OpenConection();
             DataTable dtReg1 = new DataTable();
-            string qry = "select Name,DOB,Gender,Address,Mobile_number,Email,Educational_qual,DOJ,Photo,Username from empregistration_table where  Username='" + eusername + "' ";
+            string qry = "select Name,DOB,Gender,Address,Mobile_number,Email,Educational_qual,DOJ,Username from empregistration_table where  Username='" + eusername + "' ";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@dusername", eusername);
             SqlDataAdapter da = new SqlDataAdapter(cmd);// this will query your database and return the result to your datatable

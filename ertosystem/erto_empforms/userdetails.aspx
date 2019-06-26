@@ -10,8 +10,9 @@
     <p class="center">
         &nbsp;</p>
     <p class="center">
-&nbsp;
-    <asp:Label ID="lbuserdetails" runat="server" Text="Enter User ID :"></asp:Label>
+&nbsp;</p>
+    <p class="center">
+&nbsp;<asp:Label ID="lbuserdetails" runat="server" Text="Enter User ID :"></asp:Label>
 &nbsp;<asp:DropDownList ID="dduserdetails" runat="server" DataSourceID="SqlDataSource1" DataTextField="user_id" DataValueField="user_id" Height="25px" Width="159px">
     </asp:DropDownList>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myConn %>" SelectCommand="SELECT [user_id] FROM [userregistration_table]"></asp:SqlDataSource>
@@ -37,5 +38,13 @@
     </asp:GridView>
 </p>
 <p>
+</p>
+    <p>
+</p>
+    <p>
+</p>
+    <p>
+</p>
+    <p>
 </p>
 </asp:Content>

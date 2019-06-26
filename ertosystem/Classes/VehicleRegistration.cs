@@ -193,6 +193,19 @@ namespace ertosystem.Classes
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
-        
+        public DataTable VehicleDetails()
+        {
+            OpenConection();
+            DataTable dtReg = new DataTable();
+            string qry = "select Veh_Id,Veh_type,Veh_company,Veh_model,Veh_manufactureyear,Chassis_number,Registration_date,Vehicle_no from vehicleregistration_table where  Vehicle_no='" + veh_no + "' and Chassis_number='" + ochassisnum + "' ";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@dveh_no", veh_no);
+            cmd.Parameters.AddWithValue("@dchassis", ochassisnum);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);// this will query your database and return the result to your datatable
+            da.Fill(dtReg);
+            CloseConnection();
+            return dtReg;
+        }
+
     }
 }

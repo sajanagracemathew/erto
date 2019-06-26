@@ -9,22 +9,27 @@
         .auto-style21 {
             height: 82px;
             width: 207px;
+            background-color: #FFFFFF;
         }
         .auto-style37 {
             height: 40px;
             width: 207px;
+            background-color: #FFFFFF;
         }
         .auto-style41 {
             height: 26px;
             width: 207px;
+            background-color: #FFFFFF;
         }
         .auto-style45 {
             height: 37px;
             width: 207px;
+            background-color: #FFFFFF;
         }
         .auto-style49 {
             height: 23px;
             width: 207px;
+            background-color: #FFFFFF;
         }
         .auto-style50 {
             width: 649px;
@@ -32,22 +37,27 @@
         .auto-style52 {
             height: 40px;
             width: 679px;
+            background-color: #FFFFFF;
         }
         .auto-style53 {
             height: 26px;
             width: 679px;
+            background-color: #FFFFFF;
         }
         .auto-style54 {
             height: 37px;
             width: 679px;
+            background-color: #FFFFFF;
         }
         .auto-style55 {
             height: 23px;
             width: 679px;
+            background-color: #FFFFFF;
         }
         .auto-style56 {
             height: 82px;
             width: 679px;
+            background-color: #FFFFFF;
         }
         </style>
     <style type="text/css">
@@ -168,22 +178,27 @@
         .auto-style65 {
             height: 40px;
             width: 748px;
+            background-color: #FFFFFF;
         }
         .auto-style66 {
             height: 26px;
             width: 748px;
+            background-color: #FFFFFF;
         }
         .auto-style67 {
             height: 37px;
             width: 748px;
+            background-color: #FFFFFF;
         }
         .auto-style68 {
             height: 23px;
             width: 748px;
+            background-color: #FFFFFF;
         }
         .auto-style69 {
             height: 82px;
             width: 748px;
+            background-color: #FFFFFF;
         }
         .auto-style70 {
             font-weight: bold;
@@ -194,26 +209,32 @@
         .auto-style74 {
             height: 73px;
             width: 748px;
+            background-color: #FFFFFF;
         }
         .auto-style75 {
             height: 73px;
             width: 679px;
+            background-color: #FFFFFF;
         }
         .auto-style76 {
             height: 73px;
             width: 207px;
+            background-color: #FFFFFF;
         }
         .auto-style77 {
             height: 55px;
             width: 748px;
+            background-color: #FFFFFF;
         }
         .auto-style78 {
             height: 55px;
             width: 679px;
+            background-color: #FFFFFF;
         }
         .auto-style79 {
             height: 55px;
             width: 207px;
+            background-color: #FFFFFF;
         }
         .auto-style80 {
             text-align: right;

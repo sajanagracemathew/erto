@@ -30,7 +30,7 @@ namespace ertosystem.erto_empforms
             string firstCellText = row.Cells[0].Text;
             obj.Update_btn = firstCellText;
             //obj.DisplayRequestDetails();
-            obj.UpdateTable();
+            obj.UpdateTable2();
             BindLl();
 
         }
@@ -38,7 +38,7 @@ namespace ertosystem.erto_empforms
         {
 
             DataTable dtReg = new DataTable();
-            dtReg = obj.DisplayRequestDetails();
+            dtReg = obj.DisplayRequestTestDetails();
             if (dtReg.Rows.Count > 0)
             {
                 GridView1.DataSource = dtReg;

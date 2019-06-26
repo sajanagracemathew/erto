@@ -67,29 +67,13 @@
             width: 203px;
             height: 29px;
         }
-        .auto-style71 {
-            width: 212px;
-            height: 30px;
-        }
-        .auto-style72 {
-            width: 212px;
-            height: 18px;
-        }
-        .auto-style73 {
-            width: 212px;
-            height: 28px;
-        }
-        .auto-style74 {
-            width: 212px;
-            height: 29px;
-        }
         .auto-style75 {
             width: 268px;
             height: 30px;
             text-align: center;
         }
         .auto-style77 {
-            width: 212px;
+            width: 236px;
             height: 30px;
             text-align: right;
         }
@@ -125,10 +109,6 @@
             height: 11px;
             width: 268px;
         }
-        .auto-style87 {
-            width: 212px;
-            height: 11px;
-        }
         .auto-style88 {
             height: 11px;
             width: 279px;
@@ -136,11 +116,14 @@
         .auto-style89 {
             color: #000000;
         }
+        .auto-style90 {
+            font-size: medium;
+        }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <table class="auto-style1">
+    +<table class="auto-style1">
                 <tr>
                     <td class="auto-style2"></td>
                     <td class="auto-style4" colspan="4"><strong style="color: #666666">Vehicle Registration</strong></td>
@@ -154,7 +137,7 @@
                     <td class="auto-style86">
                         <asp:Label ID="veh_id1" runat="server"></asp:Label>
                     </td>
-                    <td class="auto-style87">
+                    <td class="auto-style84">
                         <asp:Label ID="lbdistrict" runat="server" Text="District"></asp:Label>
                     </td>
                     <td class="auto-style88">
@@ -164,7 +147,7 @@
                         </asp:DropDownList>
                     </td>
                     <td class="auto-style88">
-                        <asp:Label ID="Label2" runat="server" Text="Your Vehicle Number is:" Visible="False" CssClass="auto-style89"></asp:Label>
+                        <asp:Label ID="Label3" runat="server" CssClass="auto-style90" ForeColor="#009900" Text=" Press Register button" Visible="False"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -175,7 +158,7 @@
                     <td class="auto-style81">
                         <asp:TextBox ID="tbuserid" runat="server" ReadOnly="True" Width="165px"></asp:TextBox>
                     </td>
-                    <td class="auto-style71">
+                    <td class="auto-style60">
                         <asp:Label ID="lbvehtype" runat="server" Text="Vehicle Type"></asp:Label>
                     </td>
                     <td class="auto-style48">
@@ -187,10 +170,7 @@
                         </asp:DropDownList>
                     </td>
                     <td class="auto-style48">
-                        <strong>
-                        <asp:TextBox ID="tbdisplay" runat="server" CssClass="auto-style79" Height="22px" ReadOnly="True" Visible="False" Width="157px"></asp:TextBox>
-                        </strong>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style61"></td>
@@ -200,14 +180,15 @@
                     <td class="auto-style82">
                         <asp:TextBox ID="lbveh_owner1" runat="server" ReadOnly="true" Width="165px"></asp:TextBox>
                     </td>
-                    <td class="auto-style72">
+                    <td class="auto-style61">
                         <asp:Label ID="lbvehcompany" runat="server" Text="Vehicle Company"></asp:Label>
                     </td>
                     <td class="auto-style32">
                         <asp:TextBox ID="tbvehcompany" runat="server" Width="165px"></asp:TextBox>
                     </td>
                     <td class="auto-style32">
-                        &nbsp;</td>
+                        <asp:Label ID="Label2" runat="server" Text="Your Vehicle Number is:" Visible="False" CssClass="auto-style89"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style60"></td>
@@ -217,14 +198,17 @@
                     <td class="auto-style81">
                         <asp:TextBox ID="tbregswd" runat="server" Width="165px"></asp:TextBox>
                     </td>
-                    <td class="auto-style71">
+                    <td class="auto-style60">
                         <asp:Label ID="lbvehmodel" runat="server" Text="Vehicle Model"></asp:Label>
                     </td>
                     <td class="auto-style48">
                         <asp:TextBox ID="tbvehmodel" runat="server" Width="165px"></asp:TextBox>
                     </td>
                     <td class="auto-style48">
-                        &nbsp;</td>
+                        <strong>
+                        <asp:TextBox ID="tbdisplay" runat="server" CssClass="auto-style79" Height="22px" ReadOnly="True" Visible="False" Width="157px"></asp:TextBox>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style60"></td>
@@ -234,7 +218,7 @@
                     <td class="auto-style81">
                         <asp:TextBox ID="lbownerdob1" runat="server" ReadOnly="True" Width="165px"></asp:TextBox>
                     </td>
-                    <td class="auto-style71">
+                    <td class="auto-style60">
                         <asp:Label ID="lbvehmanuf" runat="server" Text="Vehicle Manufacture Year"></asp:Label>
                     </td>
                     <td class="auto-style48">
@@ -251,7 +235,7 @@
                     <td class="auto-style83">
                         <asp:TextBox ID="lbowneraddress1" runat="server" ReadOnly="True" Width="165px" Height="49px" TextMode="MultiLine"></asp:TextBox>
                     </td>
-                    <td class="auto-style73">
+                    <td class="auto-style62">
                         <asp:Label ID="lbareaname" runat="server" Text="Area name"></asp:Label>
                     </td>
                     <td class="auto-style36">
@@ -269,8 +253,8 @@
                         <asp:FileUpload ID="FileUpload3" runat="server" Width="165px" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </td>
-                    <td class="auto-style71">
-                        <asp:Label ID="lbchassis" runat="server" Text="Chassis Number"></asp:Label>
+                    <td class="auto-style60">
+                        <asp:Label ID="lbchassis" runat="server" Text="Chassis Number(last 6 digits)"></asp:Label>
                     </td>
                     <td class="auto-style48">
                         <asp:TextBox ID="tbchassis" runat="server" Width="165px"></asp:TextBox>
@@ -286,7 +270,7 @@
                     <td class="auto-style81">
                         <asp:TextBox ID="tbregdate" runat="server" Width="165px"></asp:TextBox>
                     </td>
-                    <td class="auto-style71">
+                    <td class="auto-style60">
                         <asp:Label ID="lbfitness" runat="server" Text="Fitness Certificate"></asp:Label>
                     </td>
                     <td class="auto-style48">
@@ -302,7 +286,7 @@
                         &nbsp;</td>
                     <td class="auto-style81">
                         &nbsp;</td>
-                    <td class="auto-style71"></td>
+                    <td class="auto-style60"></td>
                     <td class="auto-style48">&nbsp;</td>
                     <td class="auto-style48">&nbsp;</td>
                 </tr>
@@ -325,7 +309,7 @@
                         &nbsp;</td>
                     <td class="auto-style53">
                         &nbsp;</td>
-                    <td class="auto-style74"></td>
+                    <td class="auto-style37">&nbsp;</td>
                     <td class="auto-style14">&nbsp;</td>
                     <td class="auto-style14">&nbsp;</td>
                 </tr>
@@ -335,7 +319,7 @@
                         &nbsp;</td>
                     <td class="auto-style53">
                         &nbsp;</td>
-                    <td class="auto-style74">&nbsp;</td>
+                    <td class="auto-style37">&nbsp;</td>
                     <td class="auto-style14">&nbsp;</td>
                     <td class="auto-style14">&nbsp;</td>
                 </tr>
@@ -348,7 +332,7 @@
                         <asp:Button ID="register_btn" runat="server" Text="Register" Width="156px" OnClick="register_btn_Click" ForeColor="White" BackColor="Black" />
                         </strong>
                     </td>
-                    <td class="auto-style71"></td>
+                    <td class="auto-style60"></td>
                     <td class="auto-style48">&nbsp;</td>
                     <td class="auto-style48">&nbsp;</td>
                 </tr>
@@ -358,7 +342,7 @@
                         &nbsp;</td>
                     <td class="auto-style75">
                         &nbsp;</td>
-                    <td class="auto-style71"></td>
+                    <td class="auto-style60"></td>
                     <td class="auto-style48">&nbsp;</td>
                     <td class="auto-style48">&nbsp;</td>
                 </tr>
@@ -368,7 +352,7 @@
                         &nbsp;</td>
                     <td class="auto-style81">
                         &nbsp;</td>
-                    <td class="auto-style71">&nbsp;</td>
+                    <td class="auto-style60">&nbsp;</td>
                     <td class="auto-style48">&nbsp;</td>
                     <td class="auto-style48">&nbsp;</td>
                 </tr>
@@ -378,7 +362,7 @@
                         &nbsp;</td>
                     <td class="auto-style81">
                         &nbsp;</td>
-                    <td class="auto-style71">&nbsp;</td>
+                    <td class="auto-style60">&nbsp;</td>
                     <td class="auto-style48">&nbsp;</td>
                     <td class="auto-style48">&nbsp;</td>
                 </tr>

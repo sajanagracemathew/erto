@@ -47,35 +47,34 @@ namespace ertosystem.erto_userforms
 
         }
 
-        protected void rtotest_btn_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/testInstructions.aspx");
-        }
+       
 
         protected void apply_btn_Click(object sender, EventArgs e)
         {
          
             obj.Uid = tbuserid.Text;
-            obj.Testid = tbtestid.Text;
+            obj.Aadhar = tbadhar.Text;
             obj.Date = tbdate.Text;
             String filename = Path.GetFileName(proofupload.PostedFile.FileName);
             string ext = Path.GetExtension(filename);
             if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".pdf")
             {
-                string src = Server.MapPath("~/Uploads/Age_proof") + "\\" + tbtestid.Text + ".pdf";
+                string src = Server.MapPath("~/Uploads/Age_proof") + "\\" + tbuserid.Text + ".pdf";
                 proofupload.PostedFile.SaveAs(src);
-                string picpath = "~/Uploads/Age_proof/" + tbtestid.Text + ".pdf";
+                string picpath = "~/Uploads/Age_proof/" + tbuserid.Text + ".pdf";
                 obj.Proof = picpath;
             }
+            obj.Centre = ddcentre.Text;
             obj.InsertLl_Parameter();
-            Response.Write("<script>alert('Application Submitted Successfully..Please Take the onlineTest and Pay the Fees(online/manually)')</script>");
+            Response.Write("<script>alert('Application Submitted Successfully..Please Pay the Fees(online/manually) and Take the Test')</script>");
 
             tbuserid.Text = "";
             tbname.Text = "";
             tbdob.Text = "";
             tbaddress.Text = "";
-            tbtestid.Text = "";
+            tbadhar.Text = "";
             tbdate.Text = "";
+            ddcentre.Text = "";
 
         }
     }

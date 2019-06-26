@@ -93,7 +93,9 @@
         <td class="auto-style15">
             <asp:TextBox ID="tblicense_no" runat="server" Width="160px"></asp:TextBox>
         </td>
-        <td class="auto-style16"></td>
+        <td class="auto-style16">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="tblicense_no" ErrorMessage="Please enter License no" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+        </td>
     </tr>
     <tr>
         <td class="auto-style13"></td>
@@ -143,7 +145,9 @@
         <td class="auto-style15">
             <asp:TextBox ID="tbexpiredate" runat="server" Width="160px" TextMode="Date"></asp:TextBox>
         </td>
-        <td class="auto-style16"></td>
+        <td class="auto-style16">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tbexpiredate" ErrorMessage="Please enter expire date" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+        </td>
     </tr>
     <tr>
         <td class="auto-style3">&nbsp;</td>

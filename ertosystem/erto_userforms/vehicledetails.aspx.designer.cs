@@ -10,42 +10,42 @@
 namespace ertosystem.erto_userforms {
     
     
-    public partial class instructions {
+    public partial class vehicledetails {
         
         /// <summary>
-        /// form1 control.
+        /// tbvehno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox tbvehno;
         
         /// <summary>
-        /// lbstatus control.
+        /// tbchassisno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbstatus;
+        protected global::System.Web.UI.WebControls.TextBox tbchassisno;
         
         /// <summary>
-        /// lbtest control.
+        /// get_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbtest;
+        protected global::System.Web.UI.WebControls.Button get_btn;
         
         /// <summary>
-        /// btnStartTest control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnStartTest;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

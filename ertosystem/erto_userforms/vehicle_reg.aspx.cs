@@ -68,7 +68,7 @@ namespace ertosystem.erto_userforms
             obj.Vehicle_no = tbdisplay.Text;
             obj.Oveh_id = Session["V_Id"].ToString();
             obj.UpdateVehNo();
-            Response.Write("<script>alert('Registered Successfully')</script>");
+            Response.Write("<script>alert('Application Submitted successfully..Please go to the RTO office for verification of vehicle')</script>");
             //lbregister.Text = "Registered Successfully";
         }
 
@@ -104,11 +104,12 @@ namespace ertosystem.erto_userforms
         protected void continue_btn_Click(object sender, EventArgs e)
         {
             
-            Label2.Visible = true;
-            tbdisplay.Visible = true;
+           // Label2.Visible = true;
+           // tbdisplay.Visible = true;
             obj.Oveh_id = Session["V_Id"].ToString();
             string vehicle_no=obj.Display_vehno();
             tbdisplay.Text= vehicle_no.ToString();
+            Label3.Visible = true;
         }
 
         protected void btnFeepayment_Click(object sender, EventArgs e)

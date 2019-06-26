@@ -51,7 +51,8 @@
             <td class="auto-style1">
                 <asp:TextBox ID="tbvehno" runat="server"  Width="165px" AutoPostBack="True" OnTextChanged="tbvehno_TextChanged"></asp:TextBox>
             </td>
-            <td>*Eg:KL-01-A-1234<asp:ScriptManager ID="ScriptManager1" runat="server">
+            <td>*Eg:KL-01-A-1234<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbvehno" ErrorMessage="Please enter vehicle no" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
             </td>
         </tr>
@@ -80,7 +81,9 @@
             <td class="auto-style1">
                 <asp:TextBox ID="tbnewname" runat="server" Width="165px"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tbnewname" ErrorMessage="Please enter name" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
@@ -90,7 +93,9 @@
             <td class="auto-style1">
                 <asp:TextBox ID="tbnewdob" runat="server" TextMode="Date" Width="165px"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="tbnewdob" ErrorMessage="Please enter DOB" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
@@ -100,7 +105,9 @@
             <td class="auto-style1">
                 <asp:TextBox ID="tbnewswd" runat="server" Width="165px"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tbnewswd" ErrorMessage="Please enter" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
@@ -120,7 +127,9 @@
             <td class="auto-style1">
                 <asp:FileUpload ID="uploadins_cer" runat="server" Width="165px" />
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="uploadins_cer" ErrorMessage="Please upload certificate" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>

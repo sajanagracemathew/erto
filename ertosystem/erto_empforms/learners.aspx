@@ -15,13 +15,14 @@
     <p class="center">
 &nbsp;&nbsp;<span class="auto-style1"><strong> Applications for Learner's License</strong></span></p>
 <p>
-    <asp:GridView ID="GridView1" runat="server" CellPadding="4" CssClass="auto-style2" ForeColor="#333333" GridLines="None" Width="863px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDataBound="GridView1_RowDataBound" AutoGenerateColumns="False">
+    <asp:GridView ID="GridView1" runat="server" CellPadding="4" CssClass="auto-style2" ForeColor="#333333" GridLines="None" Width="855px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDataBound="GridView1_RowDataBound" AutoGenerateColumns="False">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField HeaderText="User_id" DataField="User_id" />
-            <asp:BoundField HeaderText="Learner ApplnNo" DataField="Appln_no" />
-            <asp:BoundField HeaderText="Age Proof" DataField="Proof" />
-            <asp:BoundField HeaderText="Date" DataField="Date" />
+            <asp:BoundField HeaderText="Test_id" DataField="Test_id" />
+            <asp:BoundField HeaderText="Score" DataField="Score" />
+            <asp:BoundField HeaderText="Status" DataField="Status" />
+            <asp:BoundField HeaderText="LearnerAppln_no" DataField="LearnerAppln_no" />
             <asp:BoundField HeaderText="is_verified" DataField="is_verified" />
             <asp:TemplateField ShowHeader="False">
             <ItemTemplate>
@@ -44,6 +45,13 @@
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
 
     </asp:GridView>
-    <br />
 </p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
 </asp:Content>

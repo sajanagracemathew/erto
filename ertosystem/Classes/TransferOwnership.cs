@@ -60,7 +60,7 @@ namespace ertosystem.Classes
             OpenConection();
             Date = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(Date);
-            string qry = "insert into transfer_table (Current_ownername,Vehicle_number,Veh_Id,New_ownername,DOB,SWD,Address,Veh_insurancecer,Noc,Date) values(@cownername,@cveh_no,@cveh_id,@nownername,@ndob,@nswd,@naddress,@veh_inscer,@veh_noc,@cdate);";
+            string qry = "insert into transfer_table (Current_ownername,Vehicle_number,Veh_Id,New_ownername,DOB,SWD,Address,Veh_insurancecer,Date) values(@cownername,@cveh_no,@cveh_id,@nownername,@ndob,@nswd,@naddress,@veh_inscer,@cdate);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@cownername", ownername);
             
@@ -71,7 +71,7 @@ namespace ertosystem.Classes
             cmd.Parameters.AddWithValue("@nswd", swd);
             cmd.Parameters.AddWithValue("@naddress", address);
             cmd.Parameters.AddWithValue("@veh_inscer", ins_cer);
-            cmd.Parameters.AddWithValue("@veh_noc", noc);
+            //cmd.Parameters.AddWithValue("@veh_noc", noc);
             cmd.Parameters.AddWithValue("@cdate", date);
             cmd.ExecuteNonQuery();
         }

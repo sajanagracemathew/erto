@@ -40,6 +40,15 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.DropDownList d_applntype;
         
         /// <summary>
+        /// RequiredFieldValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+        
+        /// <summary>
         /// rb_debit control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,24 @@ namespace ertosystem.erto_userforms {
         protected global::System.Web.UI.WebControls.RadioButton rb_netbanking;
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
+        /// tbusername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbusername;
+        
+        /// <summary>
         /// paynow_btn control.
         /// </summary>
         /// <remarks>
@@ -92,6 +119,15 @@ namespace ertosystem.erto_userforms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button paynow_btn;
+        
+        /// <summary>
+        /// receipt_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button receipt_btn;
         
         /// <summary>
         /// Label1 control.

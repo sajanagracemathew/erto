@@ -31,6 +31,7 @@ namespace ertosystem.erto_userforms
             }
             tobj.P_id = Session["user"].ToString();
             tobj.Uid = tbuserid.Text;
+            tobj.Username = tbusername.Text;
             tobj.ExecuteSelect();
 
             DataTable dt1 = new DataTable();
@@ -38,6 +39,7 @@ namespace ertosystem.erto_userforms
             if (dt1.Rows.Count > 0)
             {
                 tbuserid.Text = dt1.Rows[0]["user_id"].ToString();
+                tbusername.Text= dt1.Rows[0]["username"].ToString();
             }
             
         }
@@ -72,6 +74,9 @@ namespace ertosystem.erto_userforms
             tbtax.Text = "";
         }
 
-       
+        protected void taxreceipt_btn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/erto_userforms/taxreceipt.aspx");
+        }
     }
 }

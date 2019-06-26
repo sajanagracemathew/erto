@@ -38,8 +38,9 @@ namespace ertosystem.Classes
         private string purchase_value;
         private string tax;
         private string fine;
-        
-        //private string veh_num;
+        private string username;
+        private string payid;
+
 
         public string Appln_type { get => appln_type; set => appln_type = value; }
         public string Fee { get => fee; set => fee = value; }
@@ -52,6 +53,8 @@ namespace ertosystem.Classes
         public string Fine { get => fine; set => fine = value; }
         public string Veh_type { get => veh_type; set => veh_type = value; }
         public string Purchase_value { get => purchase_value; set => purchase_value = value; }
+        public string Username { get => username; set => username = value; }
+        public string Payid { get => payid; set => payid = value; }
 
         //public string Veh_num { get => veh_num; set => veh_num = value; }
         //public string Vehicle_number { get => vehicle_number; set => vehicle_number = value; }
@@ -61,13 +64,14 @@ namespace ertosystem.Classes
             OpenConection();
             paydate = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(paydate);
-            string qry = "insert into pay_table values(@usr_id,@applntype,@fees,@option,@date);";
+            string qry = "insert into pay_table values(@usr_id,@applntype,@fees,@option,@date,@usrname);";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@usr_id", uid);
             cmd.Parameters.AddWithValue("@applntype",appln_type );
             cmd.Parameters.AddWithValue("@fees", fee);
             cmd.Parameters.AddWithValue("@option", pay_option);
             cmd.Parameters.AddWithValue("@date", paydate);
+            cmd.Parameters.AddWithValue("@usrname", username);
             cmd.ExecuteNonQuery();
         }
         public void Insert_taxParameter()
@@ -75,9 +79,10 @@ namespace ertosystem.Classes
             OpenConection();
             paydate = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(paydate);
-            string qry = "insert into tax_table values(@usr_id,@veh_number,@vehtype,@purchasevalue,@tax1,@option,@date);";
+            string qry = "insert into tax_table values(@usr_id,@usrname,@veh_number,@vehtype,@purchasevalue,@tax1,@option,@date);";
             SqlCommand cmd1 = new SqlCommand(qry, con);
             cmd1.Parameters.AddWithValue("@usr_id", uid);
+            cmd1.Parameters.AddWithValue("@usrname", username);
             cmd1.Parameters.AddWithValue("@veh_number", veh_no);
             cmd1.Parameters.AddWithValue("@vehtype", veh_type);
             cmd1.Parameters.AddWithValue("@purchasevalue", purchase_value);
@@ -91,9 +96,10 @@ namespace ertosystem.Classes
             OpenConection();
             paydate = System.DateTime.Now.ToString("dd/MM/yyyy");
             DateTime ddoc = Convert.ToDateTime(paydate);
-            string qry = "insert into fine_table values(@usr_id,@veh_number,@fine1,@option,@date);";
+            string qry = "insert into fine_table values(@usr_id,@usrname,@veh_number,@fine1,@option,@date);";
             SqlCommand cmd1 = new SqlCommand(qry, con);
             cmd1.Parameters.AddWithValue("@usr_id", uid);
+            cmd1.Parameters.AddWithValue("@usrname", username);
             cmd1.Parameters.AddWithValue("@veh_number", veh_no);
             cmd1.Parameters.AddWithValue("@fine1", fine);
             cmd1.Parameters.AddWithValue("@option", pay_option);
@@ -105,7 +111,7 @@ namespace ertosystem.Classes
             OpenConection();
 
             DataTable dt1 = new DataTable();
-            SqlCommand cmd2 = new SqlCommand("select user_id from userregistration_table where username=@usrname", con);
+            SqlCommand cmd2 = new SqlCommand("select user_id,username from userregistration_table where username=@usrname", con);
             cmd2.Parameters.AddWithValue("@usrname", p_id);
             SqlDataAdapter da = new SqlDataAdapter(cmd2);// this will query your database and return the result to your datatable
             da.Fill(dt1);
@@ -170,6 +176,39 @@ namespace ertosystem.Classes
             {
                 return 0;
             }
+        }
+        public DataTable feereceipt()
+        {
+            OpenConection();
+            DataTable dtReg = new DataTable();
+            SqlCommand command = new SqlCommand("Select u.name,u.address,p.user_id,p.Fee,p.Date from userregistration_table u inner join pay_table p on u.user_id=p.user_id and p.username=@usrname", con);
+            command.Parameters.AddWithValue("@usrname", p_id);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtReg);
+            CloseConnection();
+            return dtReg;
+        }
+        public DataTable taxreceipt()
+        {
+            OpenConection();
+            DataTable dtReg = new DataTable();
+            SqlCommand command = new SqlCommand("Select u.name,u.address,t.user_id,t.Tax,t.Date from userregistration_table u inner join tax_table t on u.user_id=t.user_id and t.username=@usrname", con);
+            command.Parameters.AddWithValue("@usrname", p_id);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtReg);
+            CloseConnection();
+            return dtReg;
+        }
+        public DataTable finereceipt()
+        {
+            OpenConection();
+            DataTable dtReg = new DataTable();
+            SqlCommand command = new SqlCommand("Select u.name,u.address,f.user_id,f.Fine,f.Date from userregistration_table u inner join fine_table f on u.user_id=f.user_id and f.username=@usrname", con);
+            command.Parameters.AddWithValue("@usrname", p_id);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtReg);
+            CloseConnection();
+            return dtReg;
         }
 
 

@@ -16,6 +16,7 @@ namespace ertosystem.erto_userforms
         {
             obj.P_id = Session["user"].ToString();
             obj.Uid = tbuserid.Text;
+            obj.Username = tbusername.Text;
             obj.ExecuteSelect();
 
             DataTable dt1 = new DataTable();
@@ -23,6 +24,7 @@ namespace ertosystem.erto_userforms
             if (dt1.Rows.Count > 0)
             {
                 tbuserid.Text = dt1.Rows[0]["user_id"].ToString();
+                tbusername.Text = dt1.Rows[0]["username"].ToString();
             }
         }
 
@@ -46,6 +48,11 @@ namespace ertosystem.erto_userforms
             tbuserid.Text = "";
             tbveh_no.Text = "";
             tbfine.Text = "";
+        }
+
+        protected void finereceipt_btn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/erto_userforms/finereceipt.aspx");
         }
     }
 }

@@ -22,7 +22,7 @@
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="Fine_id" HeaderText="Fine_id" InsertVisible="False" ReadOnly="True" SortExpression="Fine_id" />
-                <asp:BoundField DataField="User_id" HeaderText="User_id" SortExpression="User_id" />
+                <asp:BoundField DataField="user_id" HeaderText="User_id" SortExpression="User_id" />
                 <asp:BoundField DataField="Veh_number" HeaderText="Veh_number" SortExpression="Veh_number" />
                 <asp:BoundField DataField="Fine" HeaderText="Fine" SortExpression="Fine" />
                 <asp:BoundField DataField="Pay_option" HeaderText="Pay_option" SortExpression="Pay_option" />

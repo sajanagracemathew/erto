@@ -8,7 +8,7 @@
             width: 190px;
         }
         .auto-style3 {
-            width: 205px;
+            width: 182px;
         }
         .auto-style4 {
             width: 199px;
@@ -19,7 +19,7 @@
             height: 32px;
         }
         .auto-style6 {
-            width: 205px;
+            width: 182px;
             height: 32px;
         }
         .auto-style7 {
@@ -35,7 +35,7 @@
             height: 35px;
         }
         .auto-style10 {
-            width: 205px;
+            width: 182px;
             text-align: center;
         }
         .auto-style12 {
@@ -53,22 +53,42 @@
         }
         .auto-style15 {
             width: 159px;
-            height: 52px;
+            height: 51px;
         }
         .auto-style16 {
             width: 199px;
-            height: 52px;
+            height: 51px;
         }
         .auto-style17 {
             width: 190px;
-            height: 52px;
+            height: 51px;
         }
         .auto-style18 {
-            width: 205px;
-            height: 52px;
+            width: 182px;
+            height: 51px;
         }
         .auto-style19 {
-            height: 52px;
+            height: 51px;
+        }
+        .auto-style20 {
+            width: 159px;
+            height: 30px;
+        }
+        .auto-style21 {
+            width: 199px;
+            height: 30px;
+        }
+        .auto-style22 {
+            width: 190px;
+            text-align: center;
+            height: 30px;
+        }
+        .auto-style23 {
+            width: 182px;
+            height: 30px;
+        }
+        .auto-style24 {
+            height: 30px;
         }
         </style>
 </asp:Content>
@@ -87,7 +107,7 @@
     <table class="nav-justified">
         <tr>
             <td class="auto-style12"></td>
-            <td class="auto-style9" colspan="4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; APPLY LEARNER</strong></td>
+            <td class="auto-style9" colspan="4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; APPLY FOR LEARNER&#39;S TEST</strong></td>
         </tr>
         <tr>
             <td class="auto-style15">
@@ -99,11 +119,11 @@
                 <asp:TextBox ID="tbuserid" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" Width="150px"></asp:TextBox>
             </td>
             <td class="auto-style18">
-                <asp:Label ID="lbtestid" runat="server" Text="Test_id"></asp:Label>
+                <asp:Label ID="lbadhar" runat="server" Text="Aadhaar No"></asp:Label>
             </td>
             <td class="auto-style19">
-                <asp:TextBox ID="tbtestid" runat="server" Width="150px"></asp:TextBox>
-            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbtestid" ErrorMessage="Enter a valid Test id" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="tbadhar" runat="server" Width="150px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbadhar" ErrorMessage="Please enter Aadhaar no" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -128,11 +148,12 @@
                 <asp:TextBox ID="tbdob" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" Width="150px"></asp:TextBox>
             </td>
             <td class="auto-style3">
-                <asp:Label ID="Label1" runat="server" Text="Age proof/Address proof(ID/Adhar card)"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Age proof/Address proof(ID/Aadhaar card)"></asp:Label>
             </td>
             <td>
                 <asp:FileUpload ID="proofupload" runat="server" Width="150px" />
-            </td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="proofupload" ErrorMessage="Please upload proof" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style14">
@@ -154,28 +175,49 @@
             <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td></td>
+            <td class="auto-style3">
+                <asp:Label ID="lbcentre" runat="server" Text="Test Centre"></asp:Label>
+            </td>
+            <td>
+                <asp:DropDownList ID="ddcentre" runat="server" Height="16px" Width="151px">
+                    <asp:ListItem>--Select--</asp:ListItem>
+                    <asp:ListItem>Thiruvananthapuram</asp:ListItem>
+                    <asp:ListItem>kollam</asp:ListItem>
+                    <asp:ListItem>Pathanamthitta</asp:ListItem>
+                    <asp:ListItem>Alappuzha</asp:ListItem>
+                    <asp:ListItem>Kottayam</asp:ListItem>
+                    <asp:ListItem>Idukki</asp:ListItem>
+                    <asp:ListItem>Ernakulam</asp:ListItem>
+                    <asp:ListItem>Thrissur</asp:ListItem>
+                    <asp:ListItem>Palakkad</asp:ListItem>
+                    <asp:ListItem>Malappuram</asp:ListItem>
+                    <asp:ListItem>Kozhikode</asp:ListItem>
+                    <asp:ListItem>Wayanad</asp:ListItem>
+                    <asp:ListItem>Kannur</asp:ListItem>
+                    <asp:ListItem>Kasaragod</asp:ListItem>
+                    <asp:ListItem></asp:ListItem>
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddcentre" ErrorMessage="Please select centre" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td class="auto-style13">&nbsp;</td>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style8">
+                &nbsp;</td>
+            <td class="auto-style10">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style20"></td>
+            <td class="auto-style21"></td>
+            <td class="auto-style22">
                 <asp:Button ID="apply_btn" runat="server" ForeColor="#333333" OnClick="apply_btn_Click" Text="Apply" Width="76px" />
             </td>
-            <td class="auto-style10">
-                <asp:Button ID="rtotest_btn" runat="server" ForeColor="Blue" OnClick="rtotest_btn_Click" Text="Take Test" />
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style13">&nbsp;</td>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style8">
-                &nbsp;</td>
-            <td class="auto-style3">
-                &nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style23">
+                </td>
+            <td class="auto-style24"></td>
         </tr>
         <tr>
             <td class="auto-style13">&nbsp;</td>

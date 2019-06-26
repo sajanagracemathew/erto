@@ -101,7 +101,7 @@ namespace ertosystem.erto_adminforms
                     client.Send(msg1);
                     // lblMessage.Text = "Email Sent Successfully";  
                     // lblMessage.ForeColor = System.Drawing.Color.ForestGreen;  
-                    Response.Write("<script>alert('Mail sent successfully')</script>");
+                    Response.Write("<script>alert('Registered Successfully')</script>");
                 }
             }
 

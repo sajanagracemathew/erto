@@ -97,6 +97,7 @@
                 <td class="auto-style7">
         <asp:DropDownList ID="d_applntype" runat="server" Width="185px" OnSelectedIndexChanged="d_applntype_SelectedIndexChanged" AutoPostBack="True" Height="27px" >
         </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="d_applntype" ErrorMessage="Please enter type" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style8"> <strong><span class="auto-style2">&nbsp;&nbsp; <asp:RadioButton ID="rb_debit" runat="server" Text="Debit /Credit Card" CssClass="auto-style12" />
                     </span></strong></td>
@@ -122,8 +123,12 @@
             </tr>
             <tr>
                 <td class="auto-style19">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style3">&nbsp;</td>
+                <td class="auto-style4">
+                    <asp:Label ID="Label2" runat="server" Text="Username" Visible="False"></asp:Label>
+                </td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="tbusername" runat="server" Visible="False" Width="165px"></asp:TextBox>
+                </td>
                 <td>
         &nbsp;&nbsp;
                 </td>
@@ -141,7 +146,9 @@
                 <td class="auto-style5">
                     <asp:Button ID="paynow_btn" runat="server" OnClick="paynow_btn_Click" Text="Pay" Width="64px" />
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="receipt_btn" runat="server" OnClick="receipt_btn_Click" Text="View Receipt" Width="97px" CssClass="auto-style12" ForeColor="#3333CC" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style19">&nbsp;</td>
