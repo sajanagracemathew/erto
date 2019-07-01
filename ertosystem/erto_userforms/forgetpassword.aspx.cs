@@ -53,7 +53,7 @@ namespace ertosystem.erto_userforms
 
                     msg1.IsBodyHtml = true;
 
-                    NetworkCredential login = new NetworkCredential("sajanagracerto@gmail.com", "ertomathew9337");
+                    NetworkCredential login = new NetworkCredential("sajanagracerto@gmail.com", "password");
 
                     SmtpClient client = new SmtpClient("smtp.gmail.com");
                     client.EnableSsl = true;
